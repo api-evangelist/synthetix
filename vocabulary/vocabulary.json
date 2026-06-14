@@ -1,0 +1,274 @@
+{
+  "name": "Synthetix API Vocabulary",
+  "description": "Domain vocabulary and terminology extracted from the Synthetix API specification",
+  "source": "https://api.synthetix.io/docs/",
+  "terms": [
+    {
+      "term": "SNX",
+      "type": "token",
+      "description": "Synthetix network token used for staking and governance"
+    },
+    {
+      "term": "circulating-supply",
+      "type": "metric",
+      "description": "Total SNX tokens in active circulation excluding locked/escrowed amounts"
+    },
+    {
+      "term": "staking-ratio",
+      "type": "metric",
+      "description": "Ratio of staked SNX to total circulating SNX supply"
+    },
+    {
+      "term": "debt-pool",
+      "type": "mechanism",
+      "description": "Shared debt pool that stakers participate in when minting synths"
+    },
+    {
+      "term": "escrowed-balance",
+      "type": "balance",
+      "description": "SNX tokens locked in escrow contracts pending release"
+    },
+    {
+      "term": "vested-balance",
+      "type": "balance",
+      "description": "SNX tokens available to claim from completed vesting schedules"
+    },
+    {
+      "term": "sc-pool-apy",
+      "type": "metric",
+      "description": "Annual percentage yield for Spartan Council liquidity pool"
+    },
+    {
+      "term": "perps-volume",
+      "type": "metric",
+      "description": "Total trading volume for perpetual futures contracts"
+    },
+    {
+      "term": "lt-trades",
+      "type": "entity",
+      "description": "Leverage token trade records for Synthetix V3 markets"
+    },
+    {
+      "term": "lt-leaderboard",
+      "type": "entity",
+      "description": "Leaderboard ranking for leverage token traders"
+    },
+    {
+      "term": "tvl",
+      "type": "metric",
+      "description": "Total value locked in Synthetix V3 protocol"
+    },
+    {
+      "term": "rewards-claimed",
+      "type": "metric",
+      "description": "Staking rewards that have been claimed by participants"
+    },
+    {
+      "term": "issued-debt",
+      "type": "metric",
+      "description": "Total debt issued against collateral in V3 vaults"
+    },
+    {
+      "term": "snx-buyback",
+      "type": "mechanism",
+      "description": "Protocol-level SNX token buyback program data"
+    },
+    {
+      "term": "supply",
+      "type": "category",
+      "description": "API category grouping operations: Returns combined SNX circulating supply from L1 and L2.; Returns SNX total supply for L1 and L2.",
+      "operations": 2
+    },
+    {
+      "term": "staking",
+      "type": "category",
+      "description": "API category grouping operations: Returns outstanding composition of Synthetix debt pool. If `key` query parameter is not provided it returns an array of objects (all assets). If `key` query parameter is provided it returns an object (with requested asset). If `net` query parameter is not provided it returns combined data for both networks. If `net` query parameter is provided it returns data for requested network.; Returns SNX staking ratio between L1 and L2.",
+      "operations": 2
+    },
+    {
+      "term": "health-check",
+      "type": "category",
+      "description": "API category grouping operations: Returns API health status. Protected with basic auth. Only for internal use.; Returns API status.",
+      "operations": 2
+    },
+    {
+      "term": "escrowed-balance",
+      "type": "category",
+      "description": "API category grouping operations: Returns escrowed SNX balance from LiquidatorRewards contract.; Returns escrowed SNX balance from RewardEscrow contract.; Returns escrowed SNX balance from RewardEscrowV2 contract.",
+      "operations": 4
+    },
+    {
+      "term": "stats",
+      "type": "category",
+      "description": "API category grouping operations: Returns total volume figures across all perps deployments.",
+      "operations": 1
+    },
+    {
+      "term": "vested-balance",
+      "type": "category",
+      "description": "API category grouping operations: Returns vested SNX balance from SynthetixEscrow contract.",
+      "operations": 1
+    },
+    {
+      "term": "v3",
+      "type": "category",
+      "description": "API category grouping operations: Returns current APY for Spartan Council Pool on Arbitrum.; Returns historical APY for Spartan Council Pool on Arbitrum.; Returns current APY for Spartan Council Pool on Arbitrum.",
+      "operations": 19
+    },
+    {
+      "term": "circulating-supply",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "debt-pool-comp",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "health",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "staking-ratio",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "status",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "total-supply",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "LiquidatorRewards",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "balance",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "RewardEscrow",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "escrowed-balance",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "RewardEscrowV2",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "stats",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "perps-volume",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "SynthetixBridgeEscrow",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "SynthetixEscrow",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "vested-balance",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "arbitrum",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "sc-pool-apy-all",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "sc-pool-apy-history",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "sc-pool-apy",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "base",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "issued-debt",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "lt-leaderboard",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "lt-trades",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "rewards-claimed",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "snx-buyback",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "mainnet",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "optimism",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "top-asset",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "tvl",
+      "type": "resource",
+      "description": "API resource path segment"
+    },
+    {
+      "term": "tvl420",
+      "type": "resource",
+      "description": "API resource path segment"
+    }
+  ]
+}

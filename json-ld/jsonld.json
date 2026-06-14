@@ -1,0 +1,204 @@
+{
+  "@context": {
+    "@vocab": "https://synthetix.io/vocab#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "api": "https://api.synthetix.io/",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "version": "schema:version",
+    "SynthetixAPI": "schema:WebAPI",
+    "circulatingSupply": {
+      "@id": "https://synthetix.io/vocab#circulatingSupply",
+      "@type": "xsd:string"
+    },
+    "totalSupply": {
+      "@id": "https://synthetix.io/vocab#totalSupply",
+      "@type": "xsd:string"
+    },
+    "stakingRatio": {
+      "@id": "https://synthetix.io/vocab#stakingRatio",
+      "@type": "xsd:decimal"
+    },
+    "escrowedBalance": {
+      "@id": "https://synthetix.io/vocab#escrowedBalance",
+      "@type": "xsd:string"
+    },
+    "vestedBalance": {
+      "@id": "https://synthetix.io/vocab#vestedBalance",
+      "@type": "xsd:string"
+    },
+    "poolApy": {
+      "@id": "https://synthetix.io/vocab#poolApy",
+      "@type": "xsd:decimal"
+    },
+    "perpsVolume": {
+      "@id": "https://synthetix.io/vocab#perpsVolume",
+      "@type": "xsd:string"
+    },
+    "tvl": {
+      "@id": "https://synthetix.io/vocab#tvl",
+      "@type": "xsd:string"
+    },
+    "issuedDebt": {
+      "@id": "https://synthetix.io/vocab#issuedDebt",
+      "@type": "xsd:string"
+    },
+    "rewardsClaimed": {
+      "@id": "https://synthetix.io/vocab#rewardsClaimed",
+      "@type": "xsd:string"
+    },
+    "debtPoolComp": {
+      "@id": "https://synthetix.io/vocab#debtPoolComp",
+      "@type": "xsd:decimal"
+    },
+    "snxBuyback": {
+      "@id": "https://synthetix.io/vocab#snxBuyback",
+      "@type": "xsd:string"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "https://api.synthetix.io",
+      "@type": "SynthetixAPI",
+      "name": "Synthetix API",
+      "description": "Synthetix API documentation",
+      "version": "1.0.0",
+      "url": "https://api.synthetix.io",
+      "schema:documentation": "https://developers.synthetix.io/",
+      "schema:provider": {
+        "@type": "schema:Organization",
+        "name": "Synthetix",
+        "url": "https://synthetix.io"
+      },
+      "schema:endpointURL": "https://api.synthetix.io",
+      "schema:availableChannel": [
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/circulating-supply"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/debt-pool-comp"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/health"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/staking-ratio"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/status"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/total-supply"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/LiquidatorRewards/balance"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/RewardEscrow/escrowed-balance"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/RewardEscrowV2/escrowed-balance"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/stats/perps-volume"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/SynthetixBridgeEscrow/balance"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/SynthetixEscrow/vested-balance"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/v3/arbitrum/sc-pool-apy-all"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/v3/arbitrum/sc-pool-apy-history"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/v3/arbitrum/sc-pool-apy"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/v3/base/issued-debt"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/v3/base/lt-leaderboard"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/v3/base/lt-trades"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/v3/base/rewards-claimed"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/v3/base/sc-pool-apy-all"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/v3/base/sc-pool-apy-history"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/v3/base/sc-pool-apy"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/v3/base/snx-buyback"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/v3/mainnet/issued-debt"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/v3/mainnet/rewards-claimed"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/v3/mainnet/sc-pool-apy-all"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/v3/optimism/lt-leaderboard"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/v3/optimism/lt-trades"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/v3/top-asset"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/v3/tvl"
+        },
+        {
+          "@type": "schema:ServiceChannel",
+          "schema:serviceUrl": "https://api.synthetix.io/v3/tvl420"
+        }
+      ]
+    }
+  ]
+}

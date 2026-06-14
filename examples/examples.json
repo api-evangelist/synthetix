@@ -1,0 +1,664 @@
+{
+  "get__circulating_supply": {
+    "path": "/circulating-supply",
+    "method": "GET",
+    "summary": "Returns combined SNX circulating supply from L1 and L2.",
+    "tags": [
+      "supply"
+    ],
+    "response": {
+      "circulatingSupply": "141926691.344308997791851826",
+      "totalSupply": "309509422.088773603337882496",
+      "synthetixEscrowVestedBalance": "723907.949250420000000002",
+      "rewardEscrowEscrowedBalance": "73763701.242877032135481494",
+      "rewardEscrowV2EscrowedBalance": "58795426.272404595327975783",
+      "liquidatorRewardsBalance": "2035169.82647455828232327",
+      "synthetixBridgeEscrowBalance": "90615339.513130952531588288",
+      "OVMTotalSupply": "89132014.499559654122877079",
+      "OVMSynthetixEscrowVestedBalance": "0",
+      "OVMRewardEscrowV2EscrowedBalance": "34299695.279932558082573391",
+      "OVMLiquidatorRewardsBalance": "322414.5006437149942302",
+      "contracts": {}
+    }
+  },
+  "get__health": {
+    "path": "/health",
+    "method": "GET",
+    "summary": "Returns API health status. Protected with basic auth. Only for internal use.",
+    "tags": [
+      "health-check"
+    ],
+    "response": {
+      "status": "OK"
+    }
+  },
+  "get__staking_ratio": {
+    "path": "/staking-ratio",
+    "method": "GET",
+    "summary": "Returns SNX staking ratio between L1 and L2.",
+    "tags": [
+      "staking"
+    ],
+    "response": {
+      "systemStakingPercent": "0.7136614182989093",
+      "timestamp": "1671822729",
+      "stakedSnx": {}
+    }
+  },
+  "get__total_supply": {
+    "path": "/total-supply",
+    "method": "GET",
+    "summary": "Returns SNX total supply for L1 and L2.",
+    "tags": [
+      "supply"
+    ],
+    "response": {
+      "totalSupply": "309509422.088773603337882496",
+      "OVMTotalSupply": "89132014.499559654122877079",
+      "contracts": {}
+    }
+  },
+  "get__LiquidatorRewards_balance": {
+    "path": "/LiquidatorRewards/balance",
+    "method": "GET",
+    "summary": "Returns escrowed SNX balance from LiquidatorRewards contract.",
+    "tags": [
+      "escrowed-balance"
+    ],
+    "response": {
+      "liquidatorRewardsBalance": "2035169.82647455828232327",
+      "OVMLiquidatorRewardsBalance": "322559.742435986940227453",
+      "contracts": {}
+    }
+  },
+  "get__RewardEscrow_escrowed_balance": {
+    "path": "/RewardEscrow/escrowed-balance",
+    "method": "GET",
+    "summary": "Returns escrowed SNX balance from RewardEscrow contract.",
+    "tags": [
+      "escrowed-balance"
+    ],
+    "response": {
+      "rewardEscrowEscrowedBalance": "73763701.242877032135481494",
+      "contracts": {}
+    }
+  },
+  "get__RewardEscrowV2_escrowed_balance": {
+    "path": "/RewardEscrowV2/escrowed-balance",
+    "method": "GET",
+    "summary": "Returns escrowed SNX balance from RewardEscrowV2 contract.",
+    "tags": [
+      "escrowed-balance"
+    ],
+    "response": {
+      "rewardEscrowV2EscrowedBalance": "58794904.970146869484807159",
+      "OVMRewardEscrowV2EscrowedBalance": "34299749.053100401709993579",
+      "contracts": {}
+    }
+  },
+  "get__stats_perps_volume": {
+    "path": "/stats/perps-volume",
+    "method": "GET",
+    "summary": "Returns total volume figures across all perps deployments.",
+    "tags": [
+      "stats"
+    ],
+    "response": {
+      "timestamp": "2024-05-23T14:00:00.000Z",
+      "volume_7d": 123456789.12345679,
+      "volume_24h": 12345678.12345679
+    }
+  },
+  "get__SynthetixBridgeEscrow_balance": {
+    "path": "/SynthetixBridgeEscrow/balance",
+    "method": "GET",
+    "summary": "Returns escrowed SNX balance from SynthetixBridgeEscrow contract.",
+    "tags": [
+      "escrowed-balance"
+    ],
+    "response": {
+      "synthetixBridgeEscrowBalance": "90615339.513130952531588288",
+      "contracts": {}
+    }
+  },
+  "get__SynthetixEscrow_vested_balance": {
+    "path": "/SynthetixEscrow/vested-balance",
+    "method": "GET",
+    "summary": "Returns vested SNX balance from SynthetixEscrow contract.",
+    "tags": [
+      "vested-balance"
+    ],
+    "response": {
+      "synthetixEscrowVestedBalance": "723907.949250420000000002",
+      "OVMSynthetixEscrowVestedBalance": "0",
+      "contracts": {}
+    }
+  },
+  "get__v3_arbitrum_sc_pool_apy_all": {
+    "path": "/v3/arbitrum/sc-pool-apy-all",
+    "method": "GET",
+    "summary": "Returns current APY for Spartan Council Pool on Arbitrum.",
+    "tags": [
+      "v3"
+    ],
+    "response": [
+      {
+        "timestamp": "2024-05-23T14:00:00.000Z",
+        "poolId": 1,
+        "collateralType": "0xc74ea762cf06c9151ce074e6a569a5945b6302e7",
+        "collateralValue": 23075347.609146226,
+        "debtAmount": -38219.337186378914,
+        "hourlyIssuance": 500,
+        "hourlyPnl": 12954.05122107834,
+        "cumulativePnl": 43985.56313904079,
+        "cumulativeIssuance": 5766.225952661871,
+        "rewardsUSD": 325.5208333342384,
+        "hourlyPnlPct": 0.0005613805451816391,
+        "hourlyRewardsPct": 0.00001410686585736259,
+        "apr24h": 0.45592422360763046,
+        "apy24h": 0.57761207594964,
+        "apr7d": 0.3960274742990924,
+        "apy7d": 0.4858968400315962,
+        "apr28d": 0.4384330174128003,
+        "apy28d": 0.550259050183527,
+        "apr24hPnl": 0.33291916703302443,
+        "apy24hPnl": 0.39502570410440424,
+        "apr7dPnl": 0.19503277851939582,
+        "apy7dPnl": 0.21534818462340294,
+        "apr28dPnl": 0.13876757264702413,
+        "apy28dPnl": 0.14885578045932418,
+        "apr24hRewards": 0.12300505657460604,
+        "apy24hRewards": 0.13088916273804313,
+        "apr7dRewards": 0.20099469577969659,
+        "apy7dRewards": 0.22261546761516451,
+        "apr28dRewards": 0.29966544476577617,
+        "apy28dRewards": 0.34940036452177975,
+        "aprPnl": 0.19503277851939582,
+        "aprRewards": 0.20099469577969659,
+        "aprCombined": 0.3960274742990924
+      }
+    ]
+  },
+  "get__v3_arbitrum_sc_pool_apy_history": {
+    "path": "/v3/arbitrum/sc-pool-apy-history",
+    "method": "GET",
+    "summary": "Returns historical APY for Spartan Council Pool on Arbitrum.",
+    "tags": [
+      "v3"
+    ],
+    "response": [
+      {
+        "timestamp": "2024-05-23T14:00:00.000Z",
+        "poolId": 1,
+        "collateralType": "0xc74ea762cf06c9151ce074e6a569a5945b6302e7",
+        "collateralValue": 23075347.609146226,
+        "debtAmount": -38219.337186378914,
+        "hourlyIssuance": 500,
+        "hourlyPnl": 12954.05122107834,
+        "cumulativePnl": 43985.56313904079,
+        "cumulativeIssuance": 5766.225952661871,
+        "rewardsUSD": 325.5208333342384,
+        "hourlyPnlPct": 0.0005613805451816391,
+        "hourlyRewardsPct": 0.00001410686585736259,
+        "apr24h": 0.45592422360763046,
+        "apy24h": 0.57761207594964,
+        "apr7d": 0.3960274742990924,
+        "apy7d": 0.4858968400315962,
+        "apr28d": 0.4384330174128003,
+        "apy28d": 0.550259050183527,
+        "apr24hPnl": 0.33291916703302443,
+        "apy24hPnl": 0.39502570410440424,
+        "apr7dPnl": 0.19503277851939582,
+        "apy7dPnl": 0.21534818462340294,
+        "apr28dPnl": 0.13876757264702413,
+        "apy28dPnl": 0.14885578045932418,
+        "apr24hRewards": 0.12300505657460604,
+        "apy24hRewards": 0.13088916273804313,
+        "apr7dRewards": 0.20099469577969659,
+        "apy7dRewards": 0.22261546761516451,
+        "apr28dRewards": 0.29966544476577617,
+        "apy28dRewards": 0.34940036452177975,
+        "aprPnl": 0.19503277851939582,
+        "aprRewards": 0.20099469577969659,
+        "aprCombined": 0.3960274742990924
+      }
+    ]
+  },
+  "get__v3_arbitrum_sc_pool_apy": {
+    "path": "/v3/arbitrum/sc-pool-apy",
+    "method": "GET",
+    "summary": "Returns current APY for Spartan Council Pool on Arbitrum.",
+    "tags": [
+      "v3"
+    ],
+    "response": [
+      {
+        "timestamp": "2024-05-23T14:00:00.000Z",
+        "poolId": 1,
+        "collateralType": "0xc74ea762cf06c9151ce074e6a569a5945b6302e7",
+        "collateralValue": 23075347.609146226,
+        "debtAmount": -38219.337186378914,
+        "hourlyIssuance": 500,
+        "hourlyPnl": 12954.05122107834,
+        "cumulativePnl": 43985.56313904079,
+        "cumulativeIssuance": 5766.225952661871,
+        "rewardsUSD": 325.5208333342384,
+        "hourlyPnlPct": 0.0005613805451816391,
+        "hourlyRewardsPct": 0.00001410686585736259,
+        "apr24h": 0.45592422360763046,
+        "apy24h": 0.57761207594964,
+        "apr7d": 0.3960274742990924,
+        "apy7d": 0.4858968400315962,
+        "apr28d": 0.4384330174128003,
+        "apy28d": 0.550259050183527,
+        "apr24hPnl": 0.33291916703302443,
+        "apy24hPnl": 0.39502570410440424,
+        "apr7dPnl": 0.19503277851939582,
+        "apy7dPnl": 0.21534818462340294,
+        "apr28dPnl": 0.13876757264702413,
+        "apy28dPnl": 0.14885578045932418,
+        "apr24hRewards": 0.12300505657460604,
+        "apy24hRewards": 0.13088916273804313,
+        "apr7dRewards": 0.20099469577969659,
+        "apy7dRewards": 0.22261546761516451,
+        "apr28dRewards": 0.29966544476577617,
+        "apy28dRewards": 0.34940036452177975,
+        "aprPnl": 0.19503277851939582,
+        "aprRewards": 0.20099469577969659,
+        "aprCombined": 0.3960274742990924
+      }
+    ]
+  },
+  "get__v3_base_issued_debt": {
+    "path": "/v3/base/issued-debt",
+    "method": "GET",
+    "summary": "Fetch sum of usd value of issued debt each collateral.",
+    "tags": [
+      "v3"
+    ],
+    "response": [
+      {
+        "collateral_type": "0x..",
+        "issuance": 1
+      }
+    ]
+  },
+  "get__v3_base_lt_leaderboard": {
+    "path": "/v3/base/lt-leaderboard",
+    "method": "GET",
+    "summary": "Returns leverage token leaderboard on base.",
+    "tags": [
+      "v3"
+    ],
+    "response": [
+      {
+        "epoch_start": "2024-05-23T14:00:00.000Z",
+        "account": "0xAa4a1d3c0d96B0D8C7AE4F71939D0Fa36bd97Aa7",
+        "total_fees_paid": "954.605497900439850",
+        "fees_paid_pct": "0.210334039122012452233641885",
+        "fees_rank": "1",
+        "volume": "1",
+        "volume_rank": "1",
+        "volume_pct": "1"
+      }
+    ]
+  },
+  "get__v3_base_lt_trades": {
+    "path": "/v3/base/lt-trades",
+    "method": "GET",
+    "summary": "Returns leverage token trades on base.",
+    "tags": [
+      "v3"
+    ],
+    "response": [
+      {
+        "id": "0131506856-000048-c2285",
+        "block_number": 131506856,
+        "ts": "2025-02-03 19:54:49+00",
+        "transaction_hash": "0x...",
+        "contract": "0x...",
+        "event_name": "Redeemed",
+        "account": "0x",
+        "token": "btc_long7",
+        "leverage": 1,
+        "market": "BTC",
+        "leveraged_token_amount": "1",
+        "base_asset_amount": "1",
+        "nominal_volume": "1",
+        "notional_volume": "1",
+        "token_price": "1",
+        "total_supply": "1",
+        "vault_tvl": "1",
+        "vault_oi": "1"
+      }
+    ]
+  },
+  "get__v3_base_rewards_claimed": {
+    "path": "/v3/base/rewards-claimed",
+    "method": "GET",
+    "summary": "Fetch sum of usd value of claimed rewards for a given account ID for each collateral.",
+    "tags": [
+      "v3"
+    ],
+    "response": [
+      {
+        "collateral_type": "0x..",
+        "total_amount_usd": 1
+      }
+    ]
+  },
+  "get__v3_base_sc_pool_apy_all": {
+    "path": "/v3/base/sc-pool-apy-all",
+    "method": "GET",
+    "summary": "Returns current APY for Spartan Council Pool on Arbitrum.",
+    "tags": [
+      "v3"
+    ],
+    "response": [
+      {
+        "timestamp": "2024-05-23T14:00:00.000Z",
+        "poolId": 1,
+        "collateralType": "0xc74ea762cf06c9151ce074e6a569a5945b6302e7",
+        "collateralValue": 23075347.609146226,
+        "debtAmount": -38219.337186378914,
+        "hourlyIssuance": 500,
+        "hourlyPnl": 12954.05122107834,
+        "cumulativePnl": 43985.56313904079,
+        "cumulativeIssuance": 5766.225952661871,
+        "rewardsUSD": 325.5208333342384,
+        "hourlyPnlPct": 0.0005613805451816391,
+        "hourlyRewardsPct": 0.00001410686585736259,
+        "apr24h": 0.45592422360763046,
+        "apy24h": 0.57761207594964,
+        "apr7d": 0.3960274742990924,
+        "apy7d": 0.4858968400315962,
+        "apr28d": 0.4384330174128003,
+        "apy28d": 0.550259050183527,
+        "apr24hPnl": 0.33291916703302443,
+        "apy24hPnl": 0.39502570410440424,
+        "apr7dPnl": 0.19503277851939582,
+        "apy7dPnl": 0.21534818462340294,
+        "apr28dPnl": 0.13876757264702413,
+        "apy28dPnl": 0.14885578045932418,
+        "apr24hRewards": 0.12300505657460604,
+        "apy24hRewards": 0.13088916273804313,
+        "apr7dRewards": 0.20099469577969659,
+        "apy7dRewards": 0.22261546761516451,
+        "apr28dRewards": 0.29966544476577617,
+        "apy28dRewards": 0.34940036452177975,
+        "aprPnl": 0.19503277851939582,
+        "aprRewards": 0.20099469577969659,
+        "aprCombined": 0.3960274742990924
+      }
+    ]
+  },
+  "get__v3_base_sc_pool_apy_history": {
+    "path": "/v3/base/sc-pool-apy-history",
+    "method": "GET",
+    "summary": "Returns historical APY for Spartan Council Pool on Base.",
+    "tags": [
+      "v3"
+    ],
+    "response": [
+      {
+        "timestamp": "2024-05-23T14:00:00.000Z",
+        "poolId": 1,
+        "collateralType": "0xc74ea762cf06c9151ce074e6a569a5945b6302e7",
+        "collateralValue": 23075347.609146226,
+        "debtAmount": -38219.337186378914,
+        "hourlyIssuance": 500,
+        "hourlyPnl": 12954.05122107834,
+        "cumulativePnl": 43985.56313904079,
+        "cumulativeIssuance": 5766.225952661871,
+        "rewardsUSD": 325.5208333342384,
+        "hourlyPnlPct": 0.0005613805451816391,
+        "hourlyRewardsPct": 0.00001410686585736259,
+        "apr24h": 0.45592422360763046,
+        "apy24h": 0.57761207594964,
+        "apr7d": 0.3960274742990924,
+        "apy7d": 0.4858968400315962,
+        "apr28d": 0.4384330174128003,
+        "apy28d": 0.550259050183527,
+        "apr24hPnl": 0.33291916703302443,
+        "apy24hPnl": 0.39502570410440424,
+        "apr7dPnl": 0.19503277851939582,
+        "apy7dPnl": 0.21534818462340294,
+        "apr28dPnl": 0.13876757264702413,
+        "apy28dPnl": 0.14885578045932418,
+        "apr24hRewards": 0.12300505657460604,
+        "apy24hRewards": 0.13088916273804313,
+        "apr7dRewards": 0.20099469577969659,
+        "apy7dRewards": 0.22261546761516451,
+        "apr28dRewards": 0.29966544476577617,
+        "apy28dRewards": 0.34940036452177975,
+        "aprPnl": 0.19503277851939582,
+        "aprRewards": 0.20099469577969659,
+        "aprCombined": 0.3960274742990924
+      }
+    ]
+  },
+  "get__v3_base_sc_pool_apy": {
+    "path": "/v3/base/sc-pool-apy",
+    "method": "GET",
+    "summary": "Returns current APY for Spartan Council Pool on Base.",
+    "tags": [
+      "v3"
+    ],
+    "response": {
+      "timestamp": "2024-05-23T14:00:00.000Z",
+      "poolId": 1,
+      "collateralType": "0xc74ea762cf06c9151ce074e6a569a5945b6302e7",
+      "collateralValue": 23075347.609146226,
+      "debtAmount": -38219.337186378914,
+      "hourlyIssuance": 500,
+      "hourlyPnl": 12954.05122107834,
+      "cumulativePnl": 43985.56313904079,
+      "cumulativeIssuance": 5766.225952661871,
+      "rewardsUSD": 325.5208333342384,
+      "hourlyPnlPct": 0.0005613805451816391,
+      "hourlyRewardsPct": 0.00001410686585736259,
+      "apr24h": 0.45592422360763046,
+      "apy24h": 0.57761207594964,
+      "apr7d": 0.3960274742990924,
+      "apy7d": 0.4858968400315962,
+      "apr28d": 0.4384330174128003,
+      "apy28d": 0.550259050183527,
+      "apr24hPnl": 0.33291916703302443,
+      "apy24hPnl": 0.39502570410440424,
+      "apr7dPnl": 0.19503277851939582,
+      "apy7dPnl": 0.21534818462340294,
+      "apr28dPnl": 0.13876757264702413,
+      "apy28dPnl": 0.14885578045932418,
+      "apr24hRewards": 0.12300505657460604,
+      "apy24hRewards": 0.13088916273804313,
+      "apr7dRewards": 0.20099469577969659,
+      "apy7dRewards": 0.22261546761516451,
+      "apr28dRewards": 0.29966544476577617,
+      "apy28dRewards": 0.34940036452177975,
+      "aprPnl": 0.19503277851939582,
+      "aprRewards": 0.20099469577969659,
+      "aprCombined": 0.3960274742990924
+    }
+  },
+  "get__v3_base_snx_buyback": {
+    "path": "/v3/base/snx-buyback",
+    "method": "GET",
+    "summary": "Returns SNX buyback details on Base.",
+    "tags": [
+      "v3"
+    ],
+    "response": [
+      {
+        "ts": "1714003200000",
+        "snxAmount": "202.23566293647977",
+        "usdAmount": "588.0897936329317",
+        "cumulativeSnxAmount": "24451.665275214178",
+        "cumulativeUsdAmount": "95386.36662445917"
+      }
+    ]
+  },
+  "get__v3_mainnet_issued_debt": {
+    "path": "/v3/mainnet/issued-debt",
+    "method": "GET",
+    "summary": "Fetch sum of usd value of issued debt each collateral.",
+    "tags": [
+      "v3"
+    ],
+    "response": [
+      {
+        "collateral_type": "0x..",
+        "issuance": 1
+      }
+    ]
+  },
+  "get__v3_mainnet_rewards_claimed": {
+    "path": "/v3/mainnet/rewards-claimed",
+    "method": "GET",
+    "summary": "Fetch sum of usd value of claimed rewards for a given account ID for each collateral.",
+    "tags": [
+      "v3"
+    ],
+    "response": [
+      {
+        "collateral_type": "0x..",
+        "total_amount_usd": 1
+      }
+    ]
+  },
+  "get__v3_mainnet_sc_pool_apy_all": {
+    "path": "/v3/mainnet/sc-pool-apy-all",
+    "method": "GET",
+    "summary": "Returns current APY for Spartan Council Pool on Mainnet.",
+    "tags": [
+      "v3"
+    ],
+    "response": [
+      {
+        "timestamp": "2024-05-23T14:00:00.000Z",
+        "poolId": 1,
+        "collateralType": "0xc74ea762cf06c9151ce074e6a569a5945b6302e7",
+        "collateralValue": 23075347.609146226,
+        "debtAmount": -38219.337186378914,
+        "hourlyIssuance": 500,
+        "hourlyPnl": 12954.05122107834,
+        "cumulativePnl": 43985.56313904079,
+        "cumulativeIssuance": 5766.225952661871,
+        "rewardsUSD": 325.5208333342384,
+        "hourlyPnlPct": 0.0005613805451816391,
+        "hourlyRewardsPct": 0.00001410686585736259,
+        "apr24h": 0.45592422360763046,
+        "apy24h": 0.57761207594964,
+        "apr7d": 0.3960274742990924,
+        "apy7d": 0.4858968400315962,
+        "apr28d": 0.4384330174128003,
+        "apy28d": 0.550259050183527,
+        "apr24hPnl": 0.33291916703302443,
+        "apy24hPnl": 0.39502570410440424,
+        "apr7dPnl": 0.19503277851939582,
+        "apy7dPnl": 0.21534818462340294,
+        "apr28dPnl": 0.13876757264702413,
+        "apy28dPnl": 0.14885578045932418,
+        "apr24hRewards": 0.12300505657460604,
+        "apy24hRewards": 0.13088916273804313,
+        "apr7dRewards": 0.20099469577969659,
+        "apy7dRewards": 0.22261546761516451,
+        "apr28dRewards": 0.29966544476577617,
+        "apy28dRewards": 0.34940036452177975,
+        "aprPnl": 0.19503277851939582,
+        "aprRewards": 0.20099469577969659,
+        "aprCombined": 0.3960274742990924
+      }
+    ]
+  },
+  "get__v3_optimism_lt_leaderboard": {
+    "path": "/v3/optimism/lt-leaderboard",
+    "method": "GET",
+    "summary": "Returns leverage token leaderboard on optimism.",
+    "tags": [
+      "v3"
+    ],
+    "response": [
+      {
+        "epoch_start": "2024-05-23T14:00:00.000Z",
+        "account": "0xAa4a1d3c0d96B0D8C7AE4F71939D0Fa36bd97Aa7",
+        "total_fees_paid": "954.605497900439850",
+        "fees_paid_pct": "0.210334039122012452233641885",
+        "fees_rank": "1",
+        "volume": "1",
+        "volume_rank": "1",
+        "volume_pct": "1"
+      }
+    ]
+  },
+  "get__v3_optimism_lt_trades": {
+    "path": "/v3/optimism/lt-trades",
+    "method": "GET",
+    "summary": "Returns leverage token trades on optimism.",
+    "tags": [
+      "v3"
+    ],
+    "response": [
+      {
+        "id": "0131506856-000048-c2285",
+        "block_number": 131506856,
+        "ts": "2025-02-03 19:54:49+00",
+        "transaction_hash": "0x...",
+        "contract": "0x...",
+        "event_name": "Redeemed",
+        "account": "0x",
+        "token": "btc_long7",
+        "leverage": 1,
+        "market": "BTC",
+        "leveraged_token_amount": "1",
+        "base_asset_amount": "1",
+        "nominal_volume": "1",
+        "notional_volume": "1",
+        "token_price": "1",
+        "total_supply": "1",
+        "vault_tvl": "1",
+        "vault_oi": "1"
+      }
+    ]
+  },
+  "get__v3_top_asset": {
+    "path": "/v3/top-asset",
+    "method": "GET",
+    "summary": "Returns the current top performing asset and it's APR and APY estimated from past 7 day performance.",
+    "tags": [
+      "v3"
+    ],
+    "response": {
+      "timestamp": "2024-05-23T14:00:00.000Z",
+      "chain": "base",
+      "token_symbol": "USDC",
+      "apr": 0.123456789,
+      "apy": 0.123456789
+    }
+  },
+  "get__v3_tvl": {
+    "path": "/v3/tvl",
+    "method": "GET",
+    "summary": "Returns total value locked across all Synthetix V3 deployments.",
+    "tags": [
+      "v3"
+    ],
+    "response": {
+      "timestamp": "2024-05-23T14:00:00.000Z",
+      "tvl": 123456789.12345679
+    }
+  },
+  "get__v3_tvl420": {
+    "path": "/v3/tvl420",
+    "method": "GET",
+    "summary": "Retrieve TVL data for a specific network and time span.",
+    "tags": [
+      "v3"
+    ],
+    "response": [
+      {
+        "ts": "",
+        "value": 0
+      }
+    ]
+  }
+}
