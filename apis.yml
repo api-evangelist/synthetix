@@ -1,401 +1,402 @@
 name: Synthetix
-description: >
-  Synthetix is a derivatives liquidity protocol built on Ethereum and EVM-compatible
-  L2 networks (Optimism, Base). It provides perpetual futures trading with deep
-  onchain liquidity, supporting a wide range of synthetic assets. The platform
-  exposes REST and WebSocket APIs for querying collateral, managing positions,
-  accessing funding rates, monitoring liquidations, tracking staking rewards, and
-  interacting with V3 markets across Optimism and Base.
+description: 'Synthetix is a derivatives liquidity protocol built on Ethereum and
+  EVM-compatible L2 networks (Optimism, Base). It provides perpetual futures trading
+  with deep onchain liquidity, supporting a wide range of synthetic assets. The platform
+  exposes REST and WebSocket APIs for querying collateral, managing positions, accessing
+  funding rates, monitoring liquidations, tracking staking rewards, and interacting
+  with V3 markets across Optimism and Base.
+
+  '
 image: https://synthetix.io/favicon.ico
 tags:
-  - DeFi
-  - Derivatives
-  - Perpetuals
-  - Synthetic Assets
-  - Liquidity Protocol
-  - Blockchain
-  - Ethereum
-  - Optimism
-  - Base
-  - Trading
+- DeFi
+- Derivatives
+- Perpetuals
+- Synthetic Assets
+- Liquidity Protocol
+- Blockchain
+- Ethereum
+- Optimism
+- Base
+- Trading
 url: https://synthetix.io/
 baseURL: https://papi.synthetix.io
 humanURL: https://synthetix.io/
 contact:
-  - FN: Synthetix Developer Support
-    url: https://discord.gg/synthetix
-    X-twitter: synthetix_io
-specificationVersion: "0.19"
-modified: "2026-06-14"
+- FN: Synthetix Developer Support
+  url: https://discord.gg/synthetix
+  X-twitter: synthetix_io
+specificationVersion: '0.19'
+modified: '2026-06-14'
 apis:
-  - name: Synthetix Info API
-    description: >
-      Public REST API for accessing Synthetix market data including markets,
-      prices, candles, funding rates, collateral configurations, contract specs,
-      orderbook depth, exchange status, and fee tier information. No authentication
-      required.
-    humanURL: https://developers.synthetix.io/rest-api/info/market-data
-    baseURL: https://papi.synthetix.io/v1/info
-    tags:
-      - Market Data
-      - Public
-      - Prices
-      - Funding Rates
-      - Collateral
-      - Orderbook
-    properties:
-      - type: X-openapi
-        url: https://api.synthetix.io/docs/
-      - type: Documentation
-        url: https://developers.synthetix.io/rest-api/info/market-data
-      - type: X-environments
-        url: https://developers.synthetix.io/environments
-    contact:
-      - FN: Synthetix Developer Docs
-        url: https://developers.synthetix.io/
-    operations:
-      - label: Get Markets
-        method: POST
-        path: /v1/info
-        action: getMarkets
-        tags:
-          - Markets
-      - label: Get Market Prices
-        method: POST
-        path: /v1/info
-        action: getMarketPrices
-        tags:
-          - Prices
-      - label: Get Candles
-        method: POST
-        path: /v1/info
-        action: getCandles
-        tags:
-          - OHLCV
-          - Historical
-      - label: Get Funding Rate History
-        method: POST
-        path: /v1/info
-        action: getFundingRateHistory
-        tags:
-          - Funding Rates
-          - Historical
-      - label: Get Assets
-        method: POST
-        path: /v1/info
-        action: getAssets
-        tags:
-          - Assets
-      - label: Get Collaterals
-        method: POST
-        path: /v1/info
-        action: getCollaterals
-        tags:
-          - Collateral
-      - label: Get Tiers
-        method: POST
-        path: /v1/info
-        action: getTiers
-        tags:
-          - Fees
-          - Tiers
-      - label: Get Contracts
-        method: POST
-        path: /v1/info
-        action: getContracts
-        tags:
-          - Contracts
-          - Perpetuals
-      - label: Get Contract Specs
-        method: POST
-        path: /v1/info
-        action: getContractSpecs
-        tags:
-          - Contracts
-      - label: Get Orderbook
-        method: POST
-        path: /v1/info
-        action: getOrderbook
-        tags:
-          - Orderbook
-          - Depth
-      - label: Get Exchange Status
-        method: POST
-        path: /v1/info
-        action: getExchangeStatus
-        tags:
-          - Status
-      - label: Get Snaxpot Epoch
-        method: POST
-        path: /v1/info
-        action: getSnaxpotEpoch
-        tags:
-          - Lottery
-          - Snaxpot
+- name: Synthetix Info API
+  description: 'Public REST API for accessing Synthetix market data including markets,
+    prices, candles, funding rates, collateral configurations, contract specs, orderbook
+    depth, exchange status, and fee tier information. No authentication required.
 
-  - name: Synthetix Trade API
-    description: >
-      Authenticated REST API for trading operations and account management on the
-      Synthetix perpetuals exchange. Supports order placement, cancellation,
-      position management, collateral operations, subaccount management, delegation,
-      referrals, and performance analytics. Requires EIP-712 cryptographic signatures
-      for authentication.
-    humanURL: https://developers.synthetix.io/rest-api/trade
-    baseURL: https://papi.synthetix.io/v1/trade
-    tags:
-      - Trading
-      - Authenticated
-      - Orders
-      - Positions
-      - Accounts
-      - Collateral
-    properties:
-      - type: Documentation
-        url: https://developers.synthetix.io/rest-api/trade
-      - type: X-authentication
-        url: https://developers.synthetix.io/developer-resources/api/authentication
-      - type: X-rate-limits
-        url: https://developers.synthetix.io/developer-resources/api/rate-limits
-    contact:
-      - FN: Synthetix Developer Docs
-        url: https://developers.synthetix.io/
-    operations:
-      - label: Place Orders
-        method: POST
-        path: /v1/trade
-        action: placeOrders
-        tags:
-          - Orders
-      - label: Modify Order
-        method: POST
-        path: /v1/trade
-        action: modifyOrder
-        tags:
-          - Orders
-      - label: Cancel Orders
-        method: POST
-        path: /v1/trade
-        action: cancelOrders
-        tags:
-          - Orders
-      - label: Cancel All Orders
-        method: POST
-        path: /v1/trade
-        action: cancelAllOrders
-        tags:
-          - Orders
-      - label: Schedule Cancel
-        method: POST
-        path: /v1/trade
-        action: scheduleCancel
-        tags:
-          - Orders
-      - label: Get Positions
-        method: POST
-        path: /v1/trade
-        action: getPositions
-        tags:
-          - Positions
-      - label: Get Open Orders
-        method: POST
-        path: /v1/trade
-        action: getOpenOrders
-        tags:
-          - Orders
-      - label: Get Order History
-        method: POST
-        path: /v1/trade
-        action: getOrderHistory
-        tags:
-          - Orders
-          - Historical
-      - label: Get Trades
-        method: POST
-        path: /v1/trade
-        action: getTrades
-        tags:
-          - Trades
-          - Historical
-      - label: Get Position History
-        method: POST
-        path: /v1/trade
-        action: getPositionHistory
-        tags:
-          - Positions
-          - Historical
-      - label: Get Funding Payments
-        method: POST
-        path: /v1/trade
-        action: getFundingPayments
-        tags:
-          - Funding
-      - label: Withdraw Collateral
-        method: POST
-        path: /v1/trade
-        action: withdraw
-        tags:
-          - Collateral
-      - label: Transfer Collateral
-        method: POST
-        path: /v1/trade
-        action: transfer
-        tags:
-          - Collateral
-      - label: Get Balance Updates
-        method: POST
-        path: /v1/trade
-        action: getBalanceUpdates
-        tags:
-          - Collateral
-          - Balance
-      - label: Get Transfers
-        method: POST
-        path: /v1/trade
-        action: getTransfers
-        tags:
-          - Collateral
-      - label: Get Withdrawable Amounts
-        method: POST
-        path: /v1/trade
-        action: getWithdrawableAmounts
-        tags:
-          - Collateral
-      - label: Create Subaccount
-        method: POST
-        path: /v1/trade
-        action: createSubaccount
-        tags:
-          - Accounts
-      - label: Get SubAccount
-        method: POST
-        path: /v1/trade
-        action: getSubAccount
-        tags:
-          - Accounts
-      - label: Get SubAccounts
-        method: POST
-        path: /v1/trade
-        action: getSubAccounts
-        tags:
-          - Accounts
-      - label: Get SubAccount IDs
-        method: POST
-        path: /v1/trade
-        action: getSubAccountIds
-        tags:
-          - Accounts
-      - label: Get Delegated Signers
-        method: POST
-        path: /v1/trade
-        action: getDelegatedSigners
-        tags:
-          - Delegation
-      - label: Add Delegated Signer
-        method: POST
-        path: /v1/trade
-        action: addDelegatedSigner
-        tags:
-          - Delegation
-      - label: Remove Delegated Signer
-        method: POST
-        path: /v1/trade
-        action: removeDelegatedSigner
-        tags:
-          - Delegation
-      - label: Remove All Delegated Signers
-        method: POST
-        path: /v1/trade
-        action: removeAllDelegatedSigners
-        tags:
-          - Delegation
-      - label: Get Rate Limits
-        method: POST
-        path: /v1/trade
-        action: getRateLimits
-        tags:
-          - Rate Limits
-      - label: Get Performance History
-        method: POST
-        path: /v1/trade
-        action: getPerformanceHistory
-        tags:
-          - Analytics
-          - PnL
-      - label: Get Snaxpot Epoch Tickets
-        method: POST
-        path: /v1/trade
-        action: getSnaxpotEpochTickets
-        tags:
-          - Lottery
-          - Snaxpot
-
-  - name: Synthetix WebSocket Info API
-    description: >
-      Public WebSocket API for real-time Synthetix market data subscriptions
-      including live market prices, candles, and orderbook depth updates. No
-      authentication required. Supports heartbeat management for connection stability.
-    humanURL: https://developers.synthetix.io/websocket-api/info
-    baseURL: wss://papi.synthetix.io/v1/ws/info
-    tags:
-      - WebSocket
-      - Real-time
-      - Market Data
-      - Public
-      - Streaming
-    properties:
-      - type: Documentation
-        url: https://developers.synthetix.io/websocket-api/info
-    contact:
-      - FN: Synthetix Developer Docs
-        url: https://developers.synthetix.io/
-
-  - name: Synthetix WebSocket Trade API
-    description: >
-      Authenticated WebSocket API for real-time trading operations and account
-      event streaming on Synthetix. Supports live order management, position
-      updates, account activity subscriptions, and delegation management.
-      Requires EIP-712 authentication.
-    humanURL: https://developers.synthetix.io/websocket-api/trade
-    baseURL: wss://papi.synthetix.io/v1/ws/trade
-    tags:
-      - WebSocket
-      - Real-time
-      - Trading
-      - Authenticated
-      - Streaming
-    properties:
-      - type: Documentation
-        url: https://developers.synthetix.io/websocket-api/trade
-      - type: X-authentication
-        url: https://developers.synthetix.io/developer-resources/api/authentication
-    contact:
-      - FN: Synthetix Developer Docs
-        url: https://developers.synthetix.io/
-
-common:
+    '
+  humanURL: https://developers.synthetix.io/rest-api/info/market-data
+  baseURL: https://papi.synthetix.io/v1/info
+  tags:
+  - Market Data
+  - Public
+  - Prices
+  - Funding Rates
+  - Collateral
+  - Orderbook
+  properties:
+  - type: X-openapi
+    url: https://api.synthetix.io/docs/
   - type: Documentation
+    url: https://developers.synthetix.io/rest-api/info/market-data
+  - type: X-environments
+    url: https://developers.synthetix.io/environments
+  - url: graphql/synthetix-graphql.md
+    type: GraphQL
+  contact:
+  - FN: Synthetix Developer Docs
     url: https://developers.synthetix.io/
-  - type: PortalDocumentation
-    url: https://docs.synthetix.io/
-  - type: GithubOrg
-    url: https://github.com/Synthetixio
-  - type: X-python-sdk
-    url: https://synthetixio.github.io/python-sdk/
-  - type: Plans
-    url: https://synthetix.io/plans.html
-  - type: FinOps
-    url: https://synthetix.io/finops.html
-  - type: RateLimits
-    url: https://developers.synthetix.io/developer-resources/api/rate-limits
-  - type: X-discord
-    url: https://discord.gg/synthetix
-  - type: X-twitter
-    url: https://twitter.com/synthetix_io
-  - type: X-github
-    url: https://github.com/Synthetixio/synthetix-v3
-  - type: X-deposit-contract
-    url: https://etherscan.io/address/0xD62595c3c23B690BAEE0935e107A209Cb1Dbd37B
-  - type: X-authentication-docs
+  operations:
+  - label: Get Markets
+    method: POST
+    path: /v1/info
+    action: getMarkets
+    tags:
+    - Markets
+  - label: Get Market Prices
+    method: POST
+    path: /v1/info
+    action: getMarketPrices
+    tags:
+    - Prices
+  - label: Get Candles
+    method: POST
+    path: /v1/info
+    action: getCandles
+    tags:
+    - OHLCV
+    - Historical
+  - label: Get Funding Rate History
+    method: POST
+    path: /v1/info
+    action: getFundingRateHistory
+    tags:
+    - Funding Rates
+    - Historical
+  - label: Get Assets
+    method: POST
+    path: /v1/info
+    action: getAssets
+    tags:
+    - Assets
+  - label: Get Collaterals
+    method: POST
+    path: /v1/info
+    action: getCollaterals
+    tags:
+    - Collateral
+  - label: Get Tiers
+    method: POST
+    path: /v1/info
+    action: getTiers
+    tags:
+    - Fees
+    - Tiers
+  - label: Get Contracts
+    method: POST
+    path: /v1/info
+    action: getContracts
+    tags:
+    - Contracts
+    - Perpetuals
+  - label: Get Contract Specs
+    method: POST
+    path: /v1/info
+    action: getContractSpecs
+    tags:
+    - Contracts
+  - label: Get Orderbook
+    method: POST
+    path: /v1/info
+    action: getOrderbook
+    tags:
+    - Orderbook
+    - Depth
+  - label: Get Exchange Status
+    method: POST
+    path: /v1/info
+    action: getExchangeStatus
+    tags:
+    - Status
+  - label: Get Snaxpot Epoch
+    method: POST
+    path: /v1/info
+    action: getSnaxpotEpoch
+    tags:
+    - Lottery
+    - Snaxpot
+- name: Synthetix Trade API
+  description: 'Authenticated REST API for trading operations and account management
+    on the Synthetix perpetuals exchange. Supports order placement, cancellation,
+    position management, collateral operations, subaccount management, delegation,
+    referrals, and performance analytics. Requires EIP-712 cryptographic signatures
+    for authentication.
+
+    '
+  humanURL: https://developers.synthetix.io/rest-api/trade
+  baseURL: https://papi.synthetix.io/v1/trade
+  tags:
+  - Trading
+  - Authenticated
+  - Orders
+  - Positions
+  - Accounts
+  - Collateral
+  properties:
+  - type: Documentation
+    url: https://developers.synthetix.io/rest-api/trade
+  - type: X-authentication
     url: https://developers.synthetix.io/developer-resources/api/authentication
-  - type: X-error-handling
-    url: https://developers.synthetix.io/developer-resources/api/error-handling
+  - type: X-rate-limits
+    url: https://developers.synthetix.io/developer-resources/api/rate-limits
+  contact:
+  - FN: Synthetix Developer Docs
+    url: https://developers.synthetix.io/
+  operations:
+  - label: Place Orders
+    method: POST
+    path: /v1/trade
+    action: placeOrders
+    tags:
+    - Orders
+  - label: Modify Order
+    method: POST
+    path: /v1/trade
+    action: modifyOrder
+    tags:
+    - Orders
+  - label: Cancel Orders
+    method: POST
+    path: /v1/trade
+    action: cancelOrders
+    tags:
+    - Orders
+  - label: Cancel All Orders
+    method: POST
+    path: /v1/trade
+    action: cancelAllOrders
+    tags:
+    - Orders
+  - label: Schedule Cancel
+    method: POST
+    path: /v1/trade
+    action: scheduleCancel
+    tags:
+    - Orders
+  - label: Get Positions
+    method: POST
+    path: /v1/trade
+    action: getPositions
+    tags:
+    - Positions
+  - label: Get Open Orders
+    method: POST
+    path: /v1/trade
+    action: getOpenOrders
+    tags:
+    - Orders
+  - label: Get Order History
+    method: POST
+    path: /v1/trade
+    action: getOrderHistory
+    tags:
+    - Orders
+    - Historical
+  - label: Get Trades
+    method: POST
+    path: /v1/trade
+    action: getTrades
+    tags:
+    - Trades
+    - Historical
+  - label: Get Position History
+    method: POST
+    path: /v1/trade
+    action: getPositionHistory
+    tags:
+    - Positions
+    - Historical
+  - label: Get Funding Payments
+    method: POST
+    path: /v1/trade
+    action: getFundingPayments
+    tags:
+    - Funding
+  - label: Withdraw Collateral
+    method: POST
+    path: /v1/trade
+    action: withdraw
+    tags:
+    - Collateral
+  - label: Transfer Collateral
+    method: POST
+    path: /v1/trade
+    action: transfer
+    tags:
+    - Collateral
+  - label: Get Balance Updates
+    method: POST
+    path: /v1/trade
+    action: getBalanceUpdates
+    tags:
+    - Collateral
+    - Balance
+  - label: Get Transfers
+    method: POST
+    path: /v1/trade
+    action: getTransfers
+    tags:
+    - Collateral
+  - label: Get Withdrawable Amounts
+    method: POST
+    path: /v1/trade
+    action: getWithdrawableAmounts
+    tags:
+    - Collateral
+  - label: Create Subaccount
+    method: POST
+    path: /v1/trade
+    action: createSubaccount
+    tags:
+    - Accounts
+  - label: Get SubAccount
+    method: POST
+    path: /v1/trade
+    action: getSubAccount
+    tags:
+    - Accounts
+  - label: Get SubAccounts
+    method: POST
+    path: /v1/trade
+    action: getSubAccounts
+    tags:
+    - Accounts
+  - label: Get SubAccount IDs
+    method: POST
+    path: /v1/trade
+    action: getSubAccountIds
+    tags:
+    - Accounts
+  - label: Get Delegated Signers
+    method: POST
+    path: /v1/trade
+    action: getDelegatedSigners
+    tags:
+    - Delegation
+  - label: Add Delegated Signer
+    method: POST
+    path: /v1/trade
+    action: addDelegatedSigner
+    tags:
+    - Delegation
+  - label: Remove Delegated Signer
+    method: POST
+    path: /v1/trade
+    action: removeDelegatedSigner
+    tags:
+    - Delegation
+  - label: Remove All Delegated Signers
+    method: POST
+    path: /v1/trade
+    action: removeAllDelegatedSigners
+    tags:
+    - Delegation
+  - label: Get Rate Limits
+    method: POST
+    path: /v1/trade
+    action: getRateLimits
+    tags:
+    - Rate Limits
+  - label: Get Performance History
+    method: POST
+    path: /v1/trade
+    action: getPerformanceHistory
+    tags:
+    - Analytics
+    - PnL
+  - label: Get Snaxpot Epoch Tickets
+    method: POST
+    path: /v1/trade
+    action: getSnaxpotEpochTickets
+    tags:
+    - Lottery
+    - Snaxpot
+- name: Synthetix WebSocket Info API
+  description: 'Public WebSocket API for real-time Synthetix market data subscriptions
+    including live market prices, candles, and orderbook depth updates. No authentication
+    required. Supports heartbeat management for connection stability.
+
+    '
+  humanURL: https://developers.synthetix.io/websocket-api/info
+  baseURL: wss://papi.synthetix.io/v1/ws/info
+  tags:
+  - WebSocket
+  - Real-time
+  - Market Data
+  - Public
+  - Streaming
+  properties:
+  - type: Documentation
+    url: https://developers.synthetix.io/websocket-api/info
+  contact:
+  - FN: Synthetix Developer Docs
+    url: https://developers.synthetix.io/
+- name: Synthetix WebSocket Trade API
+  description: 'Authenticated WebSocket API for real-time trading operations and account
+    event streaming on Synthetix. Supports live order management, position updates,
+    account activity subscriptions, and delegation management. Requires EIP-712 authentication.
+
+    '
+  humanURL: https://developers.synthetix.io/websocket-api/trade
+  baseURL: wss://papi.synthetix.io/v1/ws/trade
+  tags:
+  - WebSocket
+  - Real-time
+  - Trading
+  - Authenticated
+  - Streaming
+  properties:
+  - type: Documentation
+    url: https://developers.synthetix.io/websocket-api/trade
+  - type: X-authentication
+    url: https://developers.synthetix.io/developer-resources/api/authentication
+  contact:
+  - FN: Synthetix Developer Docs
+    url: https://developers.synthetix.io/
+common:
+- type: Documentation
+  url: https://developers.synthetix.io/
+- type: PortalDocumentation
+  url: https://docs.synthetix.io/
+- type: GithubOrg
+  url: https://github.com/Synthetixio
+- type: X-python-sdk
+  url: https://synthetixio.github.io/python-sdk/
+- type: Plans
+  url: https://synthetix.io/plans.html
+- type: FinOps
+  url: https://synthetix.io/finops.html
+- type: RateLimits
+  url: https://developers.synthetix.io/developer-resources/api/rate-limits
+- type: X-discord
+  url: https://discord.gg/synthetix
+- type: X-twitter
+  url: https://twitter.com/synthetix_io
+- type: X-github
+  url: https://github.com/Synthetixio/synthetix-v3
+- type: X-deposit-contract
+  url: https://etherscan.io/address/0xD62595c3c23B690BAEE0935e107A209Cb1Dbd37B
+- type: X-authentication-docs
+  url: https://developers.synthetix.io/developer-resources/api/authentication
+- type: X-error-handling
+  url: https://developers.synthetix.io/developer-resources/api/error-handling
