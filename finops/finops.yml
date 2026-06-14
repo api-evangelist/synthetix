@@ -1,0 +1,98 @@
+name: Synthetix FinOps
+description: >
+  Synthetix trading fees are the primary cost consideration for API integrators.
+  There are no API subscription fees, monthly charges, or per-request billing.
+  Costs arise solely from trading activity — maker and taker fees deducted from
+  the trader's USDT collateral balance. Fees scale down with trading volume via
+  an automatic tier system based on 14-day rolling notional volume.
+documentation: https://developers.synthetix.io/developer-resources/api/fees
+
+feeModel: volume-based-tiered
+currency: USDT
+feeDeduction: collateral-balance
+calculationBase: notional-value
+
+formula: "Fee Amount = Trade Size × Price × Fee Rate"
+example:
+  description: "1 BTC purchased at $50,000 with 0.05% taker fee"
+  tradeSize: 1
+  price: 50000
+  feeRate: "0.05%"
+  feeAmount: "$25.00"
+
+tiers:
+  - tier: Regular User
+    minVolume14d: "$0"
+    makerFee: "0.020%"
+    takerFee: "0.050%"
+
+  - tier: Tier 1
+    minVolume14d: "$100,000"
+    makerFee: "0.020%"
+    takerFee: "0.050%"
+
+  - tier: Tier 2
+    minVolume14d: "$5,000,000"
+    makerFee: "0.016%"
+    takerFee: "0.040%"
+
+  - tier: Tier 3
+    minVolume14d: "$25,000,000"
+    makerFee: "0.014%"
+    takerFee: "0.035%"
+
+  - tier: Tier 4
+    minVolume14d: "$100,000,000"
+    makerFee: "0.012%"
+    takerFee: "0.032%"
+
+  - tier: Tier 5
+    minVolume14d: "$500,000,000"
+    makerFee: "0.008%"
+    takerFee: "0.025%"
+
+  - tier: Tier 6
+    minVolume14d: "$2,000,000,000"
+    makerFee: "0.003%"
+    takerFee: "0.020%"
+
+  - tier: Tier 7
+    minVolume14d: "$5,000,000,000"
+    makerFee: "0.000%"
+    takerFee: "0.017%"
+
+feeTypes:
+  - name: Maker Fee
+    description: >
+      Applied to orders that provide liquidity — limit orders resting on the
+      book and post-only orders before execution.
+    range: "0.000% – 0.020%"
+
+  - name: Taker Fee
+    description: >
+      Applied to orders that remove liquidity — market orders, immediately
+      filled limit orders, and triggered stop-loss or take-profit orders.
+    range: "0.017% – 0.050%"
+
+costOptimizationTips:
+  - Use limit (maker) orders where possible to benefit from lower maker fees
+  - Increase 14-day rolling volume to qualify for higher tiers and reduced rates
+  - Tier 7 offers zero maker fees for the highest-volume participants
+  - Batch trades within same market session to reduce per-trade overhead
+  - Monitor current tier via getTiers endpoint to track fee rates in real time
+
+noChargeItems:
+  - API access (REST and WebSocket)
+  - Account creation (permissionless via first deposit)
+  - Subaccount creation (within tier limits)
+  - Market data queries (Info API is fully public and free)
+  - Rate limit monitoring (getRateLimits endpoint)
+
+depositInfo:
+  description: >
+    Collateral is deposited directly to the Synthetix deposit smart contract
+    on Ethereum Mainnet. No custodial fees apply to deposits or withdrawals
+    beyond network gas costs.
+  contract: "0xD62595c3c23B690BAEE0935e107A209Cb1Dbd37B"
+  network: Ethereum Mainnet (Chain ID 1)
+  supportedCollateral: USDT (6 decimals)

@@ -1,0 +1,147 @@
+name: Synthetix API Rate Limits
+description: >
+  Synthetix uses a token bucket model for rate limiting. Each action consumes a
+  defined number of tokens, which refill over a 10-second rolling window. Two
+  independent limits apply: per-subaccount limits for authenticated trade actions
+  (which scale with fee tier), and per-IP limits that apply to all connections
+  from a given IP address.
+documentation: https://developers.synthetix.io/developer-resources/api/rate-limits
+model: token-bucket
+window: 10 seconds
+errorCode: 429
+errorMessage: RATE_LIMIT_EXCEEDED
+retryable: true
+retryStrategy: exponential-backoff
+
+limits:
+  - name: Per-IP Limit
+    description: >
+      Shared token budget across all connections from the same IP address.
+      Applies to all actions, both authenticated and public.
+    tokens: 10000
+    window: 10 seconds
+    scope: ip-address
+
+  - name: Regular User (tier_0) Subaccount Limit
+    description: Per-subaccount limit for authenticated trade actions at the default tier.
+    tokens: 1000
+    window: 10 seconds
+    scope: subaccount
+    tier: tier_0
+
+  - name: Tier 1 Subaccount Limit
+    tokens: 1200
+    window: 10 seconds
+    scope: subaccount
+    tier: tier_1
+
+  - name: Tier 2 Subaccount Limit
+    tokens: 1400
+    window: 10 seconds
+    scope: subaccount
+    tier: tier_2
+
+  - name: Tier 3 Subaccount Limit
+    tokens: 1600
+    window: 10 seconds
+    scope: subaccount
+    tier: tier_3
+
+  - name: Tier 4 Subaccount Limit
+    tokens: 1800
+    window: 10 seconds
+    scope: subaccount
+    tier: tier_4
+
+  - name: Tier 5 Subaccount Limit
+    tokens: 2000
+    window: 10 seconds
+    scope: subaccount
+    tier: tier_5
+
+  - name: Tier 6 Subaccount Limit
+    tokens: 2200
+    window: 10 seconds
+    scope: subaccount
+    tier: tier_6
+
+  - name: Tier 7 Subaccount Limit
+    tokens: 2500
+    window: 10 seconds
+    scope: subaccount
+    tier: tier_7
+
+  - name: Top Tier Subaccount Limit
+    tokens: 2500
+    window: 10 seconds
+    scope: subaccount
+    tier: top_tier
+
+  - name: Market Maker Subaccount Limit
+    tokens: 5000
+    window: 10 seconds
+    scope: subaccount
+    tier: market_maker
+
+tokenCosts:
+  - action: getExchangeStatus
+    cost: 1
+    type: info
+  - action: getMarkets
+    cost: 1
+    type: info
+  - action: getMarketPrices
+    cost: 1
+    type: info
+  - action: getAssets
+    cost: 1
+    type: info
+  - action: getCollaterals
+    cost: 1
+    type: info
+  - action: getTiers
+    cost: 1
+    type: info
+  - action: getContracts
+    cost: 1
+    type: info
+  - action: getContractSpecs
+    cost: 1
+    type: info
+  - action: getOrderbook
+    cost: 1
+    type: info
+  - action: getCandles
+    cost: 5
+    type: info
+  - action: getSubAccount
+    cost: 5
+    type: trade-read
+  - action: getSubAccounts
+    cost: 5
+    type: trade-read
+  - action: getPositions
+    cost: 5
+    type: trade-read
+  - action: getOpenOrders
+    cost: 5
+    type: trade-read
+  - action: cancelOrders
+    cost: 2
+    type: trade-write
+  - action: placeOrders
+    cost: "5 × number of orders"
+    type: trade-write
+  - action: getFundingRateHistory
+    cost: 1000
+    type: info
+  - action: addDelegatedSigner
+    cost: 100
+    type: trade-write
+
+bestPractices:
+  - Implement exponential backoff on HTTP 429 responses
+  - Space large batch requests to avoid burst token consumption
+  - Reduce request rates proactively after approaching limits
+  - Use getRateLimits endpoint to monitor real-time token consumption
+  - Batch order placements where possible to minimize token usage per order

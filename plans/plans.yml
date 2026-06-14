@@ -1,0 +1,135 @@
+name: Synthetix API Plans
+description: >
+  Synthetix operates a volume-based tier system for trading access and API rate
+  limits. Access to the public Info API is open to all without registration.
+  Authenticated Trade API access is permissionless — the first deposit to the
+  Synthetix deposit contract automatically creates a master account. Tiers are
+  assigned automatically based on 14-day rolling notional trading volume in USDT
+  across all markets.
+plans:
+  - name: Regular User
+    description: >
+      Default tier for all accounts with no minimum volume requirement. Provides
+      access to all public Info API endpoints and authenticated Trade API endpoints.
+    url: https://developers.synthetix.io/developer-resources/api/tiers
+    free: true
+    volumeRequirement: "$0"
+    features:
+      - All public Info API endpoints (no authentication)
+      - Authenticated Trade API access
+      - WebSocket real-time subscriptions
+      - 1 subaccount
+      - Max 10 open orders per market
+      - Max 50 total open orders across all markets
+      - Rate limit: 1,000 tokens per 10-second window (per subaccount)
+      - Per-IP rate limit: 10,000 tokens per 10-second window
+    fees:
+      maker: "0.020%"
+      taker: "0.050%"
+
+  - name: Tier 1
+    description: Volume-based tier for active traders with $100K+ 14-day rolling volume.
+    url: https://developers.synthetix.io/developer-resources/api/tiers
+    free: false
+    volumeRequirement: "$100,000"
+    features:
+      - All Regular User features
+      - 3 subaccounts
+      - Max 20 open orders per market
+      - Max 100 total open orders
+      - Rate limit: 1,200 tokens per 10-second window
+    fees:
+      maker: "0.020%"
+      taker: "0.050%"
+
+  - name: Tier 2
+    description: Volume-based tier for high-frequency traders with $5M+ 14-day rolling volume.
+    url: https://developers.synthetix.io/developer-resources/api/tiers
+    free: false
+    volumeRequirement: "$5,000,000"
+    features:
+      - All Tier 1 features
+      - 4 subaccounts
+      - Rate limit: 1,400 tokens per 10-second window
+    fees:
+      maker: "0.016%"
+      taker: "0.040%"
+
+  - name: Tier 3
+    description: Institutional tier for traders with $25M+ 14-day rolling volume.
+    url: https://developers.synthetix.io/developer-resources/api/tiers
+    free: false
+    volumeRequirement: "$25,000,000"
+    features:
+      - All Tier 2 features
+      - 5 subaccounts
+      - Rate limit: 1,600 tokens per 10-second window
+    fees:
+      maker: "0.014%"
+      taker: "0.035%"
+
+  - name: Tier 4
+    description: Advanced institutional tier for traders with $100M+ 14-day rolling volume.
+    url: https://developers.synthetix.io/developer-resources/api/tiers
+    free: false
+    volumeRequirement: "$100,000,000"
+    features:
+      - All Tier 3 features
+      - 7 subaccounts
+      - Rate limit: 1,800 tokens per 10-second window
+    fees:
+      maker: "0.012%"
+      taker: "0.032%"
+
+  - name: Tier 5
+    description: Elite tier for major trading firms with $500M+ 14-day rolling volume.
+    url: https://developers.synthetix.io/developer-resources/api/tiers
+    free: false
+    volumeRequirement: "$500,000,000"
+    features:
+      - All Tier 4 features
+      - 8 subaccounts
+      - Rate limit: 2,000 tokens per 10-second window
+    fees:
+      maker: "0.008%"
+      taker: "0.025%"
+
+  - name: Tier 6
+    description: Top-tier for major market participants with $2B+ 14-day rolling volume.
+    url: https://developers.synthetix.io/developer-resources/api/tiers
+    free: false
+    volumeRequirement: "$2,000,000,000"
+    features:
+      - All Tier 5 features
+      - 9 subaccounts
+      - Rate limit: 2,200 tokens per 10-second window
+    fees:
+      maker: "0.003%"
+      taker: "0.020%"
+
+  - name: Tier 7
+    description: Highest volume tier for the largest traders with $5B+ 14-day rolling volume.
+    url: https://developers.synthetix.io/developer-resources/api/tiers
+    free: false
+    volumeRequirement: "$5,000,000,000"
+    features:
+      - All Tier 6 features
+      - 10 subaccounts
+      - Max 200 open orders per market
+      - Max 1,000 total open orders
+      - Rate limit: 2,500 tokens per 10-second window
+    fees:
+      maker: "0.000%"
+      taker: "0.017%"
+
+  - name: Market Maker
+    description: >
+      Special tier for designated market makers by arrangement with Synthetix.
+      Provides the highest rate limits and preferential fee structures.
+    url: https://developers.synthetix.io/developer-resources/api/tiers
+    free: false
+    volumeRequirement: "By arrangement"
+    features:
+      - All Tier 7 features
+      - Rate limit: 5,000 tokens per 10-second window
+      - Preferential fee structure
