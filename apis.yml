@@ -378,7 +378,7 @@ common:
   url: https://developers.synthetix.io/
 - type: PortalDocumentation
   url: https://docs.synthetix.io/
-- type: GithubOrg
+- type: GitHubOrg
   url: https://github.com/Synthetixio
 - type: X-python-sdk
   url: https://synthetixio.github.io/python-sdk/
