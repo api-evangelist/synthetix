@@ -374,6 +374,8 @@ apis:
   - FN: Synthetix Developer Docs
     url: https://developers.synthetix.io/
 common:
+- type: AgenticAccess
+  url: agentic-access/synthetix-agentic-access.yml
 - type: DomainSecurity
   url: security/synthetix-domain-security.yml
 - type: Documentation
