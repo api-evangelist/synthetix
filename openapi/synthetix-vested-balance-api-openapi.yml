@@ -1,0 +1,53 @@
+openapi: 3.0.3
+info:
+  title: Synthetix escrowed-balance vested-balance API
+  description: Synthetix API documentation
+  version: 1.0.0
+servers:
+- url: https://api.synthetix.io
+  description: Production
+tags:
+- name: vested-balance
+paths:
+  /SynthetixEscrow/vested-balance:
+    get:
+      tags:
+      - vested-balance
+      description: Returns vested SNX balance from SynthetixEscrow contract.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  synthetixEscrowVestedBalance:
+                    type: string
+                    example: '723907.949250420000000002'
+                  OVMSynthetixEscrowVestedBalance:
+                    type: string
+                    example: '0'
+                  contracts:
+                    type: object
+                    properties:
+                      ethereum:
+                        type: object
+                        properties:
+                          synthetixEscrowVestedBalance:
+                            type: string
+                            example: '0x971e78e0C92392A4E39099835cF7E6aB535b2227'
+                      optimism:
+                        type: object
+                        properties:
+                          OVMSynthetixEscrowVestedBalance:
+                            type: string
+                            example: '0x06C6D063896ac733673c4474E44d9268f2402A55'
+        '403':
+          description: You have been banned by WAF.
+        '429':
+          description: Too many requests, you're being rate-limited.
+        5XX:
+          description: Service unavailable.
+        default:
+          description: Unexpected error.

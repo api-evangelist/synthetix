@@ -1,0 +1,161 @@
+openapi: 3.0.3
+info:
+  title: Synthetix escrowed-balance API
+  description: Synthetix API documentation
+  version: 1.0.0
+servers:
+- url: https://api.synthetix.io
+  description: Production
+tags:
+- name: escrowed-balance
+paths:
+  /LiquidatorRewards/balance:
+    get:
+      tags:
+      - escrowed-balance
+      description: Returns escrowed SNX balance from LiquidatorRewards contract.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  liquidatorRewardsBalance:
+                    type: string
+                    example: '2035169.82647455828232327'
+                  OVMLiquidatorRewardsBalance:
+                    type: string
+                    example: '322559.742435986940227453'
+                  contracts:
+                    type: object
+                    properties:
+                      ethereum:
+                        type: object
+                        properties:
+                          liquidatorRewardsBalance:
+                            type: string
+                            example: '0xf79603a71144e415730C1A6f57F366E4Ea962C00'
+                      optimism:
+                        type: object
+                        properties:
+                          OVMLiquidatorRewardsBalance:
+                            type: string
+                            example: '0xF4EebDD0704021eF2a6Bbe993fdf93030Cd784b4'
+        '403':
+          description: You have been banned by WAF.
+        '429':
+          description: Too many requests, you're being rate-limited.
+        5XX:
+          description: Service unavailable.
+        default:
+          description: Unexpected error.
+  /RewardEscrow/escrowed-balance:
+    get:
+      tags:
+      - escrowed-balance
+      description: Returns escrowed SNX balance from RewardEscrow contract.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  rewardEscrowEscrowedBalance:
+                    type: string
+                    example: '73763701.242877032135481494'
+                  contracts:
+                    type: object
+                    properties:
+                      ethereum:
+                        type: object
+                        properties:
+                          rewardEscrowEscrowedBalance:
+                            type: string
+                            example: '0xb671F2210B1F6621A2607EA63E6B2DC3e2464d1F'
+        '403':
+          description: You have been banned by WAF.
+        '429':
+          description: Too many requests, you're being rate-limited.
+        5XX:
+          description: Service unavailable.
+        default:
+          description: Unexpected error.
+  /RewardEscrowV2/escrowed-balance:
+    get:
+      tags:
+      - escrowed-balance
+      description: Returns escrowed SNX balance from RewardEscrowV2 contract.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  rewardEscrowV2EscrowedBalance:
+                    type: string
+                    example: '58794904.970146869484807159'
+                  OVMRewardEscrowV2EscrowedBalance:
+                    type: string
+                    example: '34299749.053100401709993579'
+                  contracts:
+                    type: object
+                    properties:
+                      ethereum:
+                        type: object
+                        properties:
+                          rewardEscrowV2EscrowedBalance:
+                            type: string
+                            example: '0xAc86855865CbF31c8f9FBB68C749AD5Bd72802e3'
+                      optimism:
+                        type: object
+                        properties:
+                          OVMRewardEscrowV2EscrowedBalance:
+                            type: string
+                            example: '0x6330D5F08f51057F36F46d6751eCDc0c65Ef7E9e'
+        '403':
+          description: You have been banned by WAF.
+        '429':
+          description: Too many requests, you're being rate-limited.
+        5XX:
+          description: Service unavailable.
+        default:
+          description: Unexpected error.
+  /SynthetixBridgeEscrow/balance:
+    get:
+      tags:
+      - escrowed-balance
+      description: Returns escrowed SNX balance from SynthetixBridgeEscrow contract.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  synthetixBridgeEscrowBalance:
+                    type: string
+                    example: '90615339.513130952531588288'
+                  contracts:
+                    type: object
+                    properties:
+                      ethereum:
+                        type: object
+                        properties:
+                          synthetixBridgeEscrowBalance:
+                            type: string
+                            example: '0x5Fd79D46EBA7F351fe49BFF9E87cdeA6c821eF9f'
+        '403':
+          description: You have been banned by WAF.
+        '429':
+          description: Too many requests, you're being rate-limited.
+        5XX:
+          description: Service unavailable.
+        default:
+          description: Unexpected error.

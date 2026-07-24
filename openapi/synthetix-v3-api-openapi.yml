@@ -1,0 +1,1483 @@
+openapi: 3.0.3
+info:
+  title: Synthetix escrowed-balance v3 API
+  description: Synthetix API documentation
+  version: 1.0.0
+servers:
+- url: https://api.synthetix.io
+  description: Production
+tags:
+- name: v3
+paths:
+  /v3/arbitrum/sc-pool-apy-all:
+    get:
+      tags:
+      - v3
+      description: Returns current APY for Spartan Council Pool on Arbitrum.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    timestamp:
+                      type: string
+                      format: date-time
+                      example: '2024-05-23T14:00:00.000Z'
+                    poolId:
+                      type: integer
+                      example: 1
+                    collateralType:
+                      type: string
+                      example: '0xc74ea762cf06c9151ce074e6a569a5945b6302e7'
+                    collateralValue:
+                      type: number
+                      example: 23075347.609146226
+                    debtAmount:
+                      type: number
+                      example: -38219.337186378914
+                    hourlyIssuance:
+                      type: number
+                      example: 500
+                    hourlyPnl:
+                      type: number
+                      example: 12954.05122107834
+                    cumulativePnl:
+                      type: number
+                      example: 43985.56313904079
+                    cumulativeIssuance:
+                      type: number
+                      example: 5766.225952661871
+                    rewardsUSD:
+                      type: number
+                      example: 325.5208333342384
+                    hourlyPnlPct:
+                      type: number
+                      example: 0.0005613805451816391
+                    hourlyRewardsPct:
+                      type: number
+                      example: 1.410686585736259e-05
+                    apr24h:
+                      type: number
+                      example: 0.45592422360763046
+                    apy24h:
+                      type: number
+                      example: 0.57761207594964
+                    apr7d:
+                      type: number
+                      example: 0.3960274742990924
+                    apy7d:
+                      type: number
+                      example: 0.4858968400315962
+                    apr28d:
+                      type: number
+                      example: 0.4384330174128003
+                    apy28d:
+                      type: number
+                      example: 0.550259050183527
+                    apr24hPnl:
+                      type: number
+                      example: 0.33291916703302443
+                    apy24hPnl:
+                      type: number
+                      example: 0.39502570410440424
+                    apr7dPnl:
+                      type: number
+                      example: 0.19503277851939582
+                    apy7dPnl:
+                      type: number
+                      example: 0.21534818462340294
+                    apr28dPnl:
+                      type: number
+                      example: 0.13876757264702413
+                    apy28dPnl:
+                      type: number
+                      example: 0.14885578045932418
+                    apr24hRewards:
+                      type: number
+                      example: 0.12300505657460604
+                    apy24hRewards:
+                      type: number
+                      example: 0.13088916273804313
+                    apr7dRewards:
+                      type: number
+                      example: 0.20099469577969659
+                    apy7dRewards:
+                      type: number
+                      example: 0.22261546761516451
+                    apr28dRewards:
+                      type: number
+                      example: 0.29966544476577617
+                    apy28dRewards:
+                      type: number
+                      example: 0.34940036452177975
+                    aprPnl:
+                      type: number
+                      example: 0.19503277851939582
+                    aprRewards:
+                      type: number
+                      example: 0.20099469577969659
+                    aprCombined:
+                      type: number
+                      example: 0.3960274742990924
+        '401':
+          description: Unauthorized.
+        '403':
+          description: You have been banned by WAF.
+        '429':
+          description: Too many requests, you're being rate-limited.
+        5XX:
+          description: Service unavailable.
+        default:
+          description: Unexpected error.
+  /v3/arbitrum/sc-pool-apy-history:
+    get:
+      tags:
+      - v3
+      description: Returns historical APY for Spartan Council Pool on Arbitrum.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    timestamp:
+                      type: string
+                      format: date-time
+                      example: '2024-05-23T14:00:00.000Z'
+                    poolId:
+                      type: integer
+                      example: 1
+                    collateralType:
+                      type: string
+                      example: '0xc74ea762cf06c9151ce074e6a569a5945b6302e7'
+                    collateralValue:
+                      type: number
+                      example: 23075347.609146226
+                    debtAmount:
+                      type: number
+                      example: -38219.337186378914
+                    hourlyIssuance:
+                      type: number
+                      example: 500
+                    hourlyPnl:
+                      type: number
+                      example: 12954.05122107834
+                    cumulativePnl:
+                      type: number
+                      example: 43985.56313904079
+                    cumulativeIssuance:
+                      type: number
+                      example: 5766.225952661871
+                    rewardsUSD:
+                      type: number
+                      example: 325.5208333342384
+                    hourlyPnlPct:
+                      type: number
+                      example: 0.0005613805451816391
+                    hourlyRewardsPct:
+                      type: number
+                      example: 1.410686585736259e-05
+                    apr24h:
+                      type: number
+                      example: 0.45592422360763046
+                    apy24h:
+                      type: number
+                      example: 0.57761207594964
+                    apr7d:
+                      type: number
+                      example: 0.3960274742990924
+                    apy7d:
+                      type: number
+                      example: 0.4858968400315962
+                    apr28d:
+                      type: number
+                      example: 0.4384330174128003
+                    apy28d:
+                      type: number
+                      example: 0.550259050183527
+                    apr24hPnl:
+                      type: number
+                      example: 0.33291916703302443
+                    apy24hPnl:
+                      type: number
+                      example: 0.39502570410440424
+                    apr7dPnl:
+                      type: number
+                      example: 0.19503277851939582
+                    apy7dPnl:
+                      type: number
+                      example: 0.21534818462340294
+                    apr28dPnl:
+                      type: number
+                      example: 0.13876757264702413
+                    apy28dPnl:
+                      type: number
+                      example: 0.14885578045932418
+                    apr24hRewards:
+                      type: number
+                      example: 0.12300505657460604
+                    apy24hRewards:
+                      type: number
+                      example: 0.13088916273804313
+                    apr7dRewards:
+                      type: number
+                      example: 0.20099469577969659
+                    apy7dRewards:
+                      type: number
+                      example: 0.22261546761516451
+                    apr28dRewards:
+                      type: number
+                      example: 0.29966544476577617
+                    apy28dRewards:
+                      type: number
+                      example: 0.34940036452177975
+                    aprPnl:
+                      type: number
+                      example: 0.19503277851939582
+                    aprRewards:
+                      type: number
+                      example: 0.20099469577969659
+                    aprCombined:
+                      type: number
+                      example: 0.3960274742990924
+        '401':
+          description: Unauthorized.
+        '403':
+          description: You have been banned by WAF.
+        '429':
+          description: Too many requests, you're being rate-limited.
+        5XX:
+          description: Service unavailable.
+        default:
+          description: Unexpected error.
+  /v3/arbitrum/sc-pool-apy:
+    get:
+      tags:
+      - v3
+      description: Returns current APY for Spartan Council Pool on Arbitrum.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    timestamp:
+                      type: string
+                      format: date-time
+                      example: '2024-05-23T14:00:00.000Z'
+                    poolId:
+                      type: integer
+                      example: 1
+                    collateralType:
+                      type: string
+                      example: '0xc74ea762cf06c9151ce074e6a569a5945b6302e7'
+                    collateralValue:
+                      type: number
+                      example: 23075347.609146226
+                    debtAmount:
+                      type: number
+                      example: -38219.337186378914
+                    hourlyIssuance:
+                      type: number
+                      example: 500
+                    hourlyPnl:
+                      type: number
+                      example: 12954.05122107834
+                    cumulativePnl:
+                      type: number
+                      example: 43985.56313904079
+                    cumulativeIssuance:
+                      type: number
+                      example: 5766.225952661871
+                    rewardsUSD:
+                      type: number
+                      example: 325.5208333342384
+                    hourlyPnlPct:
+                      type: number
+                      example: 0.0005613805451816391
+                    hourlyRewardsPct:
+                      type: number
+                      example: 1.410686585736259e-05
+                    apr24h:
+                      type: number
+                      example: 0.45592422360763046
+                    apy24h:
+                      type: number
+                      example: 0.57761207594964
+                    apr7d:
+                      type: number
+                      example: 0.3960274742990924
+                    apy7d:
+                      type: number
+                      example: 0.4858968400315962
+                    apr28d:
+                      type: number
+                      example: 0.4384330174128003
+                    apy28d:
+                      type: number
+                      example: 0.550259050183527
+                    apr24hPnl:
+                      type: number
+                      example: 0.33291916703302443
+                    apy24hPnl:
+                      type: number
+                      example: 0.39502570410440424
+                    apr7dPnl:
+                      type: number
+                      example: 0.19503277851939582
+                    apy7dPnl:
+                      type: number
+                      example: 0.21534818462340294
+                    apr28dPnl:
+                      type: number
+                      example: 0.13876757264702413
+                    apy28dPnl:
+                      type: number
+                      example: 0.14885578045932418
+                    apr24hRewards:
+                      type: number
+                      example: 0.12300505657460604
+                    apy24hRewards:
+                      type: number
+                      example: 0.13088916273804313
+                    apr7dRewards:
+                      type: number
+                      example: 0.20099469577969659
+                    apy7dRewards:
+                      type: number
+                      example: 0.22261546761516451
+                    apr28dRewards:
+                      type: number
+                      example: 0.29966544476577617
+                    apy28dRewards:
+                      type: number
+                      example: 0.34940036452177975
+                    aprPnl:
+                      type: number
+                      example: 0.19503277851939582
+                    aprRewards:
+                      type: number
+                      example: 0.20099469577969659
+                    aprCombined:
+                      type: number
+                      example: 0.3960274742990924
+        '401':
+          description: Unauthorized.
+        '403':
+          description: You have been banned by WAF.
+        '429':
+          description: Too many requests, you're being rate-limited.
+        5XX:
+          description: Service unavailable.
+        default:
+          description: Unexpected error.
+  /v3/base/issued-debt:
+    get:
+      tags:
+      - v3
+      summary: Fetch sum of usd value of issued debt each collateral.
+      description: Checks the cache first, and if not found, fetches issued debt data from Postgres for the given account ID.
+      parameters:
+      - in: query
+        name: accountId
+        required: true
+        schema:
+          type: string
+        description: The account ID to fetch the issued debt for.
+      responses:
+        '200':
+          description: Successfully fetched issued debt.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    collateral_type:
+                      type: string
+                      example: 0x..
+                    issuance:
+                      type: number
+                      example: 1
+        '400':
+          description: Invalid accountId provided.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Error message.
+        '500':
+          description: An internal server error occurred.
+  /v3/base/lt-leaderboard:
+    get:
+      tags:
+      - v3
+      description: Returns leverage token leaderboard on base.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    epoch_start:
+                      type: string
+                      format: date-time
+                      example: '2024-05-23T14:00:00.000Z'
+                    account:
+                      type: string
+                      example: '0xAa4a1d3c0d96B0D8C7AE4F71939D0Fa36bd97Aa7'
+                    total_fees_paid:
+                      type: string
+                      example: '954.605497900439850'
+                    fees_paid_pct:
+                      type: string
+                      example: '0.210334039122012452233641885'
+                    fees_rank:
+                      type: string
+                      example: '1'
+                    volume:
+                      type: string
+                      example: '1'
+                    volume_rank:
+                      type: string
+                      example: '1'
+                    volume_pct:
+                      type: string
+                      example: '1'
+        '401':
+          description: Unauthorized.
+        '403':
+          description: You have been banned by WAF.
+        '429':
+          description: Too many requests, you're being rate-limited.
+        5XX:
+          description: Service unavailable.
+        default:
+          description: Unexpected error.
+  /v3/base/lt-trades:
+    get:
+      tags:
+      - v3
+      description: Returns leverage token trades on base.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      example: 0131506856-000048-c2285
+                    block_number:
+                      type: number
+                      example: 131506856
+                    ts:
+                      type: string
+                      format: date-time
+                      example: '2025-02-03 19:54:49+00'
+                    transaction_hash:
+                      type: string
+                      example: 0x...
+                    contract:
+                      type: string
+                      example: 0x...
+                    event_name:
+                      type: string
+                      example: Redeemed
+                    account:
+                      type: string
+                      example: 0x
+                    token:
+                      type: string
+                      example: btc_long7
+                    leverage:
+                      type: number
+                      example: 1
+                    market:
+                      type: string
+                      example: BTC
+                    leveraged_token_amount:
+                      type: string
+                      example: '1'
+                    base_asset_amount:
+                      type: string
+                      example: '1'
+                    nominal_volume:
+                      type: string
+                      example: '1'
+                    notional_volume:
+                      type: string
+                      example: '1'
+                    token_price:
+                      type: string
+                      example: '1'
+                    total_supply:
+                      type: string
+                      example: '1'
+                    vault_tvl:
+                      type: string
+                      example: '1'
+                    vault_oi:
+                      type: string
+                      example: '1'
+        '401':
+          description: Unauthorized.
+        '403':
+          description: You have been banned by WAF.
+        '429':
+          description: Too many requests, you're being rate-limited.
+        5XX:
+          description: Service unavailable.
+        default:
+          description: Unexpected error.
+  /v3/base/rewards-claimed:
+    get:
+      tags:
+      - v3
+      summary: Fetch sum of usd value of claimed rewards for a given account ID for each collateral.
+      description: Checks the cache first, and if not found, fetches claimed rewards data from Postgres for the given account ID.
+      parameters:
+      - in: query
+        name: accountId
+        required: true
+        schema:
+          type: string
+        description: The account ID to fetch total usd value of claimed rewards for. Must be a positive integer.
+      responses:
+        '200':
+          description: Successfully fetched claimed rewards.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    collateral_type:
+                      type: string
+                      example: 0x..
+                    total_amount_usd:
+                      type: number
+                      example: 1
+        '400':
+          description: Invalid accountId provided.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Error message.
+        '500':
+          description: An internal server error occurred.
+  /v3/base/sc-pool-apy-all:
+    get:
+      tags:
+      - v3
+      description: Returns current APY for Spartan Council Pool on Arbitrum.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    timestamp:
+                      type: string
+                      format: date-time
+                      example: '2024-05-23T14:00:00.000Z'
+                    poolId:
+                      type: integer
+                      example: 1
+                    collateralType:
+                      type: string
+                      example: '0xc74ea762cf06c9151ce074e6a569a5945b6302e7'
+                    collateralValue:
+                      type: number
+                      example: 23075347.609146226
+                    debtAmount:
+                      type: number
+                      example: -38219.337186378914
+                    hourlyIssuance:
+                      type: number
+                      example: 500
+                    hourlyPnl:
+                      type: number
+                      example: 12954.05122107834
+                    cumulativePnl:
+                      type: number
+                      example: 43985.56313904079
+                    cumulativeIssuance:
+                      type: number
+                      example: 5766.225952661871
+                    rewardsUSD:
+                      type: number
+                      example: 325.5208333342384
+                    hourlyPnlPct:
+                      type: number
+                      example: 0.0005613805451816391
+                    hourlyRewardsPct:
+                      type: number
+                      example: 1.410686585736259e-05
+                    apr24h:
+                      type: number
+                      example: 0.45592422360763046
+                    apy24h:
+                      type: number
+                      example: 0.57761207594964
+                    apr7d:
+                      type: number
+                      example: 0.3960274742990924
+                    apy7d:
+                      type: number
+                      example: 0.4858968400315962
+                    apr28d:
+                      type: number
+                      example: 0.4384330174128003
+                    apy28d:
+                      type: number
+                      example: 0.550259050183527
+                    apr24hPnl:
+                      type: number
+                      example: 0.33291916703302443
+                    apy24hPnl:
+                      type: number
+                      example: 0.39502570410440424
+                    apr7dPnl:
+                      type: number
+                      example: 0.19503277851939582
+                    apy7dPnl:
+                      type: number
+                      example: 0.21534818462340294
+                    apr28dPnl:
+                      type: number
+                      example: 0.13876757264702413
+                    apy28dPnl:
+                      type: number
+                      example: 0.14885578045932418
+                    apr24hRewards:
+                      type: number
+                      example: 0.12300505657460604
+                    apy24hRewards:
+                      type: number
+                      example: 0.13088916273804313
+                    apr7dRewards:
+                      type: number
+                      example: 0.20099469577969659
+                    apy7dRewards:
+                      type: number
+                      example: 0.22261546761516451
+                    apr28dRewards:
+                      type: number
+                      example: 0.29966544476577617
+                    apy28dRewards:
+                      type: number
+                      example: 0.34940036452177975
+                    aprPnl:
+                      type: number
+                      example: 0.19503277851939582
+                    aprRewards:
+                      type: number
+                      example: 0.20099469577969659
+                    aprCombined:
+                      type: number
+                      example: 0.3960274742990924
+        '401':
+          description: Unauthorized.
+        '403':
+          description: You have been banned by WAF.
+        '429':
+          description: Too many requests, you're being rate-limited.
+        5XX:
+          description: Service unavailable.
+        default:
+          description: Unexpected error.
+  /v3/base/sc-pool-apy-history:
+    get:
+      tags:
+      - v3
+      description: Returns historical APY for Spartan Council Pool on Base.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    timestamp:
+                      type: string
+                      format: date-time
+                      example: '2024-05-23T14:00:00.000Z'
+                    poolId:
+                      type: integer
+                      example: 1
+                    collateralType:
+                      type: string
+                      example: '0xc74ea762cf06c9151ce074e6a569a5945b6302e7'
+                    collateralValue:
+                      type: number
+                      example: 23075347.609146226
+                    debtAmount:
+                      type: number
+                      example: -38219.337186378914
+                    hourlyIssuance:
+                      type: number
+                      example: 500
+                    hourlyPnl:
+                      type: number
+                      example: 12954.05122107834
+                    cumulativePnl:
+                      type: number
+                      example: 43985.56313904079
+                    cumulativeIssuance:
+                      type: number
+                      example: 5766.225952661871
+                    rewardsUSD:
+                      type: number
+                      example: 325.5208333342384
+                    hourlyPnlPct:
+                      type: number
+                      example: 0.0005613805451816391
+                    hourlyRewardsPct:
+                      type: number
+                      example: 1.410686585736259e-05
+                    apr24h:
+                      type: number
+                      example: 0.45592422360763046
+                    apy24h:
+                      type: number
+                      example: 0.57761207594964
+                    apr7d:
+                      type: number
+                      example: 0.3960274742990924
+                    apy7d:
+                      type: number
+                      example: 0.4858968400315962
+                    apr28d:
+                      type: number
+                      example: 0.4384330174128003
+                    apy28d:
+                      type: number
+                      example: 0.550259050183527
+                    apr24hPnl:
+                      type: number
+                      example: 0.33291916703302443
+                    apy24hPnl:
+                      type: number
+                      example: 0.39502570410440424
+                    apr7dPnl:
+                      type: number
+                      example: 0.19503277851939582
+                    apy7dPnl:
+                      type: number
+                      example: 0.21534818462340294
+                    apr28dPnl:
+                      type: number
+                      example: 0.13876757264702413
+                    apy28dPnl:
+                      type: number
+                      example: 0.14885578045932418
+                    apr24hRewards:
+                      type: number
+                      example: 0.12300505657460604
+                    apy24hRewards:
+                      type: number
+                      example: 0.13088916273804313
+                    apr7dRewards:
+                      type: number
+                      example: 0.20099469577969659
+                    apy7dRewards:
+                      type: number
+                      example: 0.22261546761516451
+                    apr28dRewards:
+                      type: number
+                      example: 0.29966544476577617
+                    apy28dRewards:
+                      type: number
+                      example: 0.34940036452177975
+                    aprPnl:
+                      type: number
+                      example: 0.19503277851939582
+                    aprRewards:
+                      type: number
+                      example: 0.20099469577969659
+                    aprCombined:
+                      type: number
+                      example: 0.3960274742990924
+        '401':
+          description: Unauthorized.
+        '403':
+          description: You have been banned by WAF.
+        '429':
+          description: Too many requests, you're being rate-limited.
+        5XX:
+          description: Service unavailable.
+        default:
+          description: Unexpected error.
+  /v3/base/sc-pool-apy:
+    get:
+      tags:
+      - v3
+      description: Returns current APY for Spartan Council Pool on Base.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  timestamp:
+                    type: string
+                    format: date-time
+                    example: '2024-05-23T14:00:00.000Z'
+                  poolId:
+                    type: integer
+                    example: 1
+                  collateralType:
+                    type: string
+                    example: '0xc74ea762cf06c9151ce074e6a569a5945b6302e7'
+                  collateralValue:
+                    type: number
+                    example: 23075347.609146226
+                  debtAmount:
+                    type: number
+                    example: -38219.337186378914
+                  hourlyIssuance:
+                    type: number
+                    example: 500
+                  hourlyPnl:
+                    type: number
+                    example: 12954.05122107834
+                  cumulativePnl:
+                    type: number
+                    example: 43985.56313904079
+                  cumulativeIssuance:
+                    type: number
+                    example: 5766.225952661871
+                  rewardsUSD:
+                    type: number
+                    example: 325.5208333342384
+                  hourlyPnlPct:
+                    type: number
+                    example: 0.0005613805451816391
+                  hourlyRewardsPct:
+                    type: number
+                    example: 1.410686585736259e-05
+                  apr24h:
+                    type: number
+                    example: 0.45592422360763046
+                  apy24h:
+                    type: number
+                    example: 0.57761207594964
+                  apr7d:
+                    type: number
+                    example: 0.3960274742990924
+                  apy7d:
+                    type: number
+                    example: 0.4858968400315962
+                  apr28d:
+                    type: number
+                    example: 0.4384330174128003
+                  apy28d:
+                    type: number
+                    example: 0.550259050183527
+                  apr24hPnl:
+                    type: number
+                    example: 0.33291916703302443
+                  apy24hPnl:
+                    type: number
+                    example: 0.39502570410440424
+                  apr7dPnl:
+                    type: number
+                    example: 0.19503277851939582
+                  apy7dPnl:
+                    type: number
+                    example: 0.21534818462340294
+                  apr28dPnl:
+                    type: number
+                    example: 0.13876757264702413
+                  apy28dPnl:
+                    type: number
+                    example: 0.14885578045932418
+                  apr24hRewards:
+                    type: number
+                    example: 0.12300505657460604
+                  apy24hRewards:
+                    type: number
+                    example: 0.13088916273804313
+                  apr7dRewards:
+                    type: number
+                    example: 0.20099469577969659
+                  apy7dRewards:
+                    type: number
+                    example: 0.22261546761516451
+                  apr28dRewards:
+                    type: number
+                    example: 0.29966544476577617
+                  apy28dRewards:
+                    type: number
+                    example: 0.34940036452177975
+                  aprPnl:
+                    type: number
+                    example: 0.19503277851939582
+                  aprRewards:
+                    type: number
+                    example: 0.20099469577969659
+                  aprCombined:
+                    type: number
+                    example: 0.3960274742990924
+        '401':
+          description: Unauthorized.
+        '403':
+          description: You have been banned by WAF.
+        '429':
+          description: Too many requests, you're being rate-limited.
+        5XX:
+          description: Service unavailable.
+        default:
+          description: Unexpected error.
+  /v3/base/snx-buyback:
+    get:
+      tags:
+      - v3
+      description: Returns SNX buyback details on Base.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    ts:
+                      type: number
+                      example: '1714003200000'
+                    snxAmount:
+                      type: number
+                      example: '202.23566293647977'
+                    usdAmount:
+                      type: number
+                      example: '588.0897936329317'
+                    cumulativeSnxAmount:
+                      type: number
+                      example: '24451.665275214178'
+                    cumulativeUsdAmount:
+                      type: number
+                      example: '95386.36662445917'
+        '401':
+          description: Unauthorized.
+        '403':
+          description: You have been banned by WAF.
+        '429':
+          description: Too many requests, you're being rate-limited.
+        5XX:
+          description: Service unavailable.
+        default:
+          description: Unexpected error.
+  /v3/mainnet/issued-debt:
+    get:
+      tags:
+      - v3
+      summary: Fetch sum of usd value of issued debt each collateral.
+      description: Checks the cache first, and if not found, fetches issued debt data from Postgres for the given account ID.
+      parameters:
+      - in: query
+        name: accountId
+        required: true
+        schema:
+          type: string
+        description: The account ID to fetch the issued debt for.
+      responses:
+        '200':
+          description: Successfully fetched issued debt.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    collateral_type:
+                      type: string
+                      example: 0x..
+                    issuance:
+                      type: number
+                      example: 1
+        '400':
+          description: Invalid accountId provided.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Error message.
+        '500':
+          description: An internal server error occurred.
+  /v3/mainnet/rewards-claimed:
+    get:
+      tags:
+      - v3
+      summary: Fetch sum of usd value of claimed rewards for a given account ID for each collateral.
+      description: Checks the cache first, and if not found, fetches claimed rewards data from Postgres for the given account ID.
+      parameters:
+      - in: query
+        name: accountId
+        required: true
+        schema:
+          type: string
+        description: The account ID to fetch total usd value of claimed rewards for. Must be a positive integer.
+      responses:
+        '200':
+          description: Successfully fetched claimed rewards.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    collateral_type:
+                      type: string
+                      example: 0x..
+                    total_amount_usd:
+                      type: number
+                      example: 1
+        '400':
+          description: Invalid accountId provided.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    description: Error message.
+        '500':
+          description: An internal server error occurred.
+  /v3/mainnet/sc-pool-apy-all:
+    get:
+      tags:
+      - v3
+      description: Returns current APY for Spartan Council Pool on Mainnet.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    timestamp:
+                      type: string
+                      format: date-time
+                      example: '2024-05-23T14:00:00.000Z'
+                    poolId:
+                      type: integer
+                      example: 1
+                    collateralType:
+                      type: string
+                      example: '0xc74ea762cf06c9151ce074e6a569a5945b6302e7'
+                    collateralValue:
+                      type: number
+                      example: 23075347.609146226
+                    debtAmount:
+                      type: number
+                      example: -38219.337186378914
+                    hourlyIssuance:
+                      type: number
+                      example: 500
+                    hourlyPnl:
+                      type: number
+                      example: 12954.05122107834
+                    cumulativePnl:
+                      type: number
+                      example: 43985.56313904079
+                    cumulativeIssuance:
+                      type: number
+                      example: 5766.225952661871
+                    rewardsUSD:
+                      type: number
+                      example: 325.5208333342384
+                    hourlyPnlPct:
+                      type: number
+                      example: 0.0005613805451816391
+                    hourlyRewardsPct:
+                      type: number
+                      example: 1.410686585736259e-05
+                    apr24h:
+                      type: number
+                      example: 0.45592422360763046
+                    apy24h:
+                      type: number
+                      example: 0.57761207594964
+                    apr7d:
+                      type: number
+                      example: 0.3960274742990924
+                    apy7d:
+                      type: number
+                      example: 0.4858968400315962
+                    apr28d:
+                      type: number
+                      example: 0.4384330174128003
+                    apy28d:
+                      type: number
+                      example: 0.550259050183527
+                    apr24hPnl:
+                      type: number
+                      example: 0.33291916703302443
+                    apy24hPnl:
+                      type: number
+                      example: 0.39502570410440424
+                    apr7dPnl:
+                      type: number
+                      example: 0.19503277851939582
+                    apy7dPnl:
+                      type: number
+                      example: 0.21534818462340294
+                    apr28dPnl:
+                      type: number
+                      example: 0.13876757264702413
+                    apy28dPnl:
+                      type: number
+                      example: 0.14885578045932418
+                    apr24hRewards:
+                      type: number
+                      example: 0.12300505657460604
+                    apy24hRewards:
+                      type: number
+                      example: 0.13088916273804313
+                    apr7dRewards:
+                      type: number
+                      example: 0.20099469577969659
+                    apy7dRewards:
+                      type: number
+                      example: 0.22261546761516451
+                    apr28dRewards:
+                      type: number
+                      example: 0.29966544476577617
+                    apy28dRewards:
+                      type: number
+                      example: 0.34940036452177975
+                    aprPnl:
+                      type: number
+                      example: 0.19503277851939582
+                    aprRewards:
+                      type: number
+                      example: 0.20099469577969659
+                    aprCombined:
+                      type: number
+                      example: 0.3960274742990924
+        '401':
+          description: Unauthorized.
+        '403':
+          description: You have been banned by WAF.
+        '429':
+          description: Too many requests, you're being rate-limited.
+        5XX:
+          description: Service unavailable.
+        default:
+          description: Unexpected error.
+  /v3/optimism/lt-leaderboard:
+    get:
+      tags:
+      - v3
+      description: Returns leverage token leaderboard on optimism.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    epoch_start:
+                      type: string
+                      format: date-time
+                      example: '2024-05-23T14:00:00.000Z'
+                    account:
+                      type: string
+                      example: '0xAa4a1d3c0d96B0D8C7AE4F71939D0Fa36bd97Aa7'
+                    total_fees_paid:
+                      type: string
+                      example: '954.605497900439850'
+                    fees_paid_pct:
+                      type: string
+                      example: '0.210334039122012452233641885'
+                    fees_rank:
+                      type: string
+                      example: '1'
+                    volume:
+                      type: string
+                      example: '1'
+                    volume_rank:
+                      type: string
+                      example: '1'
+                    volume_pct:
+                      type: string
+                      example: '1'
+        '401':
+          description: Unauthorized.
+        '403':
+          description: You have been banned by WAF.
+        '429':
+          description: Too many requests, you're being rate-limited.
+        5XX:
+          description: Service unavailable.
+        default:
+          description: Unexpected error.
+  /v3/optimism/lt-trades:
+    get:
+      tags:
+      - v3
+      description: Returns leverage token trades on optimism.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      example: 0131506856-000048-c2285
+                    block_number:
+                      type: number
+                      example: 131506856
+                    ts:
+                      type: string
+                      format: date-time
+                      example: '2025-02-03 19:54:49+00'
+                    transaction_hash:
+                      type: string
+                      example: 0x...
+                    contract:
+                      type: string
+                      example: 0x...
+                    event_name:
+                      type: string
+                      example: Redeemed
+                    account:
+                      type: string
+                      example: 0x
+                    token:
+                      type: string
+                      example: btc_long7
+                    leverage:
+                      type: number
+                      example: 1
+                    market:
+                      type: string
+                      example: BTC
+                    leveraged_token_amount:
+                      type: string
+                      example: '1'
+                    base_asset_amount:
+                      type: string
+                      example: '1'
+                    nominal_volume:
+                      type: string
+                      example: '1'
+                    notional_volume:
+                      type: string
+                      example: '1'
+                    token_price:
+                      type: string
+                      example: '1'
+                    total_supply:
+                      type: string
+                      example: '1'
+                    vault_tvl:
+                      type: string
+                      example: '1'
+                    vault_oi:
+                      type: string
+                      example: '1'
+        '401':
+          description: Unauthorized.
+        '403':
+          description: You have been banned by WAF.
+        '429':
+          description: Too many requests, you're being rate-limited.
+        5XX:
+          description: Service unavailable.
+        default:
+          description: Unexpected error.
+  /v3/top-asset:
+    get:
+      tags:
+      - v3
+      description: Returns the current top performing asset and it's APR and APY estimated from past 7 day performance.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  timestamp:
+                    type: string
+                    format: date-time
+                    example: '2024-05-23T14:00:00.000Z'
+                  chain:
+                    type: string
+                    example: base
+                  token_symbol:
+                    type: string
+                    example: USDC
+                  apr:
+                    type: number
+                    example: 0.123456789
+                  apy:
+                    type: number
+                    example: 0.123456789
+        '401':
+          description: Unauthorized.
+        '403':
+          description: You have been banned by WAF.
+        '429':
+          description: Too many requests, you're being rate-limited.
+        5XX:
+          description: Service unavailable.
+        default:
+          description: Unexpected error.
+  /v3/tvl:
+    get:
+      tags:
+      - v3
+      description: Returns total value locked across all Synthetix V3 deployments.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  timestamp:
+                    type: string
+                    format: date-time
+                    example: '2024-05-23T14:00:00.000Z'
+                  tvl:
+                    type: number
+                    example: 123456789.12345679
+        '401':
+          description: Unauthorized.
+        '403':
+          description: You have been banned by WAF.
+        '429':
+          description: Too many requests, you're being rate-limited.
+        5XX:
+          description: Service unavailable.
+        default:
+          description: Unexpected error.
+  /v3/tvl420:
+    get:
+      tags:
+      - v3
+      summary: Retrieve TVL data for a specific network and time span.
+      description: Fetches Total Value Locked (TVL) data from the cache or PostgreSQL for the specified blockchain network and time span.
+      parameters:
+      - in: query
+        name: network
+        required: true
+        schema:
+          type: string
+          enum:
+          - cross
+          - ethereum
+          - optimism
+        description: Name of the blockchain network (e.g., cross, ethereum, or optimism).
+      - in: query
+        name: span
+        required: true
+        schema:
+          type: string
+          enum:
+          - hourly
+          - daily
+          - weekly
+          - monthly
+        description: Time span for aggregations
+      responses:
+        '200':
+          description: Successfully retrieved TVL data.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    ts:
+                      type: string
+                      format: date-time
+                      description: The timestamp of the TVL data.
+                    value:
+                      type: number
+                      format: float
+                      description: The TVL value.
+        '400':
+          description: Invalid network or span specified in query parameters.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid network or span.
+        '500':
+          description: An unexpected error occurred when fetching data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Internal server error.

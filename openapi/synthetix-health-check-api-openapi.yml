@@ -1,0 +1,60 @@
+openapi: 3.0.3
+info:
+  title: Synthetix escrowed-balance health-check API
+  description: Synthetix API documentation
+  version: 1.0.0
+servers:
+- url: https://api.synthetix.io
+  description: Production
+tags:
+- name: health-check
+paths:
+  /health:
+    get:
+      tags:
+      - health-check
+      description: Returns API health status. Protected with basic auth. Only for internal use.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: OK
+        '401':
+          description: Unauthorized.
+        '403':
+          description: You have been banned by WAF.
+        '429':
+          description: Too many requests, you're being rate-limited.
+        5XX:
+          description: Service unavailable.
+        default:
+          description: Unexpected error.
+  /status:
+    get:
+      tags:
+      - health-check
+      description: Returns API status.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: OK
+        '401':
+          description: Unauthorized.
+        '403':
+          description: You have been banned by WAF.
+        '429':
+          description: Too many requests, you're being rate-limited.
+        5XX:
+          description: Service unavailable.
+        default:
+          description: Unexpected error.
