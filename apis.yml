@@ -7,6 +7,18 @@ description: 'Synthetix is a derivatives liquidity protocol built on Ethereum an
   with V3 markets across Optimism and Base.
 
   '
+accessModel:
+  pricing: unknown
+  onboarding: open
+  trial: false
+  try_now: false
+  public: true
+  label: Open access
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 image: https://synthetix.io/favicon.ico
 tags:
 - DeFi
@@ -30,11 +42,10 @@ specificationVersion: '0.19'
 modified: '2026-06-14'
 apis:
 - name: Synthetix Info API
-  description: 'Public REST API for accessing Synthetix market data including markets,
-    prices, candles, funding rates, collateral configurations, contract specs, orderbook
-    depth, exchange status, and fee tier information. No authentication required.
-
-    '
+  description: >
+    Public REST API for accessing Synthetix market data including markets, prices, candles, funding rates,
+    collateral configurations, contract specs, orderbook depth, exchange status, and fee tier information.
+    No authentication required.
   humanURL: https://developers.synthetix.io/rest-api/info/market-data
   baseURL: https://papi.synthetix.io/v1/info
   tags:
@@ -136,13 +147,10 @@ apis:
     - Lottery
     - Snaxpot
 - name: Synthetix Trade API
-  description: 'Authenticated REST API for trading operations and account management
-    on the Synthetix perpetuals exchange. Supports order placement, cancellation,
-    position management, collateral operations, subaccount management, delegation,
-    referrals, and performance analytics. Requires EIP-712 cryptographic signatures
-    for authentication.
-
-    '
+  description: >
+    Authenticated REST API for trading operations and account management on the Synthetix perpetuals exchange.
+    Supports order placement, cancellation, position management, collateral operations, subaccount management,
+    delegation, referrals, and performance analytics. Requires EIP-712 cryptographic signatures for authentication.
   humanURL: https://developers.synthetix.io/rest-api/trade
   baseURL: https://papi.synthetix.io/v1/trade
   tags:
@@ -332,11 +340,10 @@ apis:
     - Lottery
     - Snaxpot
 - name: Synthetix WebSocket Info API
-  description: 'Public WebSocket API for real-time Synthetix market data subscriptions
-    including live market prices, candles, and orderbook depth updates. No authentication
-    required. Supports heartbeat management for connection stability.
-
-    '
+  description: >
+    Public WebSocket API for real-time Synthetix market data subscriptions including live market prices,
+    candles, and orderbook depth updates. No authentication required. Supports heartbeat management for
+    connection stability.
   humanURL: https://developers.synthetix.io/websocket-api/info
   baseURL: wss://papi.synthetix.io/v1/ws/info
   tags:
@@ -352,11 +359,10 @@ apis:
   - FN: Synthetix Developer Docs
     url: https://developers.synthetix.io/
 - name: Synthetix WebSocket Trade API
-  description: 'Authenticated WebSocket API for real-time trading operations and account
-    event streaming on Synthetix. Supports live order management, position updates,
-    account activity subscriptions, and delegation management. Requires EIP-712 authentication.
-
-    '
+  description: >
+    Authenticated WebSocket API for real-time trading operations and account event streaming on Synthetix.
+    Supports live order management, position updates, account activity subscriptions, and delegation management.
+    Requires EIP-712 authentication.
   humanURL: https://developers.synthetix.io/websocket-api/trade
   baseURL: wss://papi.synthetix.io/v1/ws/trade
   tags:
@@ -373,6 +379,76 @@ apis:
   contact:
   - FN: Synthetix Developer Docs
     url: https://developers.synthetix.io/
+- aid: synthetix:synthetix-escrowed-balance-api
+  name: Synthetix escrowed-balance API
+  description: The escrowed-balance API from Synthetix — 4 operation(s) for escrowed-balance.
+  humanURL: https://developers.synthetix.io/rest-api/info/market-data
+  baseURL: https://papi.synthetix.io/v1/info
+  tags:
+  - escrowed-balance
+  properties:
+  - type: OpenAPI
+    url: openapi/synthetix-escrowed-balance-api-openapi.yml
+- aid: synthetix:synthetix-health-check-api
+  name: Synthetix health-check API
+  description: The health-check API from Synthetix — 2 operation(s) for health-check.
+  humanURL: https://developers.synthetix.io/rest-api/info/market-data
+  baseURL: https://papi.synthetix.io/v1/info
+  tags:
+  - health-check
+  properties:
+  - type: OpenAPI
+    url: openapi/synthetix-health-check-api-openapi.yml
+- aid: synthetix:synthetix-staking-api
+  name: Synthetix staking API
+  description: The staking API from Synthetix — 2 operation(s) for staking.
+  humanURL: https://developers.synthetix.io/rest-api/info/market-data
+  baseURL: https://papi.synthetix.io/v1/info
+  tags:
+  - staking
+  properties:
+  - type: OpenAPI
+    url: openapi/synthetix-staking-api-openapi.yml
+- aid: synthetix:synthetix-stats-api
+  name: Synthetix stats API
+  description: The stats API from Synthetix — 1 operation(s) for stats.
+  humanURL: https://developers.synthetix.io/rest-api/info/market-data
+  baseURL: https://papi.synthetix.io/v1/info
+  tags:
+  - stats
+  properties:
+  - type: OpenAPI
+    url: openapi/synthetix-stats-api-openapi.yml
+- aid: synthetix:synthetix-supply-api
+  name: Synthetix supply API
+  description: The supply API from Synthetix — 2 operation(s) for supply.
+  humanURL: https://developers.synthetix.io/rest-api/info/market-data
+  baseURL: https://papi.synthetix.io/v1/info
+  tags:
+  - supply
+  properties:
+  - type: OpenAPI
+    url: openapi/synthetix-supply-api-openapi.yml
+- aid: synthetix:synthetix-v3-api
+  name: Synthetix v3 API
+  description: The v3 API from Synthetix — 19 operation(s) for v3.
+  humanURL: https://developers.synthetix.io/rest-api/info/market-data
+  baseURL: https://papi.synthetix.io/v1/info
+  tags:
+  - v3
+  properties:
+  - type: OpenAPI
+    url: openapi/synthetix-v3-api-openapi.yml
+- aid: synthetix:synthetix-vested-balance-api
+  name: Synthetix vested-balance API
+  description: The vested-balance API from Synthetix — 1 operation(s) for vested-balance.
+  humanURL: https://developers.synthetix.io/rest-api/info/market-data
+  baseURL: https://papi.synthetix.io/v1/info
+  tags:
+  - vested-balance
+  properties:
+  - type: OpenAPI
+    url: openapi/synthetix-vested-balance-api-openapi.yml
 common:
 - type: AgenticAccess
   url: agentic-access/synthetix-agentic-access.yml
