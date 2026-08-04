@@ -1,0 +1,3062 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Synthetix API",
+    "description": "Synthetix API documentation",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.synthetix.io",
+      "description": "Production"
+    }
+  ],
+  "paths": {
+    "/circulating-supply": {
+      "get": {
+        "tags": [
+          "supply"
+        ],
+        "description": "Returns combined SNX circulating supply from L1 and L2.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "circulatingSupply": {
+                      "type": "string",
+                      "example": "141926691.344308997791851826"
+                    },
+                    "totalSupply": {
+                      "type": "string",
+                      "example": "309509422.088773603337882496"
+                    },
+                    "synthetixEscrowVestedBalance": {
+                      "type": "string",
+                      "example": "723907.949250420000000002"
+                    },
+                    "rewardEscrowEscrowedBalance": {
+                      "type": "string",
+                      "example": "73763701.242877032135481494"
+                    },
+                    "rewardEscrowV2EscrowedBalance": {
+                      "type": "string",
+                      "example": "58795426.272404595327975783"
+                    },
+                    "liquidatorRewardsBalance": {
+                      "type": "string",
+                      "example": "2035169.82647455828232327"
+                    },
+                    "synthetixBridgeEscrowBalance": {
+                      "type": "string",
+                      "example": "90615339.513130952531588288"
+                    },
+                    "OVMTotalSupply": {
+                      "type": "string",
+                      "example": "89132014.499559654122877079"
+                    },
+                    "OVMSynthetixEscrowVestedBalance": {
+                      "type": "string",
+                      "example": "0"
+                    },
+                    "OVMRewardEscrowV2EscrowedBalance": {
+                      "type": "string",
+                      "example": "34299695.279932558082573391"
+                    },
+                    "OVMLiquidatorRewardsBalance": {
+                      "type": "string",
+                      "example": "322414.5006437149942302"
+                    },
+                    "contracts": {
+                      "type": "object",
+                      "properties": {
+                        "ethereum": {
+                          "type": "object",
+                          "properties": {
+                            "totalSupply": {
+                              "type": "string",
+                              "example": "0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F"
+                            },
+                            "synthetixEscrowVestedBalance": {
+                              "type": "string",
+                              "example": "0x971e78e0C92392A4E39099835cF7E6aB535b2227"
+                            },
+                            "rewardEscrowEscrowedBalance": {
+                              "type": "string",
+                              "example": "0xb671F2210B1F6621A2607EA63E6B2DC3e2464d1F"
+                            },
+                            "rewardEscrowV2EscrowedBalance": {
+                              "type": "string",
+                              "example": "0xAc86855865CbF31c8f9FBB68C749AD5Bd72802e3"
+                            },
+                            "liquidatorRewardsBalance": {
+                              "type": "string",
+                              "example": "0xf79603a71144e415730C1A6f57F366E4Ea962C00"
+                            },
+                            "synthetixBridgeEscrowBalance": {
+                              "type": "string",
+                              "example": "0x5Fd79D46EBA7F351fe49BFF9E87cdeA6c821eF9f"
+                            }
+                          }
+                        },
+                        "optimism": {
+                          "type": "object",
+                          "properties": {
+                            "OVMTotalSupply": {
+                              "type": "string",
+                              "example": "0x8700dAec35aF8Ff88c16BdF0418774CB3D7599B4"
+                            },
+                            "OVMSynthetixEscrowVestedBalance": {
+                              "type": "string",
+                              "example": "0x06C6D063896ac733673c4474E44d9268f2402A55"
+                            },
+                            "OVMRewardEscrowV2EscrowedBalance": {
+                              "type": "string",
+                              "example": "0x6330D5F08f51057F36F46d6751eCDc0c65Ef7E9e"
+                            },
+                            "OVMLiquidatorRewardsBalance": {
+                              "type": "string",
+                              "example": "0xF4EebDD0704021eF2a6Bbe993fdf93030Cd784b4"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/debt-pool-comp": {
+      "get": {
+        "parameters": [
+          {
+            "in": "query",
+            "name": "key",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "sAAVE",
+                "sADA",
+                "sAPE",
+                "sAUD",
+                "sAVAX",
+                "sBNB",
+                "sBTC",
+                "sCHF",
+                "sDOGE",
+                "sDOT",
+                "sDYDX",
+                "sDebtRatio",
+                "sETH",
+                "sETHBTC",
+                "sEUR",
+                "sGBP",
+                "sINR",
+                "sJPY",
+                "sKRW",
+                "sLINK",
+                "sMATIC",
+                "sOP",
+                "sSOL",
+                "sUNI",
+                "sUSD",
+                "sXAG",
+                "sXAU",
+                "sXMR"
+              ]
+            },
+            "description": "(optional) The asset name for which return data for."
+          },
+          {
+            "in": "query",
+            "name": "net",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "mainnet",
+                "optimism"
+              ]
+            },
+            "description": "(optional) The asset name for which return data for."
+          }
+        ],
+        "tags": [
+          "staking"
+        ],
+        "description": "Returns outstanding composition of Synthetix debt pool. If `key` query parameter is not provided it returns an array of objects (all assets). If `key` query parameter is provided it returns an object (with requested asset). If `net` query parameter is not provided it returns combined data for both networks. If `net` query parameter is provided it returns data for requested network.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "currencyKey": {
+                            "type": "string",
+                            "example": "sETH"
+                          },
+                          "supply": {
+                            "type": "number",
+                            "example": "25753.424162863263"
+                          },
+                          "cap": {
+                            "type": "number",
+                            "example": "31454739.51287476"
+                          },
+                          "loans_ccy": {
+                            "type": "number",
+                            "example": "2954.629312098541"
+                          },
+                          "shorts_ccy": {
+                            "type": "number",
+                            "example": "614.1142234519882"
+                          },
+                          "wrappers_ccy": {
+                            "type": "number",
+                            "example": "12328.443894605662"
+                          },
+                          "futures_skew_ccy": {
+                            "type": "number",
+                            "example": "-47.47796708610887"
+                          },
+                          "futures_debt_usd": {
+                            "type": "number",
+                            "example": "942036.5619142533"
+                          },
+                          "perps_skew_ccy": {
+                            "type": "number",
+                            "example": "351.6988574973502"
+                          },
+                          "perps_debt_usd": {
+                            "type": "number",
+                            "example": "26715.23431427603"
+                          },
+                          "eth_wrapper_ccy_legacy": {
+                            "type": "number",
+                            "example": "0"
+                          },
+                          "debt_in_usd": {
+                            "type": "number",
+                            "example": "13007251.112776328"
+                          },
+                          "position_in_usd": {
+                            "type": "number",
+                            "example": "12410007.783500198"
+                          },
+                          "position_in_ccy": {
+                            "type": "number",
+                            "example": "10160.457623118315"
+                          },
+                          "price": {
+                            "type": "number",
+                            "example": "1221.18"
+                          },
+                          "debt_in_percent": {
+                            "type": "number",
+                            "example": "10.37"
+                          },
+                          "user_debt_hedge_in_usd": {
+                            "type": "number",
+                            "example": "14.27"
+                          },
+                          "position_type": {
+                            "type": "string",
+                            "example": "long"
+                          },
+                          "user_debt_hedge_with_correlation_in_usd": {
+                            "type": "number",
+                            "example": "23.518795444167843"
+                          },
+                          "timestamp": {
+                            "type": "number",
+                            "example": "1671833711"
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "currencyKey": {
+                          "type": "string",
+                          "example": "sETH"
+                        },
+                        "supply": {
+                          "type": "number",
+                          "example": "25753.424162863263"
+                        },
+                        "cap": {
+                          "type": "number",
+                          "example": "31454739.51287476"
+                        },
+                        "loans_ccy": {
+                          "type": "number",
+                          "example": "2954.629312098541"
+                        },
+                        "shorts_ccy": {
+                          "type": "number",
+                          "example": "614.1142234519882"
+                        },
+                        "wrappers_ccy": {
+                          "type": "number",
+                          "example": "12328.443894605662"
+                        },
+                        "futures_skew_ccy": {
+                          "type": "number",
+                          "example": "-47.47796708610887"
+                        },
+                        "futures_debt_usd": {
+                          "type": "number",
+                          "example": "942036.5619142533"
+                        },
+                        "perps_skew_ccy": {
+                          "type": "number",
+                          "example": "351.6988574973502"
+                        },
+                        "perps_debt_usd": {
+                          "type": "number",
+                          "example": "26715.23431427603"
+                        },
+                        "eth_wrapper_ccy_legacy": {
+                          "type": "number",
+                          "example": "0"
+                        },
+                        "debt_in_usd": {
+                          "type": "number",
+                          "example": "13007251.112776328"
+                        },
+                        "position_in_usd": {
+                          "type": "number",
+                          "example": "12410007.783500198"
+                        },
+                        "position_in_ccy": {
+                          "type": "number",
+                          "example": "10160.457623118315"
+                        },
+                        "price": {
+                          "type": "number",
+                          "example": "1221.18"
+                        },
+                        "debt_in_percent": {
+                          "type": "number",
+                          "example": "10.37"
+                        },
+                        "user_debt_hedge_in_usd": {
+                          "type": "number",
+                          "example": "14.27"
+                        },
+                        "position_type": {
+                          "type": "string",
+                          "example": "long"
+                        },
+                        "user_debt_hedge_with_correlation_in_usd": {
+                          "type": "number",
+                          "example": "23.518795444167843"
+                        },
+                        "timestamp": {
+                          "type": "number",
+                          "example": "1671833711"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized."
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "tags": [
+          "health-check"
+        ],
+        "description": "Returns API health status. Protected with basic auth. Only for internal use.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "example": "OK"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized."
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/staking-ratio": {
+      "get": {
+        "tags": [
+          "staking"
+        ],
+        "description": "Returns SNX staking ratio between L1 and L2.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "systemStakingPercent": {
+                      "type": "number",
+                      "example": "0.7136614182989093"
+                    },
+                    "timestamp": {
+                      "type": "number",
+                      "example": "1671822729"
+                    },
+                    "stakedSnx": {
+                      "type": "object",
+                      "properties": {
+                        "ethereum": {
+                          "type": "number",
+                          "example": "143369770.98409882"
+                        },
+                        "optimism": {
+                          "type": "number",
+                          "example": "77990791.09047478"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized."
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/status": {
+      "get": {
+        "tags": [
+          "health-check"
+        ],
+        "description": "Returns API status.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "example": "OK"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized."
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/total-supply": {
+      "get": {
+        "tags": [
+          "supply"
+        ],
+        "description": "Returns SNX total supply for L1 and L2.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "totalSupply": {
+                      "type": "string",
+                      "example": "309509422.088773603337882496"
+                    },
+                    "OVMTotalSupply": {
+                      "type": "string",
+                      "example": "89132014.499559654122877079"
+                    },
+                    "contracts": {
+                      "type": "object",
+                      "properties": {
+                        "ethereum": {
+                          "type": "object",
+                          "properties": {
+                            "totalSupply": {
+                              "type": "string",
+                              "example": "0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F"
+                            }
+                          }
+                        },
+                        "optimism": {
+                          "type": "object",
+                          "properties": {
+                            "OVMTotalSupply": {
+                              "type": "string",
+                              "example": "0x8700dAec35aF8Ff88c16BdF0418774CB3D7599B4"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/LiquidatorRewards/balance": {
+      "get": {
+        "tags": [
+          "escrowed-balance"
+        ],
+        "description": "Returns escrowed SNX balance from LiquidatorRewards contract.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "liquidatorRewardsBalance": {
+                      "type": "string",
+                      "example": "2035169.82647455828232327"
+                    },
+                    "OVMLiquidatorRewardsBalance": {
+                      "type": "string",
+                      "example": "322559.742435986940227453"
+                    },
+                    "contracts": {
+                      "type": "object",
+                      "properties": {
+                        "ethereum": {
+                          "type": "object",
+                          "properties": {
+                            "liquidatorRewardsBalance": {
+                              "type": "string",
+                              "example": "0xf79603a71144e415730C1A6f57F366E4Ea962C00"
+                            }
+                          }
+                        },
+                        "optimism": {
+                          "type": "object",
+                          "properties": {
+                            "OVMLiquidatorRewardsBalance": {
+                              "type": "string",
+                              "example": "0xF4EebDD0704021eF2a6Bbe993fdf93030Cd784b4"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/RewardEscrow/escrowed-balance": {
+      "get": {
+        "tags": [
+          "escrowed-balance"
+        ],
+        "description": "Returns escrowed SNX balance from RewardEscrow contract.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "rewardEscrowEscrowedBalance": {
+                      "type": "string",
+                      "example": "73763701.242877032135481494"
+                    },
+                    "contracts": {
+                      "type": "object",
+                      "properties": {
+                        "ethereum": {
+                          "type": "object",
+                          "properties": {
+                            "rewardEscrowEscrowedBalance": {
+                              "type": "string",
+                              "example": "0xb671F2210B1F6621A2607EA63E6B2DC3e2464d1F"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/RewardEscrowV2/escrowed-balance": {
+      "get": {
+        "tags": [
+          "escrowed-balance"
+        ],
+        "description": "Returns escrowed SNX balance from RewardEscrowV2 contract.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "rewardEscrowV2EscrowedBalance": {
+                      "type": "string",
+                      "example": "58794904.970146869484807159"
+                    },
+                    "OVMRewardEscrowV2EscrowedBalance": {
+                      "type": "string",
+                      "example": "34299749.053100401709993579"
+                    },
+                    "contracts": {
+                      "type": "object",
+                      "properties": {
+                        "ethereum": {
+                          "type": "object",
+                          "properties": {
+                            "rewardEscrowV2EscrowedBalance": {
+                              "type": "string",
+                              "example": "0xAc86855865CbF31c8f9FBB68C749AD5Bd72802e3"
+                            }
+                          }
+                        },
+                        "optimism": {
+                          "type": "object",
+                          "properties": {
+                            "OVMRewardEscrowV2EscrowedBalance": {
+                              "type": "string",
+                              "example": "0x6330D5F08f51057F36F46d6751eCDc0c65Ef7E9e"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/stats/perps-volume": {
+      "get": {
+        "tags": [
+          "stats"
+        ],
+        "description": "Returns total volume figures across all perps deployments.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "timestamp": {
+                      "type": "string",
+                      "format": "date-time",
+                      "example": "2024-05-23T14:00:00.000Z"
+                    },
+                    "volume_7d": {
+                      "type": "number",
+                      "example": 123456789.12345679
+                    },
+                    "volume_24h": {
+                      "type": "number",
+                      "example": 12345678.12345679
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized."
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/SynthetixBridgeEscrow/balance": {
+      "get": {
+        "tags": [
+          "escrowed-balance"
+        ],
+        "description": "Returns escrowed SNX balance from SynthetixBridgeEscrow contract.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "synthetixBridgeEscrowBalance": {
+                      "type": "string",
+                      "example": "90615339.513130952531588288"
+                    },
+                    "contracts": {
+                      "type": "object",
+                      "properties": {
+                        "ethereum": {
+                          "type": "object",
+                          "properties": {
+                            "synthetixBridgeEscrowBalance": {
+                              "type": "string",
+                              "example": "0x5Fd79D46EBA7F351fe49BFF9E87cdeA6c821eF9f"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/SynthetixEscrow/vested-balance": {
+      "get": {
+        "tags": [
+          "vested-balance"
+        ],
+        "description": "Returns vested SNX balance from SynthetixEscrow contract.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "synthetixEscrowVestedBalance": {
+                      "type": "string",
+                      "example": "723907.949250420000000002"
+                    },
+                    "OVMSynthetixEscrowVestedBalance": {
+                      "type": "string",
+                      "example": "0"
+                    },
+                    "contracts": {
+                      "type": "object",
+                      "properties": {
+                        "ethereum": {
+                          "type": "object",
+                          "properties": {
+                            "synthetixEscrowVestedBalance": {
+                              "type": "string",
+                              "example": "0x971e78e0C92392A4E39099835cF7E6aB535b2227"
+                            }
+                          }
+                        },
+                        "optimism": {
+                          "type": "object",
+                          "properties": {
+                            "OVMSynthetixEscrowVestedBalance": {
+                              "type": "string",
+                              "example": "0x06C6D063896ac733673c4474E44d9268f2402A55"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/v3/arbitrum/sc-pool-apy-all": {
+      "get": {
+        "tags": [
+          "v3"
+        ],
+        "description": "Returns current APY for Spartan Council Pool on Arbitrum.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "timestamp": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-05-23T14:00:00.000Z"
+                      },
+                      "poolId": {
+                        "type": "integer",
+                        "example": 1
+                      },
+                      "collateralType": {
+                        "type": "string",
+                        "example": "0xc74ea762cf06c9151ce074e6a569a5945b6302e7"
+                      },
+                      "collateralValue": {
+                        "type": "number",
+                        "example": 23075347.609146226
+                      },
+                      "debtAmount": {
+                        "type": "number",
+                        "example": -38219.337186378914
+                      },
+                      "hourlyIssuance": {
+                        "type": "number",
+                        "example": 500
+                      },
+                      "hourlyPnl": {
+                        "type": "number",
+                        "example": 12954.05122107834
+                      },
+                      "cumulativePnl": {
+                        "type": "number",
+                        "example": 43985.56313904079
+                      },
+                      "cumulativeIssuance": {
+                        "type": "number",
+                        "example": 5766.225952661871
+                      },
+                      "rewardsUSD": {
+                        "type": "number",
+                        "example": 325.5208333342384
+                      },
+                      "hourlyPnlPct": {
+                        "type": "number",
+                        "example": 0.0005613805451816391
+                      },
+                      "hourlyRewardsPct": {
+                        "type": "number",
+                        "example": 0.00001410686585736259
+                      },
+                      "apr24h": {
+                        "type": "number",
+                        "example": 0.45592422360763046
+                      },
+                      "apy24h": {
+                        "type": "number",
+                        "example": 0.57761207594964
+                      },
+                      "apr7d": {
+                        "type": "number",
+                        "example": 0.3960274742990924
+                      },
+                      "apy7d": {
+                        "type": "number",
+                        "example": 0.4858968400315962
+                      },
+                      "apr28d": {
+                        "type": "number",
+                        "example": 0.4384330174128003
+                      },
+                      "apy28d": {
+                        "type": "number",
+                        "example": 0.550259050183527
+                      },
+                      "apr24hPnl": {
+                        "type": "number",
+                        "example": 0.33291916703302443
+                      },
+                      "apy24hPnl": {
+                        "type": "number",
+                        "example": 0.39502570410440424
+                      },
+                      "apr7dPnl": {
+                        "type": "number",
+                        "example": 0.19503277851939582
+                      },
+                      "apy7dPnl": {
+                        "type": "number",
+                        "example": 0.21534818462340294
+                      },
+                      "apr28dPnl": {
+                        "type": "number",
+                        "example": 0.13876757264702413
+                      },
+                      "apy28dPnl": {
+                        "type": "number",
+                        "example": 0.14885578045932418
+                      },
+                      "apr24hRewards": {
+                        "type": "number",
+                        "example": 0.12300505657460604
+                      },
+                      "apy24hRewards": {
+                        "type": "number",
+                        "example": 0.13088916273804313
+                      },
+                      "apr7dRewards": {
+                        "type": "number",
+                        "example": 0.20099469577969659
+                      },
+                      "apy7dRewards": {
+                        "type": "number",
+                        "example": 0.22261546761516451
+                      },
+                      "apr28dRewards": {
+                        "type": "number",
+                        "example": 0.29966544476577617
+                      },
+                      "apy28dRewards": {
+                        "type": "number",
+                        "example": 0.34940036452177975
+                      },
+                      "aprPnl": {
+                        "type": "number",
+                        "example": 0.19503277851939582
+                      },
+                      "aprRewards": {
+                        "type": "number",
+                        "example": 0.20099469577969659
+                      },
+                      "aprCombined": {
+                        "type": "number",
+                        "example": 0.3960274742990924
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized."
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/v3/arbitrum/sc-pool-apy-history": {
+      "get": {
+        "tags": [
+          "v3"
+        ],
+        "description": "Returns historical APY for Spartan Council Pool on Arbitrum.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "timestamp": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-05-23T14:00:00.000Z"
+                      },
+                      "poolId": {
+                        "type": "integer",
+                        "example": 1
+                      },
+                      "collateralType": {
+                        "type": "string",
+                        "example": "0xc74ea762cf06c9151ce074e6a569a5945b6302e7"
+                      },
+                      "collateralValue": {
+                        "type": "number",
+                        "example": 23075347.609146226
+                      },
+                      "debtAmount": {
+                        "type": "number",
+                        "example": -38219.337186378914
+                      },
+                      "hourlyIssuance": {
+                        "type": "number",
+                        "example": 500
+                      },
+                      "hourlyPnl": {
+                        "type": "number",
+                        "example": 12954.05122107834
+                      },
+                      "cumulativePnl": {
+                        "type": "number",
+                        "example": 43985.56313904079
+                      },
+                      "cumulativeIssuance": {
+                        "type": "number",
+                        "example": 5766.225952661871
+                      },
+                      "rewardsUSD": {
+                        "type": "number",
+                        "example": 325.5208333342384
+                      },
+                      "hourlyPnlPct": {
+                        "type": "number",
+                        "example": 0.0005613805451816391
+                      },
+                      "hourlyRewardsPct": {
+                        "type": "number",
+                        "example": 0.00001410686585736259
+                      },
+                      "apr24h": {
+                        "type": "number",
+                        "example": 0.45592422360763046
+                      },
+                      "apy24h": {
+                        "type": "number",
+                        "example": 0.57761207594964
+                      },
+                      "apr7d": {
+                        "type": "number",
+                        "example": 0.3960274742990924
+                      },
+                      "apy7d": {
+                        "type": "number",
+                        "example": 0.4858968400315962
+                      },
+                      "apr28d": {
+                        "type": "number",
+                        "example": 0.4384330174128003
+                      },
+                      "apy28d": {
+                        "type": "number",
+                        "example": 0.550259050183527
+                      },
+                      "apr24hPnl": {
+                        "type": "number",
+                        "example": 0.33291916703302443
+                      },
+                      "apy24hPnl": {
+                        "type": "number",
+                        "example": 0.39502570410440424
+                      },
+                      "apr7dPnl": {
+                        "type": "number",
+                        "example": 0.19503277851939582
+                      },
+                      "apy7dPnl": {
+                        "type": "number",
+                        "example": 0.21534818462340294
+                      },
+                      "apr28dPnl": {
+                        "type": "number",
+                        "example": 0.13876757264702413
+                      },
+                      "apy28dPnl": {
+                        "type": "number",
+                        "example": 0.14885578045932418
+                      },
+                      "apr24hRewards": {
+                        "type": "number",
+                        "example": 0.12300505657460604
+                      },
+                      "apy24hRewards": {
+                        "type": "number",
+                        "example": 0.13088916273804313
+                      },
+                      "apr7dRewards": {
+                        "type": "number",
+                        "example": 0.20099469577969659
+                      },
+                      "apy7dRewards": {
+                        "type": "number",
+                        "example": 0.22261546761516451
+                      },
+                      "apr28dRewards": {
+                        "type": "number",
+                        "example": 0.29966544476577617
+                      },
+                      "apy28dRewards": {
+                        "type": "number",
+                        "example": 0.34940036452177975
+                      },
+                      "aprPnl": {
+                        "type": "number",
+                        "example": 0.19503277851939582
+                      },
+                      "aprRewards": {
+                        "type": "number",
+                        "example": 0.20099469577969659
+                      },
+                      "aprCombined": {
+                        "type": "number",
+                        "example": 0.3960274742990924
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized."
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/v3/arbitrum/sc-pool-apy": {
+      "get": {
+        "tags": [
+          "v3"
+        ],
+        "description": "Returns current APY for Spartan Council Pool on Arbitrum.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "timestamp": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-05-23T14:00:00.000Z"
+                      },
+                      "poolId": {
+                        "type": "integer",
+                        "example": 1
+                      },
+                      "collateralType": {
+                        "type": "string",
+                        "example": "0xc74ea762cf06c9151ce074e6a569a5945b6302e7"
+                      },
+                      "collateralValue": {
+                        "type": "number",
+                        "example": 23075347.609146226
+                      },
+                      "debtAmount": {
+                        "type": "number",
+                        "example": -38219.337186378914
+                      },
+                      "hourlyIssuance": {
+                        "type": "number",
+                        "example": 500
+                      },
+                      "hourlyPnl": {
+                        "type": "number",
+                        "example": 12954.05122107834
+                      },
+                      "cumulativePnl": {
+                        "type": "number",
+                        "example": 43985.56313904079
+                      },
+                      "cumulativeIssuance": {
+                        "type": "number",
+                        "example": 5766.225952661871
+                      },
+                      "rewardsUSD": {
+                        "type": "number",
+                        "example": 325.5208333342384
+                      },
+                      "hourlyPnlPct": {
+                        "type": "number",
+                        "example": 0.0005613805451816391
+                      },
+                      "hourlyRewardsPct": {
+                        "type": "number",
+                        "example": 0.00001410686585736259
+                      },
+                      "apr24h": {
+                        "type": "number",
+                        "example": 0.45592422360763046
+                      },
+                      "apy24h": {
+                        "type": "number",
+                        "example": 0.57761207594964
+                      },
+                      "apr7d": {
+                        "type": "number",
+                        "example": 0.3960274742990924
+                      },
+                      "apy7d": {
+                        "type": "number",
+                        "example": 0.4858968400315962
+                      },
+                      "apr28d": {
+                        "type": "number",
+                        "example": 0.4384330174128003
+                      },
+                      "apy28d": {
+                        "type": "number",
+                        "example": 0.550259050183527
+                      },
+                      "apr24hPnl": {
+                        "type": "number",
+                        "example": 0.33291916703302443
+                      },
+                      "apy24hPnl": {
+                        "type": "number",
+                        "example": 0.39502570410440424
+                      },
+                      "apr7dPnl": {
+                        "type": "number",
+                        "example": 0.19503277851939582
+                      },
+                      "apy7dPnl": {
+                        "type": "number",
+                        "example": 0.21534818462340294
+                      },
+                      "apr28dPnl": {
+                        "type": "number",
+                        "example": 0.13876757264702413
+                      },
+                      "apy28dPnl": {
+                        "type": "number",
+                        "example": 0.14885578045932418
+                      },
+                      "apr24hRewards": {
+                        "type": "number",
+                        "example": 0.12300505657460604
+                      },
+                      "apy24hRewards": {
+                        "type": "number",
+                        "example": 0.13088916273804313
+                      },
+                      "apr7dRewards": {
+                        "type": "number",
+                        "example": 0.20099469577969659
+                      },
+                      "apy7dRewards": {
+                        "type": "number",
+                        "example": 0.22261546761516451
+                      },
+                      "apr28dRewards": {
+                        "type": "number",
+                        "example": 0.29966544476577617
+                      },
+                      "apy28dRewards": {
+                        "type": "number",
+                        "example": 0.34940036452177975
+                      },
+                      "aprPnl": {
+                        "type": "number",
+                        "example": 0.19503277851939582
+                      },
+                      "aprRewards": {
+                        "type": "number",
+                        "example": 0.20099469577969659
+                      },
+                      "aprCombined": {
+                        "type": "number",
+                        "example": 0.3960274742990924
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized."
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/v3/base/issued-debt": {
+      "get": {
+        "tags": [
+          "v3"
+        ],
+        "summary": "Fetch sum of usd value of issued debt each collateral.",
+        "description": "Checks the cache first, and if not found, fetches issued debt data from Postgres for the given account ID.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "accountId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The account ID to fetch the issued debt for."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully fetched issued debt.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "collateral_type": {
+                        "type": "string",
+                        "example": "0x.."
+                      },
+                      "issuance": {
+                        "type": "number",
+                        "example": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid accountId provided.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Error message."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An internal server error occurred."
+          }
+        }
+      }
+    },
+    "/v3/base/lt-leaderboard": {
+      "get": {
+        "tags": [
+          "v3"
+        ],
+        "description": "Returns leverage token leaderboard on base.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "epoch_start": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-05-23T14:00:00.000Z"
+                      },
+                      "account": {
+                        "type": "string",
+                        "example": "0xAa4a1d3c0d96B0D8C7AE4F71939D0Fa36bd97Aa7"
+                      },
+                      "total_fees_paid": {
+                        "type": "string",
+                        "example": "954.605497900439850"
+                      },
+                      "fees_paid_pct": {
+                        "type": "string",
+                        "example": "0.210334039122012452233641885"
+                      },
+                      "fees_rank": {
+                        "type": "string",
+                        "example": "1"
+                      },
+                      "volume": {
+                        "type": "string",
+                        "example": "1"
+                      },
+                      "volume_rank": {
+                        "type": "string",
+                        "example": "1"
+                      },
+                      "volume_pct": {
+                        "type": "string",
+                        "example": "1"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized."
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/v3/base/lt-trades": {
+      "get": {
+        "tags": [
+          "v3"
+        ],
+        "description": "Returns leverage token trades on base.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "example": "0131506856-000048-c2285"
+                      },
+                      "block_number": {
+                        "type": "number",
+                        "example": 131506856
+                      },
+                      "ts": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2025-02-03 19:54:49+00"
+                      },
+                      "transaction_hash": {
+                        "type": "string",
+                        "example": "0x..."
+                      },
+                      "contract": {
+                        "type": "string",
+                        "example": "0x..."
+                      },
+                      "event_name": {
+                        "type": "string",
+                        "example": "Redeemed"
+                      },
+                      "account": {
+                        "type": "string",
+                        "example": "0x"
+                      },
+                      "token": {
+                        "type": "string",
+                        "example": "btc_long7"
+                      },
+                      "leverage": {
+                        "type": "number",
+                        "example": 1
+                      },
+                      "market": {
+                        "type": "string",
+                        "example": "BTC"
+                      },
+                      "leveraged_token_amount": {
+                        "type": "string",
+                        "example": "1"
+                      },
+                      "base_asset_amount": {
+                        "type": "string",
+                        "example": "1"
+                      },
+                      "nominal_volume": {
+                        "type": "string",
+                        "example": "1"
+                      },
+                      "notional_volume": {
+                        "type": "string",
+                        "example": "1"
+                      },
+                      "token_price": {
+                        "type": "string",
+                        "example": "1"
+                      },
+                      "total_supply": {
+                        "type": "string",
+                        "example": "1"
+                      },
+                      "vault_tvl": {
+                        "type": "string",
+                        "example": "1"
+                      },
+                      "vault_oi": {
+                        "type": "string",
+                        "example": "1"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized."
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/v3/base/rewards-claimed": {
+      "get": {
+        "tags": [
+          "v3"
+        ],
+        "summary": "Fetch sum of usd value of claimed rewards for a given account ID for each collateral.",
+        "description": "Checks the cache first, and if not found, fetches claimed rewards data from Postgres for the given account ID.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "accountId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The account ID to fetch total usd value of claimed rewards for. Must be a positive integer."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully fetched claimed rewards.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "collateral_type": {
+                        "type": "string",
+                        "example": "0x.."
+                      },
+                      "total_amount_usd": {
+                        "type": "number",
+                        "example": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid accountId provided.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Error message."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An internal server error occurred."
+          }
+        }
+      }
+    },
+    "/v3/base/sc-pool-apy-all": {
+      "get": {
+        "tags": [
+          "v3"
+        ],
+        "description": "Returns current APY for Spartan Council Pool on Arbitrum.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "timestamp": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-05-23T14:00:00.000Z"
+                      },
+                      "poolId": {
+                        "type": "integer",
+                        "example": 1
+                      },
+                      "collateralType": {
+                        "type": "string",
+                        "example": "0xc74ea762cf06c9151ce074e6a569a5945b6302e7"
+                      },
+                      "collateralValue": {
+                        "type": "number",
+                        "example": 23075347.609146226
+                      },
+                      "debtAmount": {
+                        "type": "number",
+                        "example": -38219.337186378914
+                      },
+                      "hourlyIssuance": {
+                        "type": "number",
+                        "example": 500
+                      },
+                      "hourlyPnl": {
+                        "type": "number",
+                        "example": 12954.05122107834
+                      },
+                      "cumulativePnl": {
+                        "type": "number",
+                        "example": 43985.56313904079
+                      },
+                      "cumulativeIssuance": {
+                        "type": "number",
+                        "example": 5766.225952661871
+                      },
+                      "rewardsUSD": {
+                        "type": "number",
+                        "example": 325.5208333342384
+                      },
+                      "hourlyPnlPct": {
+                        "type": "number",
+                        "example": 0.0005613805451816391
+                      },
+                      "hourlyRewardsPct": {
+                        "type": "number",
+                        "example": 0.00001410686585736259
+                      },
+                      "apr24h": {
+                        "type": "number",
+                        "example": 0.45592422360763046
+                      },
+                      "apy24h": {
+                        "type": "number",
+                        "example": 0.57761207594964
+                      },
+                      "apr7d": {
+                        "type": "number",
+                        "example": 0.3960274742990924
+                      },
+                      "apy7d": {
+                        "type": "number",
+                        "example": 0.4858968400315962
+                      },
+                      "apr28d": {
+                        "type": "number",
+                        "example": 0.4384330174128003
+                      },
+                      "apy28d": {
+                        "type": "number",
+                        "example": 0.550259050183527
+                      },
+                      "apr24hPnl": {
+                        "type": "number",
+                        "example": 0.33291916703302443
+                      },
+                      "apy24hPnl": {
+                        "type": "number",
+                        "example": 0.39502570410440424
+                      },
+                      "apr7dPnl": {
+                        "type": "number",
+                        "example": 0.19503277851939582
+                      },
+                      "apy7dPnl": {
+                        "type": "number",
+                        "example": 0.21534818462340294
+                      },
+                      "apr28dPnl": {
+                        "type": "number",
+                        "example": 0.13876757264702413
+                      },
+                      "apy28dPnl": {
+                        "type": "number",
+                        "example": 0.14885578045932418
+                      },
+                      "apr24hRewards": {
+                        "type": "number",
+                        "example": 0.12300505657460604
+                      },
+                      "apy24hRewards": {
+                        "type": "number",
+                        "example": 0.13088916273804313
+                      },
+                      "apr7dRewards": {
+                        "type": "number",
+                        "example": 0.20099469577969659
+                      },
+                      "apy7dRewards": {
+                        "type": "number",
+                        "example": 0.22261546761516451
+                      },
+                      "apr28dRewards": {
+                        "type": "number",
+                        "example": 0.29966544476577617
+                      },
+                      "apy28dRewards": {
+                        "type": "number",
+                        "example": 0.34940036452177975
+                      },
+                      "aprPnl": {
+                        "type": "number",
+                        "example": 0.19503277851939582
+                      },
+                      "aprRewards": {
+                        "type": "number",
+                        "example": 0.20099469577969659
+                      },
+                      "aprCombined": {
+                        "type": "number",
+                        "example": 0.3960274742990924
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized."
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/v3/base/sc-pool-apy-history": {
+      "get": {
+        "tags": [
+          "v3"
+        ],
+        "description": "Returns historical APY for Spartan Council Pool on Base.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "timestamp": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-05-23T14:00:00.000Z"
+                      },
+                      "poolId": {
+                        "type": "integer",
+                        "example": 1
+                      },
+                      "collateralType": {
+                        "type": "string",
+                        "example": "0xc74ea762cf06c9151ce074e6a569a5945b6302e7"
+                      },
+                      "collateralValue": {
+                        "type": "number",
+                        "example": 23075347.609146226
+                      },
+                      "debtAmount": {
+                        "type": "number",
+                        "example": -38219.337186378914
+                      },
+                      "hourlyIssuance": {
+                        "type": "number",
+                        "example": 500
+                      },
+                      "hourlyPnl": {
+                        "type": "number",
+                        "example": 12954.05122107834
+                      },
+                      "cumulativePnl": {
+                        "type": "number",
+                        "example": 43985.56313904079
+                      },
+                      "cumulativeIssuance": {
+                        "type": "number",
+                        "example": 5766.225952661871
+                      },
+                      "rewardsUSD": {
+                        "type": "number",
+                        "example": 325.5208333342384
+                      },
+                      "hourlyPnlPct": {
+                        "type": "number",
+                        "example": 0.0005613805451816391
+                      },
+                      "hourlyRewardsPct": {
+                        "type": "number",
+                        "example": 0.00001410686585736259
+                      },
+                      "apr24h": {
+                        "type": "number",
+                        "example": 0.45592422360763046
+                      },
+                      "apy24h": {
+                        "type": "number",
+                        "example": 0.57761207594964
+                      },
+                      "apr7d": {
+                        "type": "number",
+                        "example": 0.3960274742990924
+                      },
+                      "apy7d": {
+                        "type": "number",
+                        "example": 0.4858968400315962
+                      },
+                      "apr28d": {
+                        "type": "number",
+                        "example": 0.4384330174128003
+                      },
+                      "apy28d": {
+                        "type": "number",
+                        "example": 0.550259050183527
+                      },
+                      "apr24hPnl": {
+                        "type": "number",
+                        "example": 0.33291916703302443
+                      },
+                      "apy24hPnl": {
+                        "type": "number",
+                        "example": 0.39502570410440424
+                      },
+                      "apr7dPnl": {
+                        "type": "number",
+                        "example": 0.19503277851939582
+                      },
+                      "apy7dPnl": {
+                        "type": "number",
+                        "example": 0.21534818462340294
+                      },
+                      "apr28dPnl": {
+                        "type": "number",
+                        "example": 0.13876757264702413
+                      },
+                      "apy28dPnl": {
+                        "type": "number",
+                        "example": 0.14885578045932418
+                      },
+                      "apr24hRewards": {
+                        "type": "number",
+                        "example": 0.12300505657460604
+                      },
+                      "apy24hRewards": {
+                        "type": "number",
+                        "example": 0.13088916273804313
+                      },
+                      "apr7dRewards": {
+                        "type": "number",
+                        "example": 0.20099469577969659
+                      },
+                      "apy7dRewards": {
+                        "type": "number",
+                        "example": 0.22261546761516451
+                      },
+                      "apr28dRewards": {
+                        "type": "number",
+                        "example": 0.29966544476577617
+                      },
+                      "apy28dRewards": {
+                        "type": "number",
+                        "example": 0.34940036452177975
+                      },
+                      "aprPnl": {
+                        "type": "number",
+                        "example": 0.19503277851939582
+                      },
+                      "aprRewards": {
+                        "type": "number",
+                        "example": 0.20099469577969659
+                      },
+                      "aprCombined": {
+                        "type": "number",
+                        "example": 0.3960274742990924
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized."
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/v3/base/sc-pool-apy": {
+      "get": {
+        "tags": [
+          "v3"
+        ],
+        "description": "Returns current APY for Spartan Council Pool on Base.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "timestamp": {
+                      "type": "string",
+                      "format": "date-time",
+                      "example": "2024-05-23T14:00:00.000Z"
+                    },
+                    "poolId": {
+                      "type": "integer",
+                      "example": 1
+                    },
+                    "collateralType": {
+                      "type": "string",
+                      "example": "0xc74ea762cf06c9151ce074e6a569a5945b6302e7"
+                    },
+                    "collateralValue": {
+                      "type": "number",
+                      "example": 23075347.609146226
+                    },
+                    "debtAmount": {
+                      "type": "number",
+                      "example": -38219.337186378914
+                    },
+                    "hourlyIssuance": {
+                      "type": "number",
+                      "example": 500
+                    },
+                    "hourlyPnl": {
+                      "type": "number",
+                      "example": 12954.05122107834
+                    },
+                    "cumulativePnl": {
+                      "type": "number",
+                      "example": 43985.56313904079
+                    },
+                    "cumulativeIssuance": {
+                      "type": "number",
+                      "example": 5766.225952661871
+                    },
+                    "rewardsUSD": {
+                      "type": "number",
+                      "example": 325.5208333342384
+                    },
+                    "hourlyPnlPct": {
+                      "type": "number",
+                      "example": 0.0005613805451816391
+                    },
+                    "hourlyRewardsPct": {
+                      "type": "number",
+                      "example": 0.00001410686585736259
+                    },
+                    "apr24h": {
+                      "type": "number",
+                      "example": 0.45592422360763046
+                    },
+                    "apy24h": {
+                      "type": "number",
+                      "example": 0.57761207594964
+                    },
+                    "apr7d": {
+                      "type": "number",
+                      "example": 0.3960274742990924
+                    },
+                    "apy7d": {
+                      "type": "number",
+                      "example": 0.4858968400315962
+                    },
+                    "apr28d": {
+                      "type": "number",
+                      "example": 0.4384330174128003
+                    },
+                    "apy28d": {
+                      "type": "number",
+                      "example": 0.550259050183527
+                    },
+                    "apr24hPnl": {
+                      "type": "number",
+                      "example": 0.33291916703302443
+                    },
+                    "apy24hPnl": {
+                      "type": "number",
+                      "example": 0.39502570410440424
+                    },
+                    "apr7dPnl": {
+                      "type": "number",
+                      "example": 0.19503277851939582
+                    },
+                    "apy7dPnl": {
+                      "type": "number",
+                      "example": 0.21534818462340294
+                    },
+                    "apr28dPnl": {
+                      "type": "number",
+                      "example": 0.13876757264702413
+                    },
+                    "apy28dPnl": {
+                      "type": "number",
+                      "example": 0.14885578045932418
+                    },
+                    "apr24hRewards": {
+                      "type": "number",
+                      "example": 0.12300505657460604
+                    },
+                    "apy24hRewards": {
+                      "type": "number",
+                      "example": 0.13088916273804313
+                    },
+                    "apr7dRewards": {
+                      "type": "number",
+                      "example": 0.20099469577969659
+                    },
+                    "apy7dRewards": {
+                      "type": "number",
+                      "example": 0.22261546761516451
+                    },
+                    "apr28dRewards": {
+                      "type": "number",
+                      "example": 0.29966544476577617
+                    },
+                    "apy28dRewards": {
+                      "type": "number",
+                      "example": 0.34940036452177975
+                    },
+                    "aprPnl": {
+                      "type": "number",
+                      "example": 0.19503277851939582
+                    },
+                    "aprRewards": {
+                      "type": "number",
+                      "example": 0.20099469577969659
+                    },
+                    "aprCombined": {
+                      "type": "number",
+                      "example": 0.3960274742990924
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized."
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/v3/base/snx-buyback": {
+      "get": {
+        "tags": [
+          "v3"
+        ],
+        "description": "Returns SNX buyback details on Base.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "ts": {
+                        "type": "number",
+                        "example": "1714003200000"
+                      },
+                      "snxAmount": {
+                        "type": "number",
+                        "example": "202.23566293647977"
+                      },
+                      "usdAmount": {
+                        "type": "number",
+                        "example": "588.0897936329317"
+                      },
+                      "cumulativeSnxAmount": {
+                        "type": "number",
+                        "example": "24451.665275214178"
+                      },
+                      "cumulativeUsdAmount": {
+                        "type": "number",
+                        "example": "95386.36662445917"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized."
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/v3/mainnet/issued-debt": {
+      "get": {
+        "tags": [
+          "v3"
+        ],
+        "summary": "Fetch sum of usd value of issued debt each collateral.",
+        "description": "Checks the cache first, and if not found, fetches issued debt data from Postgres for the given account ID.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "accountId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The account ID to fetch the issued debt for."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully fetched issued debt.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "collateral_type": {
+                        "type": "string",
+                        "example": "0x.."
+                      },
+                      "issuance": {
+                        "type": "number",
+                        "example": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid accountId provided.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Error message."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An internal server error occurred."
+          }
+        }
+      }
+    },
+    "/v3/mainnet/rewards-claimed": {
+      "get": {
+        "tags": [
+          "v3"
+        ],
+        "summary": "Fetch sum of usd value of claimed rewards for a given account ID for each collateral.",
+        "description": "Checks the cache first, and if not found, fetches claimed rewards data from Postgres for the given account ID.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "accountId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The account ID to fetch total usd value of claimed rewards for. Must be a positive integer."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully fetched claimed rewards.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "collateral_type": {
+                        "type": "string",
+                        "example": "0x.."
+                      },
+                      "total_amount_usd": {
+                        "type": "number",
+                        "example": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid accountId provided.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "description": "Error message."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An internal server error occurred."
+          }
+        }
+      }
+    },
+    "/v3/mainnet/sc-pool-apy-all": {
+      "get": {
+        "tags": [
+          "v3"
+        ],
+        "description": "Returns current APY for Spartan Council Pool on Mainnet.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "timestamp": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-05-23T14:00:00.000Z"
+                      },
+                      "poolId": {
+                        "type": "integer",
+                        "example": 1
+                      },
+                      "collateralType": {
+                        "type": "string",
+                        "example": "0xc74ea762cf06c9151ce074e6a569a5945b6302e7"
+                      },
+                      "collateralValue": {
+                        "type": "number",
+                        "example": 23075347.609146226
+                      },
+                      "debtAmount": {
+                        "type": "number",
+                        "example": -38219.337186378914
+                      },
+                      "hourlyIssuance": {
+                        "type": "number",
+                        "example": 500
+                      },
+                      "hourlyPnl": {
+                        "type": "number",
+                        "example": 12954.05122107834
+                      },
+                      "cumulativePnl": {
+                        "type": "number",
+                        "example": 43985.56313904079
+                      },
+                      "cumulativeIssuance": {
+                        "type": "number",
+                        "example": 5766.225952661871
+                      },
+                      "rewardsUSD": {
+                        "type": "number",
+                        "example": 325.5208333342384
+                      },
+                      "hourlyPnlPct": {
+                        "type": "number",
+                        "example": 0.0005613805451816391
+                      },
+                      "hourlyRewardsPct": {
+                        "type": "number",
+                        "example": 0.00001410686585736259
+                      },
+                      "apr24h": {
+                        "type": "number",
+                        "example": 0.45592422360763046
+                      },
+                      "apy24h": {
+                        "type": "number",
+                        "example": 0.57761207594964
+                      },
+                      "apr7d": {
+                        "type": "number",
+                        "example": 0.3960274742990924
+                      },
+                      "apy7d": {
+                        "type": "number",
+                        "example": 0.4858968400315962
+                      },
+                      "apr28d": {
+                        "type": "number",
+                        "example": 0.4384330174128003
+                      },
+                      "apy28d": {
+                        "type": "number",
+                        "example": 0.550259050183527
+                      },
+                      "apr24hPnl": {
+                        "type": "number",
+                        "example": 0.33291916703302443
+                      },
+                      "apy24hPnl": {
+                        "type": "number",
+                        "example": 0.39502570410440424
+                      },
+                      "apr7dPnl": {
+                        "type": "number",
+                        "example": 0.19503277851939582
+                      },
+                      "apy7dPnl": {
+                        "type": "number",
+                        "example": 0.21534818462340294
+                      },
+                      "apr28dPnl": {
+                        "type": "number",
+                        "example": 0.13876757264702413
+                      },
+                      "apy28dPnl": {
+                        "type": "number",
+                        "example": 0.14885578045932418
+                      },
+                      "apr24hRewards": {
+                        "type": "number",
+                        "example": 0.12300505657460604
+                      },
+                      "apy24hRewards": {
+                        "type": "number",
+                        "example": 0.13088916273804313
+                      },
+                      "apr7dRewards": {
+                        "type": "number",
+                        "example": 0.20099469577969659
+                      },
+                      "apy7dRewards": {
+                        "type": "number",
+                        "example": 0.22261546761516451
+                      },
+                      "apr28dRewards": {
+                        "type": "number",
+                        "example": 0.29966544476577617
+                      },
+                      "apy28dRewards": {
+                        "type": "number",
+                        "example": 0.34940036452177975
+                      },
+                      "aprPnl": {
+                        "type": "number",
+                        "example": 0.19503277851939582
+                      },
+                      "aprRewards": {
+                        "type": "number",
+                        "example": 0.20099469577969659
+                      },
+                      "aprCombined": {
+                        "type": "number",
+                        "example": 0.3960274742990924
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized."
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/v3/optimism/lt-leaderboard": {
+      "get": {
+        "tags": [
+          "v3"
+        ],
+        "description": "Returns leverage token leaderboard on optimism.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "epoch_start": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2024-05-23T14:00:00.000Z"
+                      },
+                      "account": {
+                        "type": "string",
+                        "example": "0xAa4a1d3c0d96B0D8C7AE4F71939D0Fa36bd97Aa7"
+                      },
+                      "total_fees_paid": {
+                        "type": "string",
+                        "example": "954.605497900439850"
+                      },
+                      "fees_paid_pct": {
+                        "type": "string",
+                        "example": "0.210334039122012452233641885"
+                      },
+                      "fees_rank": {
+                        "type": "string",
+                        "example": "1"
+                      },
+                      "volume": {
+                        "type": "string",
+                        "example": "1"
+                      },
+                      "volume_rank": {
+                        "type": "string",
+                        "example": "1"
+                      },
+                      "volume_pct": {
+                        "type": "string",
+                        "example": "1"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized."
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/v3/optimism/lt-trades": {
+      "get": {
+        "tags": [
+          "v3"
+        ],
+        "description": "Returns leverage token trades on optimism.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "example": "0131506856-000048-c2285"
+                      },
+                      "block_number": {
+                        "type": "number",
+                        "example": 131506856
+                      },
+                      "ts": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2025-02-03 19:54:49+00"
+                      },
+                      "transaction_hash": {
+                        "type": "string",
+                        "example": "0x..."
+                      },
+                      "contract": {
+                        "type": "string",
+                        "example": "0x..."
+                      },
+                      "event_name": {
+                        "type": "string",
+                        "example": "Redeemed"
+                      },
+                      "account": {
+                        "type": "string",
+                        "example": "0x"
+                      },
+                      "token": {
+                        "type": "string",
+                        "example": "btc_long7"
+                      },
+                      "leverage": {
+                        "type": "number",
+                        "example": 1
+                      },
+                      "market": {
+                        "type": "string",
+                        "example": "BTC"
+                      },
+                      "leveraged_token_amount": {
+                        "type": "string",
+                        "example": "1"
+                      },
+                      "base_asset_amount": {
+                        "type": "string",
+                        "example": "1"
+                      },
+                      "nominal_volume": {
+                        "type": "string",
+                        "example": "1"
+                      },
+                      "notional_volume": {
+                        "type": "string",
+                        "example": "1"
+                      },
+                      "token_price": {
+                        "type": "string",
+                        "example": "1"
+                      },
+                      "total_supply": {
+                        "type": "string",
+                        "example": "1"
+                      },
+                      "vault_tvl": {
+                        "type": "string",
+                        "example": "1"
+                      },
+                      "vault_oi": {
+                        "type": "string",
+                        "example": "1"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized."
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/v3/top-asset": {
+      "get": {
+        "tags": [
+          "v3"
+        ],
+        "description": "Returns the current top performing asset and it's APR and APY estimated from past 7 day performance.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "timestamp": {
+                      "type": "string",
+                      "format": "date-time",
+                      "example": "2024-05-23T14:00:00.000Z"
+                    },
+                    "chain": {
+                      "type": "string",
+                      "example": "base"
+                    },
+                    "token_symbol": {
+                      "type": "string",
+                      "example": "USDC"
+                    },
+                    "apr": {
+                      "type": "number",
+                      "example": 0.123456789
+                    },
+                    "apy": {
+                      "type": "number",
+                      "example": 0.123456789
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized."
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/v3/tvl": {
+      "get": {
+        "tags": [
+          "v3"
+        ],
+        "description": "Returns total value locked across all Synthetix V3 deployments.",
+        "responses": {
+          "200": {
+            "description": "Successful response.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "timestamp": {
+                      "type": "string",
+                      "format": "date-time",
+                      "example": "2024-05-23T14:00:00.000Z"
+                    },
+                    "tvl": {
+                      "type": "number",
+                      "example": 123456789.12345679
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized."
+          },
+          "403": {
+            "description": "You have been banned by WAF."
+          },
+          "429": {
+            "description": "Too many requests, you're being rate-limited."
+          },
+          "5XX": {
+            "description": "Service unavailable."
+          },
+          "default": {
+            "description": "Unexpected error."
+          }
+        }
+      }
+    },
+    "/v3/tvl420": {
+      "get": {
+        "tags": [
+          "v3"
+        ],
+        "summary": "Retrieve TVL data for a specific network and time span.",
+        "description": "Fetches Total Value Locked (TVL) data from the cache or PostgreSQL for the specified blockchain network and time span.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "network",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "cross",
+                "ethereum",
+                "optimism"
+              ]
+            },
+            "description": "Name of the blockchain network (e.g., cross, ethereum, or optimism)."
+          },
+          {
+            "in": "query",
+            "name": "span",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "hourly",
+                "daily",
+                "weekly",
+                "monthly"
+              ]
+            },
+            "description": "Time span for aggregations"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully retrieved TVL data.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "ts": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "The timestamp of the TVL data."
+                      },
+                      "value": {
+                        "type": "number",
+                        "format": "float",
+                        "description": "The TVL value."
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid network or span specified in query parameters.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "Invalid network or span."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "An unexpected error occurred when fetching data.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string",
+                      "example": "Internal server error."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {},
+  "tags": []
+}

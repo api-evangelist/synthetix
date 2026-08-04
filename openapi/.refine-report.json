@@ -1,0 +1,26 @@
+{
+  "provider": "synthetix",
+  "sources": [
+    "synthetix-escrowed-balance-api-openapi.yml",
+    "synthetix-health-check-api-openapi.yml",
+    "synthetix-staking-api-openapi.yml",
+    "synthetix-stats-api-openapi.yml",
+    "synthetix-supply-api-openapi.yml",
+    "synthetix-v3-api-openapi.yml",
+    "synthetix-vested-balance-api-openapi.yml"
+  ],
+  "outputs": [
+    "synthetix-escrowed-balance-api-openapi.yml",
+    "synthetix-health-check-api-openapi.yml",
+    "synthetix-staking-api-openapi.yml",
+    "synthetix-stats-api-openapi.yml",
+    "synthetix-supply-api-openapi.yml",
+    "synthetix-v3-api-openapi.yml",
+    "synthetix-vested-balance-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
