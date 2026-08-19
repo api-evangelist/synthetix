@@ -1,0 +1,404 @@
+{
+  "item": [
+    {
+      "id": "aefff818-c01b-4b39-8852-1bbda8c61e20",
+      "name": "supply",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c95ec27d-df4e-4c4d-a447-e76899db2766",
+          "name": "Returns combined SNX circulating supply from L1 and L2.",
+          "request": {
+            "name": "Returns combined SNX circulating supply from L1 and L2.",
+            "description": {
+              "content": "Returns combined SNX circulating supply from L1 and L2.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "circulating-supply"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1c3449a6-ee35-4661-a4ff-8d202caf7366",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "circulating-supply"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"circulatingSupply\": \"141926691.344308997791851826\",\n  \"totalSupply\": \"309509422.088773603337882496\",\n  \"synthetixEscrowVestedBalance\": \"723907.949250420000000002\",\n  \"rewardEscrowEscrowedBalance\": \"73763701.242877032135481494\",\n  \"rewardEscrowV2EscrowedBalance\": \"58795426.272404595327975783\",\n  \"liquidatorRewardsBalance\": \"2035169.82647455828232327\",\n  \"synthetixBridgeEscrowBalance\": \"90615339.513130952531588288\",\n  \"OVMTotalSupply\": \"89132014.499559654122877079\",\n  \"OVMSynthetixEscrowVestedBalance\": \"0\",\n  \"OVMRewardEscrowV2EscrowedBalance\": \"34299695.279932558082573391\",\n  \"OVMLiquidatorRewardsBalance\": \"322414.5006437149942302\",\n  \"contracts\": {\n    \"ethereum\": {\n      \"totalSupply\": \"0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F\",\n      \"synthetixEscrowVestedBalance\": \"0x971e78e0C92392A4E39099835cF7E6aB535b2227\",\n      \"rewardEscrowEscrowedBalance\": \"0xb671F2210B1F6621A2607EA63E6B2DC3e2464d1F\",\n      \"rewardEscrowV2EscrowedBalance\": \"0xAc86855865CbF31c8f9FBB68C749AD5Bd72802e3\",\n      \"liquidatorRewardsBalance\": \"0xf79603a71144e415730C1A6f57F366E4Ea962C00\",\n      \"synthetixBridgeEscrowBalance\": \"0x5Fd79D46EBA7F351fe49BFF9E87cdeA6c821eF9f\"\n    },\n    \"optimism\": {\n      \"OVMTotalSupply\": \"0x8700dAec35aF8Ff88c16BdF0418774CB3D7599B4\",\n      \"OVMSynthetixEscrowVestedBalance\": \"0x06C6D063896ac733673c4474E44d9268f2402A55\",\n      \"OVMRewardEscrowV2EscrowedBalance\": \"0x6330D5F08f51057F36F46d6751eCDc0c65Ef7E9e\",\n      \"OVMLiquidatorRewardsBalance\": \"0xF4EebDD0704021eF2a6Bbe993fdf93030Cd784b4\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5ac9c4fa-32ea-44cd-a9c9-36d1dbae6cf2",
+              "name": "You have been banned by WAF.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "circulating-supply"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e12e06d5-d92e-4695-baaf-03cda5e3e24f",
+              "name": "Too many requests, you're being rate-limited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "circulating-supply"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "6feaaea8-1f66-4ca7-b6f9-0eda70679a49",
+              "name": "Service unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "circulating-supply"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "06e4c414-fd7a-4785-8491-2d23015a0d8b",
+              "name": "Unexpected error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "circulating-supply"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "17b84106-c53f-495c-83db-c01d5655ace5",
+          "name": "Returns SNX total supply for L1 and L2.",
+          "request": {
+            "name": "Returns SNX total supply for L1 and L2.",
+            "description": {
+              "content": "Returns SNX total supply for L1 and L2.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "total-supply"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c4436746-24dc-48d2-a265-6b5dae9e2bf6",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "total-supply"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"totalSupply\": \"309509422.088773603337882496\",\n  \"OVMTotalSupply\": \"89132014.499559654122877079\",\n  \"contracts\": {\n    \"ethereum\": {\n      \"totalSupply\": \"0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F\"\n    },\n    \"optimism\": {\n      \"OVMTotalSupply\": \"0x8700dAec35aF8Ff88c16BdF0418774CB3D7599B4\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "17a9ff81-7842-4be8-a197-440eaf66bade",
+              "name": "You have been banned by WAF.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "total-supply"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "3b90e418-05d0-4a16-b803-758d60ee4687",
+              "name": "Too many requests, you're being rate-limited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "total-supply"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f82f1543-c875-4f8b-887f-d8f74b82a864",
+              "name": "Service unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "total-supply"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "4d193374-db6e-496f-b06d-5635492b732d",
+              "name": "Unexpected error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "total-supply"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.synthetix.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "253e696d-c6ba-4592-a852-c2e6f7eceb6b",
+    "name": "Synthetix escrowed-balance supply API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Synthetix API documentation",
+      "type": "text/plain"
+    }
+  }
+}

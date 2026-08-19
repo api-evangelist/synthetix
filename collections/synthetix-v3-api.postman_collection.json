@@ -1,0 +1,4064 @@
+{
+  "item": [
+    {
+      "id": "991d1862-e6e7-456e-9b13-9d93fb832ed2",
+      "name": "v3",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a74af5d2-f336-4640-857b-354bb2d29733",
+          "name": "Returns current APY for Spartan Council Pool on Arbitrum.",
+          "request": {
+            "name": "Returns current APY for Spartan Council Pool on Arbitrum.",
+            "description": {
+              "content": "Returns current APY for Spartan Council Pool on Arbitrum.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v3",
+                "arbitrum",
+                "sc-pool-apy-all"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d3981854-d7ce-481e-9aec-380327d116a8",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "arbitrum",
+                    "sc-pool-apy-all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"timestamp\": \"2024-05-23T14:00:00.000Z\",\n    \"poolId\": 1,\n    \"collateralType\": \"0xc74ea762cf06c9151ce074e6a569a5945b6302e7\",\n    \"collateralValue\": 23075347.609146226,\n    \"debtAmount\": -38219.337186378914,\n    \"hourlyIssuance\": 500,\n    \"hourlyPnl\": 12954.05122107834,\n    \"cumulativePnl\": 43985.56313904079,\n    \"cumulativeIssuance\": 5766.225952661871,\n    \"rewardsUSD\": 325.5208333342384,\n    \"hourlyPnlPct\": 0.0005613805451816391,\n    \"hourlyRewardsPct\": 0.00001410686585736259,\n    \"apr24h\": 0.45592422360763046,\n    \"apy24h\": 0.57761207594964,\n    \"apr7d\": 0.3960274742990924,\n    \"apy7d\": 0.4858968400315962,\n    \"apr28d\": 0.4384330174128003,\n    \"apy28d\": 0.550259050183527,\n    \"apr24hPnl\": 0.33291916703302443,\n    \"apy24hPnl\": 0.39502570410440424,\n    \"apr7dPnl\": 0.19503277851939582,\n    \"apy7dPnl\": 0.21534818462340294,\n    \"apr28dPnl\": 0.13876757264702413,\n    \"apy28dPnl\": 0.14885578045932418,\n    \"apr24hRewards\": 0.12300505657460604,\n    \"apy24hRewards\": 0.13088916273804313,\n    \"apr7dRewards\": 0.20099469577969659,\n    \"apy7dRewards\": 0.22261546761516451,\n    \"apr28dRewards\": 0.29966544476577617,\n    \"apy28dRewards\": 0.34940036452177975,\n    \"aprPnl\": 0.19503277851939582,\n    \"aprRewards\": 0.20099469577969659,\n    \"aprCombined\": 0.3960274742990924\n  },\n  {\n    \"timestamp\": \"2024-05-23T14:00:00.000Z\",\n    \"poolId\": 1,\n    \"collateralType\": \"0xc74ea762cf06c9151ce074e6a569a5945b6302e7\",\n    \"collateralValue\": 23075347.609146226,\n    \"debtAmount\": -38219.337186378914,\n    \"hourlyIssuance\": 500,\n    \"hourlyPnl\": 12954.05122107834,\n    \"cumulativePnl\": 43985.56313904079,\n    \"cumulativeIssuance\": 5766.225952661871,\n    \"rewardsUSD\": 325.5208333342384,\n    \"hourlyPnlPct\": 0.0005613805451816391,\n    \"hourlyRewardsPct\": 0.00001410686585736259,\n    \"apr24h\": 0.45592422360763046,\n    \"apy24h\": 0.57761207594964,\n    \"apr7d\": 0.3960274742990924,\n    \"apy7d\": 0.4858968400315962,\n    \"apr28d\": 0.4384330174128003,\n    \"apy28d\": 0.550259050183527,\n    \"apr24hPnl\": 0.33291916703302443,\n    \"apy24hPnl\": 0.39502570410440424,\n    \"apr7dPnl\": 0.19503277851939582,\n    \"apy7dPnl\": 0.21534818462340294,\n    \"apr28dPnl\": 0.13876757264702413,\n    \"apy28dPnl\": 0.14885578045932418,\n    \"apr24hRewards\": 0.12300505657460604,\n    \"apy24hRewards\": 0.13088916273804313,\n    \"apr7dRewards\": 0.20099469577969659,\n    \"apy7dRewards\": 0.22261546761516451,\n    \"apr28dRewards\": 0.29966544476577617,\n    \"apy28dRewards\": 0.34940036452177975,\n    \"aprPnl\": 0.19503277851939582,\n    \"aprRewards\": 0.20099469577969659,\n    \"aprCombined\": 0.3960274742990924\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8a2fae81-f443-4a79-999a-21e77e8dbce6",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "arbitrum",
+                    "sc-pool-apy-all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "422e1183-aba7-4d0d-9da7-fea2f052ba1f",
+              "name": "You have been banned by WAF.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "arbitrum",
+                    "sc-pool-apy-all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "dda180ed-3d06-4a8d-a589-836fa34244ea",
+              "name": "Too many requests, you're being rate-limited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "arbitrum",
+                    "sc-pool-apy-all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c576bfc1-2859-49a5-a69e-08c0a92953d9",
+              "name": "Service unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "arbitrum",
+                    "sc-pool-apy-all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "52277406-7758-4318-abdf-97032615f5d3",
+              "name": "Unexpected error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "arbitrum",
+                    "sc-pool-apy-all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5a990c93-fabb-42ef-a510-8746e5d18124",
+          "name": "Returns historical APY for Spartan Council Pool on Arbitrum.",
+          "request": {
+            "name": "Returns historical APY for Spartan Council Pool on Arbitrum.",
+            "description": {
+              "content": "Returns historical APY for Spartan Council Pool on Arbitrum.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v3",
+                "arbitrum",
+                "sc-pool-apy-history"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "67023cbd-bc50-4099-8727-dc241ccefcdc",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "arbitrum",
+                    "sc-pool-apy-history"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"timestamp\": \"2024-05-23T14:00:00.000Z\",\n    \"poolId\": 1,\n    \"collateralType\": \"0xc74ea762cf06c9151ce074e6a569a5945b6302e7\",\n    \"collateralValue\": 23075347.609146226,\n    \"debtAmount\": -38219.337186378914,\n    \"hourlyIssuance\": 500,\n    \"hourlyPnl\": 12954.05122107834,\n    \"cumulativePnl\": 43985.56313904079,\n    \"cumulativeIssuance\": 5766.225952661871,\n    \"rewardsUSD\": 325.5208333342384,\n    \"hourlyPnlPct\": 0.0005613805451816391,\n    \"hourlyRewardsPct\": 0.00001410686585736259,\n    \"apr24h\": 0.45592422360763046,\n    \"apy24h\": 0.57761207594964,\n    \"apr7d\": 0.3960274742990924,\n    \"apy7d\": 0.4858968400315962,\n    \"apr28d\": 0.4384330174128003,\n    \"apy28d\": 0.550259050183527,\n    \"apr24hPnl\": 0.33291916703302443,\n    \"apy24hPnl\": 0.39502570410440424,\n    \"apr7dPnl\": 0.19503277851939582,\n    \"apy7dPnl\": 0.21534818462340294,\n    \"apr28dPnl\": 0.13876757264702413,\n    \"apy28dPnl\": 0.14885578045932418,\n    \"apr24hRewards\": 0.12300505657460604,\n    \"apy24hRewards\": 0.13088916273804313,\n    \"apr7dRewards\": 0.20099469577969659,\n    \"apy7dRewards\": 0.22261546761516451,\n    \"apr28dRewards\": 0.29966544476577617,\n    \"apy28dRewards\": 0.34940036452177975,\n    \"aprPnl\": 0.19503277851939582,\n    \"aprRewards\": 0.20099469577969659,\n    \"aprCombined\": 0.3960274742990924\n  },\n  {\n    \"timestamp\": \"2024-05-23T14:00:00.000Z\",\n    \"poolId\": 1,\n    \"collateralType\": \"0xc74ea762cf06c9151ce074e6a569a5945b6302e7\",\n    \"collateralValue\": 23075347.609146226,\n    \"debtAmount\": -38219.337186378914,\n    \"hourlyIssuance\": 500,\n    \"hourlyPnl\": 12954.05122107834,\n    \"cumulativePnl\": 43985.56313904079,\n    \"cumulativeIssuance\": 5766.225952661871,\n    \"rewardsUSD\": 325.5208333342384,\n    \"hourlyPnlPct\": 0.0005613805451816391,\n    \"hourlyRewardsPct\": 0.00001410686585736259,\n    \"apr24h\": 0.45592422360763046,\n    \"apy24h\": 0.57761207594964,\n    \"apr7d\": 0.3960274742990924,\n    \"apy7d\": 0.4858968400315962,\n    \"apr28d\": 0.4384330174128003,\n    \"apy28d\": 0.550259050183527,\n    \"apr24hPnl\": 0.33291916703302443,\n    \"apy24hPnl\": 0.39502570410440424,\n    \"apr7dPnl\": 0.19503277851939582,\n    \"apy7dPnl\": 0.21534818462340294,\n    \"apr28dPnl\": 0.13876757264702413,\n    \"apy28dPnl\": 0.14885578045932418,\n    \"apr24hRewards\": 0.12300505657460604,\n    \"apy24hRewards\": 0.13088916273804313,\n    \"apr7dRewards\": 0.20099469577969659,\n    \"apy7dRewards\": 0.22261546761516451,\n    \"apr28dRewards\": 0.29966544476577617,\n    \"apy28dRewards\": 0.34940036452177975,\n    \"aprPnl\": 0.19503277851939582,\n    \"aprRewards\": 0.20099469577969659,\n    \"aprCombined\": 0.3960274742990924\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "39822297-ac6a-4b4d-8737-48543e51d581",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "arbitrum",
+                    "sc-pool-apy-history"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "6f2ee2b0-475c-493b-9357-f79cc6f6c952",
+              "name": "You have been banned by WAF.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "arbitrum",
+                    "sc-pool-apy-history"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d91d0de1-c474-4430-a454-411ba47c98b5",
+              "name": "Too many requests, you're being rate-limited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "arbitrum",
+                    "sc-pool-apy-history"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ca3c55dd-3e89-49fd-bb8d-38ed87b928bd",
+              "name": "Service unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "arbitrum",
+                    "sc-pool-apy-history"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b8934aa4-a305-4bcd-b6ae-760d40a1d955",
+              "name": "Unexpected error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "arbitrum",
+                    "sc-pool-apy-history"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "034e5d23-bd56-4344-93a9-0dba410e801d",
+          "name": "Returns current APY for Spartan Council Pool on Arbitrum.",
+          "request": {
+            "name": "Returns current APY for Spartan Council Pool on Arbitrum.",
+            "description": {
+              "content": "Returns current APY for Spartan Council Pool on Arbitrum.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v3",
+                "arbitrum",
+                "sc-pool-apy"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cca244d8-27df-491e-96c8-2d9186050faa",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "arbitrum",
+                    "sc-pool-apy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"timestamp\": \"2024-05-23T14:00:00.000Z\",\n    \"poolId\": 1,\n    \"collateralType\": \"0xc74ea762cf06c9151ce074e6a569a5945b6302e7\",\n    \"collateralValue\": 23075347.609146226,\n    \"debtAmount\": -38219.337186378914,\n    \"hourlyIssuance\": 500,\n    \"hourlyPnl\": 12954.05122107834,\n    \"cumulativePnl\": 43985.56313904079,\n    \"cumulativeIssuance\": 5766.225952661871,\n    \"rewardsUSD\": 325.5208333342384,\n    \"hourlyPnlPct\": 0.0005613805451816391,\n    \"hourlyRewardsPct\": 0.00001410686585736259,\n    \"apr24h\": 0.45592422360763046,\n    \"apy24h\": 0.57761207594964,\n    \"apr7d\": 0.3960274742990924,\n    \"apy7d\": 0.4858968400315962,\n    \"apr28d\": 0.4384330174128003,\n    \"apy28d\": 0.550259050183527,\n    \"apr24hPnl\": 0.33291916703302443,\n    \"apy24hPnl\": 0.39502570410440424,\n    \"apr7dPnl\": 0.19503277851939582,\n    \"apy7dPnl\": 0.21534818462340294,\n    \"apr28dPnl\": 0.13876757264702413,\n    \"apy28dPnl\": 0.14885578045932418,\n    \"apr24hRewards\": 0.12300505657460604,\n    \"apy24hRewards\": 0.13088916273804313,\n    \"apr7dRewards\": 0.20099469577969659,\n    \"apy7dRewards\": 0.22261546761516451,\n    \"apr28dRewards\": 0.29966544476577617,\n    \"apy28dRewards\": 0.34940036452177975,\n    \"aprPnl\": 0.19503277851939582,\n    \"aprRewards\": 0.20099469577969659,\n    \"aprCombined\": 0.3960274742990924\n  },\n  {\n    \"timestamp\": \"2024-05-23T14:00:00.000Z\",\n    \"poolId\": 1,\n    \"collateralType\": \"0xc74ea762cf06c9151ce074e6a569a5945b6302e7\",\n    \"collateralValue\": 23075347.609146226,\n    \"debtAmount\": -38219.337186378914,\n    \"hourlyIssuance\": 500,\n    \"hourlyPnl\": 12954.05122107834,\n    \"cumulativePnl\": 43985.56313904079,\n    \"cumulativeIssuance\": 5766.225952661871,\n    \"rewardsUSD\": 325.5208333342384,\n    \"hourlyPnlPct\": 0.0005613805451816391,\n    \"hourlyRewardsPct\": 0.00001410686585736259,\n    \"apr24h\": 0.45592422360763046,\n    \"apy24h\": 0.57761207594964,\n    \"apr7d\": 0.3960274742990924,\n    \"apy7d\": 0.4858968400315962,\n    \"apr28d\": 0.4384330174128003,\n    \"apy28d\": 0.550259050183527,\n    \"apr24hPnl\": 0.33291916703302443,\n    \"apy24hPnl\": 0.39502570410440424,\n    \"apr7dPnl\": 0.19503277851939582,\n    \"apy7dPnl\": 0.21534818462340294,\n    \"apr28dPnl\": 0.13876757264702413,\n    \"apy28dPnl\": 0.14885578045932418,\n    \"apr24hRewards\": 0.12300505657460604,\n    \"apy24hRewards\": 0.13088916273804313,\n    \"apr7dRewards\": 0.20099469577969659,\n    \"apy7dRewards\": 0.22261546761516451,\n    \"apr28dRewards\": 0.29966544476577617,\n    \"apy28dRewards\": 0.34940036452177975,\n    \"aprPnl\": 0.19503277851939582,\n    \"aprRewards\": 0.20099469577969659,\n    \"aprCombined\": 0.3960274742990924\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3ff822a1-3b27-4d73-bd56-ac242e11ed2f",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "arbitrum",
+                    "sc-pool-apy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b0985cc2-6e8b-4fbd-a297-c637cbe7932c",
+              "name": "You have been banned by WAF.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "arbitrum",
+                    "sc-pool-apy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "6bacfbaf-a2be-4a4a-9d7f-a1157478c926",
+              "name": "Too many requests, you're being rate-limited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "arbitrum",
+                    "sc-pool-apy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "9bc8b5de-6bb8-4a25-ba2d-0f20f618fb5f",
+              "name": "Service unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "arbitrum",
+                    "sc-pool-apy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "14b16217-df26-4173-99e6-0eb8993ea60e",
+              "name": "Unexpected error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "arbitrum",
+                    "sc-pool-apy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5d58fd8e-03d6-452d-8937-93cbeb2a8982",
+          "name": "Fetch sum of usd value of issued debt each collateral.",
+          "request": {
+            "name": "Fetch sum of usd value of issued debt each collateral.",
+            "description": {
+              "content": "Checks the cache first, and if not found, fetches issued debt data from Postgres for the given account ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v3",
+                "base",
+                "issued-debt"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "accountId",
+                  "value": "<string>",
+                  "description": "(Required) The account ID to fetch the issued debt for."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "76e95212-8eb7-424a-9a86-0041eb6745fd",
+              "name": "Successfully fetched issued debt.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "issued-debt"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "accountId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"collateral_type\": \"0x..\",\n    \"issuance\": 1\n  },\n  {\n    \"collateral_type\": \"0x..\",\n    \"issuance\": 1\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "10d2c8a2-6020-4021-8b8f-53d02309e4e9",
+              "name": "Invalid accountId provided.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "issued-debt"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "accountId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "38b3fd78-a5dd-4c92-90b3-bc7c758bbc51",
+              "name": "An internal server error occurred.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "issued-debt"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "accountId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b0b7af9b-eeb2-43fd-8fa3-d080e0bb6f7b",
+          "name": "Returns leverage token leaderboard on base.",
+          "request": {
+            "name": "Returns leverage token leaderboard on base.",
+            "description": {
+              "content": "Returns leverage token leaderboard on base.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v3",
+                "base",
+                "lt-leaderboard"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "439ef6ee-6828-4bbb-b0b6-354e35e9742c",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "lt-leaderboard"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"epoch_start\": \"2024-05-23T14:00:00.000Z\",\n    \"account\": \"0xAa4a1d3c0d96B0D8C7AE4F71939D0Fa36bd97Aa7\",\n    \"total_fees_paid\": \"954.605497900439850\",\n    \"fees_paid_pct\": \"0.210334039122012452233641885\",\n    \"fees_rank\": \"1\",\n    \"volume\": \"1\",\n    \"volume_rank\": \"1\",\n    \"volume_pct\": \"1\"\n  },\n  {\n    \"epoch_start\": \"2024-05-23T14:00:00.000Z\",\n    \"account\": \"0xAa4a1d3c0d96B0D8C7AE4F71939D0Fa36bd97Aa7\",\n    \"total_fees_paid\": \"954.605497900439850\",\n    \"fees_paid_pct\": \"0.210334039122012452233641885\",\n    \"fees_rank\": \"1\",\n    \"volume\": \"1\",\n    \"volume_rank\": \"1\",\n    \"volume_pct\": \"1\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5b342a8f-ad83-44c2-aaa1-f1ca55f52dfd",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "lt-leaderboard"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "36ff9461-7dea-462e-92e0-9701f761c4c5",
+              "name": "You have been banned by WAF.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "lt-leaderboard"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "918843a2-03f0-44d7-9588-321e1fbe9521",
+              "name": "Too many requests, you're being rate-limited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "lt-leaderboard"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d5015368-3087-49c2-8785-b1c95b224c6a",
+              "name": "Service unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "lt-leaderboard"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2e34e070-751c-49bb-80b5-bc00c2aabe64",
+              "name": "Unexpected error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "lt-leaderboard"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "77a7eacd-01e9-4afe-a04c-ba69d30bd752",
+          "name": "Returns leverage token trades on base.",
+          "request": {
+            "name": "Returns leverage token trades on base.",
+            "description": {
+              "content": "Returns leverage token trades on base.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v3",
+                "base",
+                "lt-trades"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "77fce459-1b2d-4cec-96b0-a109d53c5b2a",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "lt-trades"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"0131506856-000048-c2285\",\n    \"block_number\": 131506856,\n    \"ts\": \"2025-02-03 19:54:49+00\",\n    \"transaction_hash\": \"0x...\",\n    \"contract\": \"0x...\",\n    \"event_name\": \"Redeemed\",\n    \"account\": \"0x\",\n    \"token\": \"btc_long7\",\n    \"leverage\": 1,\n    \"market\": \"BTC\",\n    \"leveraged_token_amount\": \"1\",\n    \"base_asset_amount\": \"1\",\n    \"nominal_volume\": \"1\",\n    \"notional_volume\": \"1\",\n    \"token_price\": \"1\",\n    \"total_supply\": \"1\",\n    \"vault_tvl\": \"1\",\n    \"vault_oi\": \"1\"\n  },\n  {\n    \"id\": \"0131506856-000048-c2285\",\n    \"block_number\": 131506856,\n    \"ts\": \"2025-02-03 19:54:49+00\",\n    \"transaction_hash\": \"0x...\",\n    \"contract\": \"0x...\",\n    \"event_name\": \"Redeemed\",\n    \"account\": \"0x\",\n    \"token\": \"btc_long7\",\n    \"leverage\": 1,\n    \"market\": \"BTC\",\n    \"leveraged_token_amount\": \"1\",\n    \"base_asset_amount\": \"1\",\n    \"nominal_volume\": \"1\",\n    \"notional_volume\": \"1\",\n    \"token_price\": \"1\",\n    \"total_supply\": \"1\",\n    \"vault_tvl\": \"1\",\n    \"vault_oi\": \"1\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ac63a293-19ab-42a4-9846-36cd54cc3135",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "lt-trades"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "fb5d2aba-7449-4537-9804-4d7070d345f6",
+              "name": "You have been banned by WAF.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "lt-trades"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "8d9b33b1-88c9-4f91-9f9f-ab2c6f32b708",
+              "name": "Too many requests, you're being rate-limited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "lt-trades"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a53d50a6-56eb-43f3-a091-4da684073b9c",
+              "name": "Service unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "lt-trades"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "49700656-6f15-4d93-b8e5-301564880ae4",
+              "name": "Unexpected error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "lt-trades"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "743b31ed-542f-43d4-ad54-272be7731d5f",
+          "name": "Fetch sum of usd value of claimed rewards for a given account ID for each collateral.",
+          "request": {
+            "name": "Fetch sum of usd value of claimed rewards for a given account ID for each collateral.",
+            "description": {
+              "content": "Checks the cache first, and if not found, fetches claimed rewards data from Postgres for the given account ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v3",
+                "base",
+                "rewards-claimed"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "accountId",
+                  "value": "<string>",
+                  "description": "(Required) The account ID to fetch total usd value of claimed rewards for. Must be a positive integer."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9b25552d-22d5-4b6f-8015-21482f546f77",
+              "name": "Successfully fetched claimed rewards.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "rewards-claimed"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "accountId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"collateral_type\": \"0x..\",\n    \"total_amount_usd\": 1\n  },\n  {\n    \"collateral_type\": \"0x..\",\n    \"total_amount_usd\": 1\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "bf17bd67-a24d-40df-a485-4b84958456dd",
+              "name": "Invalid accountId provided.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "rewards-claimed"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "accountId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0aa771f0-6e63-44da-aa7f-00309f1b64e5",
+              "name": "An internal server error occurred.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "rewards-claimed"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "accountId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ab49b667-c426-4538-beb7-6dd4d262c66f",
+          "name": "Returns current APY for Spartan Council Pool on Arbitrum.",
+          "request": {
+            "name": "Returns current APY for Spartan Council Pool on Arbitrum.",
+            "description": {
+              "content": "Returns current APY for Spartan Council Pool on Arbitrum.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v3",
+                "base",
+                "sc-pool-apy-all"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "76d9207f-6534-49f3-bcb2-333c3ec2406c",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "sc-pool-apy-all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"timestamp\": \"2024-05-23T14:00:00.000Z\",\n    \"poolId\": 1,\n    \"collateralType\": \"0xc74ea762cf06c9151ce074e6a569a5945b6302e7\",\n    \"collateralValue\": 23075347.609146226,\n    \"debtAmount\": -38219.337186378914,\n    \"hourlyIssuance\": 500,\n    \"hourlyPnl\": 12954.05122107834,\n    \"cumulativePnl\": 43985.56313904079,\n    \"cumulativeIssuance\": 5766.225952661871,\n    \"rewardsUSD\": 325.5208333342384,\n    \"hourlyPnlPct\": 0.0005613805451816391,\n    \"hourlyRewardsPct\": 0.00001410686585736259,\n    \"apr24h\": 0.45592422360763046,\n    \"apy24h\": 0.57761207594964,\n    \"apr7d\": 0.3960274742990924,\n    \"apy7d\": 0.4858968400315962,\n    \"apr28d\": 0.4384330174128003,\n    \"apy28d\": 0.550259050183527,\n    \"apr24hPnl\": 0.33291916703302443,\n    \"apy24hPnl\": 0.39502570410440424,\n    \"apr7dPnl\": 0.19503277851939582,\n    \"apy7dPnl\": 0.21534818462340294,\n    \"apr28dPnl\": 0.13876757264702413,\n    \"apy28dPnl\": 0.14885578045932418,\n    \"apr24hRewards\": 0.12300505657460604,\n    \"apy24hRewards\": 0.13088916273804313,\n    \"apr7dRewards\": 0.20099469577969659,\n    \"apy7dRewards\": 0.22261546761516451,\n    \"apr28dRewards\": 0.29966544476577617,\n    \"apy28dRewards\": 0.34940036452177975,\n    \"aprPnl\": 0.19503277851939582,\n    \"aprRewards\": 0.20099469577969659,\n    \"aprCombined\": 0.3960274742990924\n  },\n  {\n    \"timestamp\": \"2024-05-23T14:00:00.000Z\",\n    \"poolId\": 1,\n    \"collateralType\": \"0xc74ea762cf06c9151ce074e6a569a5945b6302e7\",\n    \"collateralValue\": 23075347.609146226,\n    \"debtAmount\": -38219.337186378914,\n    \"hourlyIssuance\": 500,\n    \"hourlyPnl\": 12954.05122107834,\n    \"cumulativePnl\": 43985.56313904079,\n    \"cumulativeIssuance\": 5766.225952661871,\n    \"rewardsUSD\": 325.5208333342384,\n    \"hourlyPnlPct\": 0.0005613805451816391,\n    \"hourlyRewardsPct\": 0.00001410686585736259,\n    \"apr24h\": 0.45592422360763046,\n    \"apy24h\": 0.57761207594964,\n    \"apr7d\": 0.3960274742990924,\n    \"apy7d\": 0.4858968400315962,\n    \"apr28d\": 0.4384330174128003,\n    \"apy28d\": 0.550259050183527,\n    \"apr24hPnl\": 0.33291916703302443,\n    \"apy24hPnl\": 0.39502570410440424,\n    \"apr7dPnl\": 0.19503277851939582,\n    \"apy7dPnl\": 0.21534818462340294,\n    \"apr28dPnl\": 0.13876757264702413,\n    \"apy28dPnl\": 0.14885578045932418,\n    \"apr24hRewards\": 0.12300505657460604,\n    \"apy24hRewards\": 0.13088916273804313,\n    \"apr7dRewards\": 0.20099469577969659,\n    \"apy7dRewards\": 0.22261546761516451,\n    \"apr28dRewards\": 0.29966544476577617,\n    \"apy28dRewards\": 0.34940036452177975,\n    \"aprPnl\": 0.19503277851939582,\n    \"aprRewards\": 0.20099469577969659,\n    \"aprCombined\": 0.3960274742990924\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d5d2e5c5-a15f-4dcd-abf4-232fe3692ffd",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "sc-pool-apy-all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d3d0ce24-9abc-46cb-8416-bd2f0452419a",
+              "name": "You have been banned by WAF.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "sc-pool-apy-all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "275ec2ac-d151-4dc0-b468-a89b1397e21e",
+              "name": "Too many requests, you're being rate-limited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "sc-pool-apy-all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "fffa53b9-6d55-4fca-9101-d184f6045100",
+              "name": "Service unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "sc-pool-apy-all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d837f32c-e8c4-4b5d-8f9c-a89001557071",
+              "name": "Unexpected error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "sc-pool-apy-all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bc3e343e-3a2f-4024-abd8-cf95a284c510",
+          "name": "Returns historical APY for Spartan Council Pool on Base.",
+          "request": {
+            "name": "Returns historical APY for Spartan Council Pool on Base.",
+            "description": {
+              "content": "Returns historical APY for Spartan Council Pool on Base.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v3",
+                "base",
+                "sc-pool-apy-history"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "325a777f-628a-4c9f-bd8b-da7e8cf0e88a",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "sc-pool-apy-history"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"timestamp\": \"2024-05-23T14:00:00.000Z\",\n    \"poolId\": 1,\n    \"collateralType\": \"0xc74ea762cf06c9151ce074e6a569a5945b6302e7\",\n    \"collateralValue\": 23075347.609146226,\n    \"debtAmount\": -38219.337186378914,\n    \"hourlyIssuance\": 500,\n    \"hourlyPnl\": 12954.05122107834,\n    \"cumulativePnl\": 43985.56313904079,\n    \"cumulativeIssuance\": 5766.225952661871,\n    \"rewardsUSD\": 325.5208333342384,\n    \"hourlyPnlPct\": 0.0005613805451816391,\n    \"hourlyRewardsPct\": 0.00001410686585736259,\n    \"apr24h\": 0.45592422360763046,\n    \"apy24h\": 0.57761207594964,\n    \"apr7d\": 0.3960274742990924,\n    \"apy7d\": 0.4858968400315962,\n    \"apr28d\": 0.4384330174128003,\n    \"apy28d\": 0.550259050183527,\n    \"apr24hPnl\": 0.33291916703302443,\n    \"apy24hPnl\": 0.39502570410440424,\n    \"apr7dPnl\": 0.19503277851939582,\n    \"apy7dPnl\": 0.21534818462340294,\n    \"apr28dPnl\": 0.13876757264702413,\n    \"apy28dPnl\": 0.14885578045932418,\n    \"apr24hRewards\": 0.12300505657460604,\n    \"apy24hRewards\": 0.13088916273804313,\n    \"apr7dRewards\": 0.20099469577969659,\n    \"apy7dRewards\": 0.22261546761516451,\n    \"apr28dRewards\": 0.29966544476577617,\n    \"apy28dRewards\": 0.34940036452177975,\n    \"aprPnl\": 0.19503277851939582,\n    \"aprRewards\": 0.20099469577969659,\n    \"aprCombined\": 0.3960274742990924\n  },\n  {\n    \"timestamp\": \"2024-05-23T14:00:00.000Z\",\n    \"poolId\": 1,\n    \"collateralType\": \"0xc74ea762cf06c9151ce074e6a569a5945b6302e7\",\n    \"collateralValue\": 23075347.609146226,\n    \"debtAmount\": -38219.337186378914,\n    \"hourlyIssuance\": 500,\n    \"hourlyPnl\": 12954.05122107834,\n    \"cumulativePnl\": 43985.56313904079,\n    \"cumulativeIssuance\": 5766.225952661871,\n    \"rewardsUSD\": 325.5208333342384,\n    \"hourlyPnlPct\": 0.0005613805451816391,\n    \"hourlyRewardsPct\": 0.00001410686585736259,\n    \"apr24h\": 0.45592422360763046,\n    \"apy24h\": 0.57761207594964,\n    \"apr7d\": 0.3960274742990924,\n    \"apy7d\": 0.4858968400315962,\n    \"apr28d\": 0.4384330174128003,\n    \"apy28d\": 0.550259050183527,\n    \"apr24hPnl\": 0.33291916703302443,\n    \"apy24hPnl\": 0.39502570410440424,\n    \"apr7dPnl\": 0.19503277851939582,\n    \"apy7dPnl\": 0.21534818462340294,\n    \"apr28dPnl\": 0.13876757264702413,\n    \"apy28dPnl\": 0.14885578045932418,\n    \"apr24hRewards\": 0.12300505657460604,\n    \"apy24hRewards\": 0.13088916273804313,\n    \"apr7dRewards\": 0.20099469577969659,\n    \"apy7dRewards\": 0.22261546761516451,\n    \"apr28dRewards\": 0.29966544476577617,\n    \"apy28dRewards\": 0.34940036452177975,\n    \"aprPnl\": 0.19503277851939582,\n    \"aprRewards\": 0.20099469577969659,\n    \"aprCombined\": 0.3960274742990924\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "044139e7-1190-4875-89e5-9cd6579c36df",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "sc-pool-apy-history"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "aab7b0cf-5ef0-4e6a-95e5-a5d0d72949f6",
+              "name": "You have been banned by WAF.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "sc-pool-apy-history"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f01b989d-9ed4-4cad-a4b6-7691e1b415c1",
+              "name": "Too many requests, you're being rate-limited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "sc-pool-apy-history"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a8c7a04a-38bc-4dd6-b291-fae2b7157643",
+              "name": "Service unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "sc-pool-apy-history"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "34ba0058-c76d-4a73-b778-91f6704cde13",
+              "name": "Unexpected error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "sc-pool-apy-history"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7c4c2746-2c5b-46f0-9048-1717bde1185f",
+          "name": "Returns current APY for Spartan Council Pool on Base.",
+          "request": {
+            "name": "Returns current APY for Spartan Council Pool on Base.",
+            "description": {
+              "content": "Returns current APY for Spartan Council Pool on Base.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v3",
+                "base",
+                "sc-pool-apy"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a47aff25-576d-4695-9a25-53b4a9e446ca",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "sc-pool-apy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"timestamp\": \"2024-05-23T14:00:00.000Z\",\n  \"poolId\": 1,\n  \"collateralType\": \"0xc74ea762cf06c9151ce074e6a569a5945b6302e7\",\n  \"collateralValue\": 23075347.609146226,\n  \"debtAmount\": -38219.337186378914,\n  \"hourlyIssuance\": 500,\n  \"hourlyPnl\": 12954.05122107834,\n  \"cumulativePnl\": 43985.56313904079,\n  \"cumulativeIssuance\": 5766.225952661871,\n  \"rewardsUSD\": 325.5208333342384,\n  \"hourlyPnlPct\": 0.0005613805451816391,\n  \"hourlyRewardsPct\": 0.00001410686585736259,\n  \"apr24h\": 0.45592422360763046,\n  \"apy24h\": 0.57761207594964,\n  \"apr7d\": 0.3960274742990924,\n  \"apy7d\": 0.4858968400315962,\n  \"apr28d\": 0.4384330174128003,\n  \"apy28d\": 0.550259050183527,\n  \"apr24hPnl\": 0.33291916703302443,\n  \"apy24hPnl\": 0.39502570410440424,\n  \"apr7dPnl\": 0.19503277851939582,\n  \"apy7dPnl\": 0.21534818462340294,\n  \"apr28dPnl\": 0.13876757264702413,\n  \"apy28dPnl\": 0.14885578045932418,\n  \"apr24hRewards\": 0.12300505657460604,\n  \"apy24hRewards\": 0.13088916273804313,\n  \"apr7dRewards\": 0.20099469577969659,\n  \"apy7dRewards\": 0.22261546761516451,\n  \"apr28dRewards\": 0.29966544476577617,\n  \"apy28dRewards\": 0.34940036452177975,\n  \"aprPnl\": 0.19503277851939582,\n  \"aprRewards\": 0.20099469577969659,\n  \"aprCombined\": 0.3960274742990924\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "dd2ea160-333c-4bf2-aefd-d40b4247b854",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "sc-pool-apy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ba0bccc5-caf4-48b0-9de0-4e19afea8e64",
+              "name": "You have been banned by WAF.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "sc-pool-apy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "26ec6402-bba9-4c79-95c4-f7e565b7195c",
+              "name": "Too many requests, you're being rate-limited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "sc-pool-apy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "cf25377c-6db0-4ffc-9c20-43c026f017c3",
+              "name": "Service unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "sc-pool-apy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "5e4790b3-8992-401d-96ae-94ea15531f36",
+              "name": "Unexpected error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "sc-pool-apy"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "50625f76-ec2d-49b0-b79a-ddeaa16f3b93",
+          "name": "Returns SNX buyback details on Base.",
+          "request": {
+            "name": "Returns SNX buyback details on Base.",
+            "description": {
+              "content": "Returns SNX buyback details on Base.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v3",
+                "base",
+                "snx-buyback"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a7df7ceb-7620-4b85-a655-351a8cc56520",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "snx-buyback"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"ts\": 6614.3138335125195,\n    \"snxAmount\": 119.31418084003664,\n    \"usdAmount\": 1596.3125042967874,\n    \"cumulativeSnxAmount\": 7810.226181597148,\n    \"cumulativeUsdAmount\": 8232.56698735352\n  },\n  {\n    \"ts\": 7897.989054244965,\n    \"snxAmount\": 9108.364317349378,\n    \"usdAmount\": 9052.88326907518,\n    \"cumulativeSnxAmount\": 821.7266993471306,\n    \"cumulativeUsdAmount\": 83.00541177823972\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1ca12ba2-61c3-4b32-95a9-17215209bc1e",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "snx-buyback"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "299590a9-810b-4f83-963c-ff9d8a0f8e20",
+              "name": "You have been banned by WAF.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "snx-buyback"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "41ffaef7-888a-4e57-adc0-da938b1384ca",
+              "name": "Too many requests, you're being rate-limited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "snx-buyback"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "6de2da7d-bbc4-430b-9bb7-8772c1527822",
+              "name": "Service unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "snx-buyback"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "374266a7-a1dd-49a5-91c4-e2451a9db3bb",
+              "name": "Unexpected error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "base",
+                    "snx-buyback"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "65dd9209-7c10-4e71-9aec-38dca6bf3e05",
+          "name": "Fetch sum of usd value of issued debt each collateral.",
+          "request": {
+            "name": "Fetch sum of usd value of issued debt each collateral.",
+            "description": {
+              "content": "Checks the cache first, and if not found, fetches issued debt data from Postgres for the given account ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v3",
+                "mainnet",
+                "issued-debt"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "accountId",
+                  "value": "<string>",
+                  "description": "(Required) The account ID to fetch the issued debt for."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "110aa303-fb16-48b4-9d4b-fbf4a992648e",
+              "name": "Successfully fetched issued debt.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "mainnet",
+                    "issued-debt"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "accountId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"collateral_type\": \"0x..\",\n    \"issuance\": 1\n  },\n  {\n    \"collateral_type\": \"0x..\",\n    \"issuance\": 1\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0bdbde7b-3066-4924-b033-01bf9be025fc",
+              "name": "Invalid accountId provided.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "mainnet",
+                    "issued-debt"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "accountId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8cd4b929-b9e3-4810-863f-d1ffa2d375bd",
+              "name": "An internal server error occurred.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "mainnet",
+                    "issued-debt"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "accountId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0a723f0f-4c3a-4f1b-a78f-9254e6b07a19",
+          "name": "Fetch sum of usd value of claimed rewards for a given account ID for each collateral.",
+          "request": {
+            "name": "Fetch sum of usd value of claimed rewards for a given account ID for each collateral.",
+            "description": {
+              "content": "Checks the cache first, and if not found, fetches claimed rewards data from Postgres for the given account ID.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v3",
+                "mainnet",
+                "rewards-claimed"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "accountId",
+                  "value": "<string>",
+                  "description": "(Required) The account ID to fetch total usd value of claimed rewards for. Must be a positive integer."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e8806504-7d08-4dc7-9cc8-f788edc7c77e",
+              "name": "Successfully fetched claimed rewards.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "mainnet",
+                    "rewards-claimed"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "accountId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"collateral_type\": \"0x..\",\n    \"total_amount_usd\": 1\n  },\n  {\n    \"collateral_type\": \"0x..\",\n    \"total_amount_usd\": 1\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "aecced52-94a2-4344-9ac7-b255b1ca3885",
+              "name": "Invalid accountId provided.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "mainnet",
+                    "rewards-claimed"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "accountId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c158ce3e-9bed-417c-a80b-bb6404eba141",
+              "name": "An internal server error occurred.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "mainnet",
+                    "rewards-claimed"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "accountId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "174648a7-b4b0-4a6b-b443-39863591571b",
+          "name": "Returns current APY for Spartan Council Pool on Mainnet.",
+          "request": {
+            "name": "Returns current APY for Spartan Council Pool on Mainnet.",
+            "description": {
+              "content": "Returns current APY for Spartan Council Pool on Mainnet.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v3",
+                "mainnet",
+                "sc-pool-apy-all"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7c5e9fed-8dad-45c8-8fc3-a4e66f6b846b",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "mainnet",
+                    "sc-pool-apy-all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"timestamp\": \"2024-05-23T14:00:00.000Z\",\n    \"poolId\": 1,\n    \"collateralType\": \"0xc74ea762cf06c9151ce074e6a569a5945b6302e7\",\n    \"collateralValue\": 23075347.609146226,\n    \"debtAmount\": -38219.337186378914,\n    \"hourlyIssuance\": 500,\n    \"hourlyPnl\": 12954.05122107834,\n    \"cumulativePnl\": 43985.56313904079,\n    \"cumulativeIssuance\": 5766.225952661871,\n    \"rewardsUSD\": 325.5208333342384,\n    \"hourlyPnlPct\": 0.0005613805451816391,\n    \"hourlyRewardsPct\": 0.00001410686585736259,\n    \"apr24h\": 0.45592422360763046,\n    \"apy24h\": 0.57761207594964,\n    \"apr7d\": 0.3960274742990924,\n    \"apy7d\": 0.4858968400315962,\n    \"apr28d\": 0.4384330174128003,\n    \"apy28d\": 0.550259050183527,\n    \"apr24hPnl\": 0.33291916703302443,\n    \"apy24hPnl\": 0.39502570410440424,\n    \"apr7dPnl\": 0.19503277851939582,\n    \"apy7dPnl\": 0.21534818462340294,\n    \"apr28dPnl\": 0.13876757264702413,\n    \"apy28dPnl\": 0.14885578045932418,\n    \"apr24hRewards\": 0.12300505657460604,\n    \"apy24hRewards\": 0.13088916273804313,\n    \"apr7dRewards\": 0.20099469577969659,\n    \"apy7dRewards\": 0.22261546761516451,\n    \"apr28dRewards\": 0.29966544476577617,\n    \"apy28dRewards\": 0.34940036452177975,\n    \"aprPnl\": 0.19503277851939582,\n    \"aprRewards\": 0.20099469577969659,\n    \"aprCombined\": 0.3960274742990924\n  },\n  {\n    \"timestamp\": \"2024-05-23T14:00:00.000Z\",\n    \"poolId\": 1,\n    \"collateralType\": \"0xc74ea762cf06c9151ce074e6a569a5945b6302e7\",\n    \"collateralValue\": 23075347.609146226,\n    \"debtAmount\": -38219.337186378914,\n    \"hourlyIssuance\": 500,\n    \"hourlyPnl\": 12954.05122107834,\n    \"cumulativePnl\": 43985.56313904079,\n    \"cumulativeIssuance\": 5766.225952661871,\n    \"rewardsUSD\": 325.5208333342384,\n    \"hourlyPnlPct\": 0.0005613805451816391,\n    \"hourlyRewardsPct\": 0.00001410686585736259,\n    \"apr24h\": 0.45592422360763046,\n    \"apy24h\": 0.57761207594964,\n    \"apr7d\": 0.3960274742990924,\n    \"apy7d\": 0.4858968400315962,\n    \"apr28d\": 0.4384330174128003,\n    \"apy28d\": 0.550259050183527,\n    \"apr24hPnl\": 0.33291916703302443,\n    \"apy24hPnl\": 0.39502570410440424,\n    \"apr7dPnl\": 0.19503277851939582,\n    \"apy7dPnl\": 0.21534818462340294,\n    \"apr28dPnl\": 0.13876757264702413,\n    \"apy28dPnl\": 0.14885578045932418,\n    \"apr24hRewards\": 0.12300505657460604,\n    \"apy24hRewards\": 0.13088916273804313,\n    \"apr7dRewards\": 0.20099469577969659,\n    \"apy7dRewards\": 0.22261546761516451,\n    \"apr28dRewards\": 0.29966544476577617,\n    \"apy28dRewards\": 0.34940036452177975,\n    \"aprPnl\": 0.19503277851939582,\n    \"aprRewards\": 0.20099469577969659,\n    \"aprCombined\": 0.3960274742990924\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f0f9b6cd-be5d-4a2e-9faf-62f95935acc0",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "mainnet",
+                    "sc-pool-apy-all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2e783f58-6447-4971-ae85-f18929196b4c",
+              "name": "You have been banned by WAF.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "mainnet",
+                    "sc-pool-apy-all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "6673fd7f-b338-4168-beb0-845b978579c5",
+              "name": "Too many requests, you're being rate-limited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "mainnet",
+                    "sc-pool-apy-all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "1191a66a-b540-42df-99f6-9e36768c28b7",
+              "name": "Service unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "mainnet",
+                    "sc-pool-apy-all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e333ad2f-a768-4944-94bc-7c8754720413",
+              "name": "Unexpected error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "mainnet",
+                    "sc-pool-apy-all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f81f10b1-c4ae-4527-a852-dce2d4bced9f",
+          "name": "Returns leverage token leaderboard on optimism.",
+          "request": {
+            "name": "Returns leverage token leaderboard on optimism.",
+            "description": {
+              "content": "Returns leverage token leaderboard on optimism.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v3",
+                "optimism",
+                "lt-leaderboard"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ade734f0-3b01-46e5-9750-88f824305c09",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "optimism",
+                    "lt-leaderboard"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"epoch_start\": \"2024-05-23T14:00:00.000Z\",\n    \"account\": \"0xAa4a1d3c0d96B0D8C7AE4F71939D0Fa36bd97Aa7\",\n    \"total_fees_paid\": \"954.605497900439850\",\n    \"fees_paid_pct\": \"0.210334039122012452233641885\",\n    \"fees_rank\": \"1\",\n    \"volume\": \"1\",\n    \"volume_rank\": \"1\",\n    \"volume_pct\": \"1\"\n  },\n  {\n    \"epoch_start\": \"2024-05-23T14:00:00.000Z\",\n    \"account\": \"0xAa4a1d3c0d96B0D8C7AE4F71939D0Fa36bd97Aa7\",\n    \"total_fees_paid\": \"954.605497900439850\",\n    \"fees_paid_pct\": \"0.210334039122012452233641885\",\n    \"fees_rank\": \"1\",\n    \"volume\": \"1\",\n    \"volume_rank\": \"1\",\n    \"volume_pct\": \"1\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "32f31794-1342-4dfe-b770-e712d985dedb",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "optimism",
+                    "lt-leaderboard"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "37f50e3d-425c-4496-a944-463c52d485ae",
+              "name": "You have been banned by WAF.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "optimism",
+                    "lt-leaderboard"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f05f5ccd-0b5c-485a-aeeb-aaa06b051160",
+              "name": "Too many requests, you're being rate-limited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "optimism",
+                    "lt-leaderboard"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d74a2640-ddf9-441f-a96d-353895fb200c",
+              "name": "Service unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "optimism",
+                    "lt-leaderboard"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "38a6c345-90ff-45f9-b2f8-ae3638ecea16",
+              "name": "Unexpected error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "optimism",
+                    "lt-leaderboard"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7df88fad-aee7-4825-8a49-0a68ba96fce1",
+          "name": "Returns leverage token trades on optimism.",
+          "request": {
+            "name": "Returns leverage token trades on optimism.",
+            "description": {
+              "content": "Returns leverage token trades on optimism.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v3",
+                "optimism",
+                "lt-trades"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e644ec7d-0cfa-4e9f-9bbc-17693d7f362b",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "optimism",
+                    "lt-trades"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"0131506856-000048-c2285\",\n    \"block_number\": 131506856,\n    \"ts\": \"2025-02-03 19:54:49+00\",\n    \"transaction_hash\": \"0x...\",\n    \"contract\": \"0x...\",\n    \"event_name\": \"Redeemed\",\n    \"account\": \"0x\",\n    \"token\": \"btc_long7\",\n    \"leverage\": 1,\n    \"market\": \"BTC\",\n    \"leveraged_token_amount\": \"1\",\n    \"base_asset_amount\": \"1\",\n    \"nominal_volume\": \"1\",\n    \"notional_volume\": \"1\",\n    \"token_price\": \"1\",\n    \"total_supply\": \"1\",\n    \"vault_tvl\": \"1\",\n    \"vault_oi\": \"1\"\n  },\n  {\n    \"id\": \"0131506856-000048-c2285\",\n    \"block_number\": 131506856,\n    \"ts\": \"2025-02-03 19:54:49+00\",\n    \"transaction_hash\": \"0x...\",\n    \"contract\": \"0x...\",\n    \"event_name\": \"Redeemed\",\n    \"account\": \"0x\",\n    \"token\": \"btc_long7\",\n    \"leverage\": 1,\n    \"market\": \"BTC\",\n    \"leveraged_token_amount\": \"1\",\n    \"base_asset_amount\": \"1\",\n    \"nominal_volume\": \"1\",\n    \"notional_volume\": \"1\",\n    \"token_price\": \"1\",\n    \"total_supply\": \"1\",\n    \"vault_tvl\": \"1\",\n    \"vault_oi\": \"1\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f2677fc9-d7f4-4bf8-93f5-828c0d5f7a03",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "optimism",
+                    "lt-trades"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2d7e073e-e3d8-4ecd-9841-65dc5adbad5b",
+              "name": "You have been banned by WAF.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "optimism",
+                    "lt-trades"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "1c617cd4-94c4-473a-ba0c-da9e88a4b050",
+              "name": "Too many requests, you're being rate-limited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "optimism",
+                    "lt-trades"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "8e15a53f-f0e4-469d-8b51-2b2b27017e26",
+              "name": "Service unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "optimism",
+                    "lt-trades"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "342f5c0f-a8d7-484f-8655-cacc2f9c15f6",
+              "name": "Unexpected error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "optimism",
+                    "lt-trades"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8bd1926e-b16d-4c6e-a004-137cd8321d3f",
+          "name": "Returns the current top performing asset and it's APR and APY estimated from past 7 day performance.",
+          "request": {
+            "name": "Returns the current top performing asset and it's APR and APY estimated from past 7 day performance.",
+            "description": {
+              "content": "Returns the current top performing asset and it's APR and APY estimated from past 7 day performance.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v3",
+                "top-asset"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "427e338b-76eb-4135-ae0f-f6179ea37973",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "top-asset"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"timestamp\": \"2024-05-23T14:00:00.000Z\",\n  \"chain\": \"base\",\n  \"token_symbol\": \"USDC\",\n  \"apr\": 0.123456789,\n  \"apy\": 0.123456789\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0d74903e-4d10-455b-a201-e09ceea84f63",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "top-asset"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ac4006f0-aebf-4cd9-b69d-8ea303284018",
+              "name": "You have been banned by WAF.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "top-asset"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "63d36e43-9b37-4f49-a411-349e70d0b86f",
+              "name": "Too many requests, you're being rate-limited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "top-asset"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c7f57407-9c75-41a0-9e75-3c6a253241c8",
+              "name": "Service unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "top-asset"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "9c2e1865-6442-42a0-a1d1-270c1e9134d3",
+              "name": "Unexpected error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "top-asset"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2d141659-0a20-496d-83ca-a271d65a3982",
+          "name": "Returns total value locked across all Synthetix V3 deployments.",
+          "request": {
+            "name": "Returns total value locked across all Synthetix V3 deployments.",
+            "description": {
+              "content": "Returns total value locked across all Synthetix V3 deployments.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v3",
+                "tvl"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b8922ab7-2850-4a19-a312-605cfd947848",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "tvl"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"timestamp\": \"2024-05-23T14:00:00.000Z\",\n  \"tvl\": 123456789.12345679\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7f65be51-1b9f-4959-bcc3-7e5e18a34bcf",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "tvl"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "33d5eb66-9c96-4c25-a296-79cc7f19e58d",
+              "name": "You have been banned by WAF.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "tvl"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "7685de02-1e3d-4d0e-bf94-f7114e8a76f2",
+              "name": "Too many requests, you're being rate-limited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "tvl"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ea2f5ef6-abaf-4e33-a7ff-61feda0e6174",
+              "name": "Service unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "tvl"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "0045bb0c-e4a8-4881-b6e4-9cdfdf7c26b7",
+              "name": "Unexpected error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "tvl"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5e354e35-0559-47c4-b4b9-651f433ddc47",
+          "name": "Retrieve TVL data for a specific network and time span.",
+          "request": {
+            "name": "Retrieve TVL data for a specific network and time span.",
+            "description": {
+              "content": "Fetches Total Value Locked (TVL) data from the cache or PostgreSQL for the specified blockchain network and time span.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v3",
+                "tvl420"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "network",
+                  "value": "<string>",
+                  "description": "(Required) Name of the blockchain network (e.g., cross, ethereum, or optimism)."
+                },
+                {
+                  "disabled": false,
+                  "key": "span",
+                  "value": "<string>",
+                  "description": "(Required) Time span for aggregations"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "08f7f97e-844e-4e4e-ac63-f8f9fc82b2c1",
+              "name": "Successfully retrieved TVL data.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "tvl420"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "network",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "span",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"ts\": \"1970-10-16T13:08:18.580Z\",\n    \"value\": 7140.018654989612\n  },\n  {\n    \"ts\": \"2005-03-14T07:40:54.817Z\",\n    \"value\": 9572.26911266129\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "856f9a5b-0461-4f6b-a29c-b39b1a514547",
+              "name": "Invalid network or span specified in query parameters.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "tvl420"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "network",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "span",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Invalid network or span.\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b841fe5c-670b-4346-ad75-b67d5f871a90",
+              "name": "An unexpected error occurred when fetching data.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v3",
+                    "tvl420"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "network",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "span",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Internal server error.\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.synthetix.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "55755ed0-604c-4772-b127-2a678bd5c7be",
+    "name": "Synthetix escrowed-balance v3 API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Synthetix API documentation",
+      "type": "text/plain"
+    }
+  }
+}

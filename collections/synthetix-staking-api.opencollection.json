@@ -1,0 +1,54 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Synthetix escrowed-balance staking API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "staking",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /debt-pool-comp",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/debt-pool-comp",
+            "params": [
+              {
+                "name": "key",
+                "value": "",
+                "type": "query",
+                "description": "(optional) The asset name for which return data for."
+              },
+              {
+                "name": "net",
+                "value": "",
+                "type": "query",
+                "description": "(optional) The asset name for which return data for."
+              }
+            ]
+          },
+          "docs": "Returns outstanding composition of Synthetix debt pool. If `key` query parameter is not provided it returns an array of objects (all assets). If `key` query parameter is provided it returns an object (with requested asset). If `net` query parameter is not provided it returns combined data for both networks. If `net` query parameter is provided it returns data for requested network."
+        },
+        {
+          "info": {
+            "name": "GET /staking-ratio",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/staking-ratio"
+          },
+          "docs": "Returns SNX staking ratio between L1 and L2."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

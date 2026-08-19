@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Synthetix escrowed-balance API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "escrowed-balance",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /LiquidatorRewards/balance",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/LiquidatorRewards/balance"
+          },
+          "docs": "Returns escrowed SNX balance from LiquidatorRewards contract."
+        },
+        {
+          "info": {
+            "name": "GET /RewardEscrow/escrowed-balance",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/RewardEscrow/escrowed-balance"
+          },
+          "docs": "Returns escrowed SNX balance from RewardEscrow contract."
+        },
+        {
+          "info": {
+            "name": "GET /RewardEscrowV2/escrowed-balance",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/RewardEscrowV2/escrowed-balance"
+          },
+          "docs": "Returns escrowed SNX balance from RewardEscrowV2 contract."
+        },
+        {
+          "info": {
+            "name": "GET /SynthetixBridgeEscrow/balance",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/SynthetixBridgeEscrow/balance"
+          },
+          "docs": "Returns escrowed SNX balance from SynthetixBridgeEscrow contract."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Synthetix escrowed-balance vested-balance API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "vested-balance",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /SynthetixEscrow/vested-balance",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/SynthetixEscrow/vested-balance"
+          },
+          "docs": "Returns vested SNX balance from SynthetixEscrow contract."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

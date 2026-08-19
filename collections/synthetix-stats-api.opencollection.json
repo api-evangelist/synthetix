@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Synthetix escrowed-balance stats API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "stats",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /stats/perps-volume",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/stats/perps-volume"
+          },
+          "docs": "Returns total volume figures across all perps deployments."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

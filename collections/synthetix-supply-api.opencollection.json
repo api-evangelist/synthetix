@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Synthetix escrowed-balance supply API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "supply",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /circulating-supply",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/circulating-supply"
+          },
+          "docs": "Returns combined SNX circulating supply from L1 and L2."
+        },
+        {
+          "info": {
+            "name": "GET /total-supply",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/total-supply"
+          },
+          "docs": "Returns SNX total supply for L1 and L2."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

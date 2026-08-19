@@ -1,0 +1,273 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Synthetix escrowed-balance v3 API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "v3",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /v3/arbitrum/sc-pool-apy-all",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/v3/arbitrum/sc-pool-apy-all"
+          },
+          "docs": "Returns current APY for Spartan Council Pool on Arbitrum."
+        },
+        {
+          "info": {
+            "name": "GET /v3/arbitrum/sc-pool-apy-history",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/v3/arbitrum/sc-pool-apy-history"
+          },
+          "docs": "Returns historical APY for Spartan Council Pool on Arbitrum."
+        },
+        {
+          "info": {
+            "name": "GET /v3/arbitrum/sc-pool-apy",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/v3/arbitrum/sc-pool-apy"
+          },
+          "docs": "Returns current APY for Spartan Council Pool on Arbitrum."
+        },
+        {
+          "info": {
+            "name": "Fetch sum of usd value of issued debt each collateral.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/v3/base/issued-debt",
+            "params": [
+              {
+                "name": "accountId",
+                "value": "",
+                "type": "query",
+                "description": "The account ID to fetch the issued debt for."
+              }
+            ]
+          },
+          "docs": "Checks the cache first, and if not found, fetches issued debt data from Postgres for the given account ID."
+        },
+        {
+          "info": {
+            "name": "GET /v3/base/lt-leaderboard",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/v3/base/lt-leaderboard"
+          },
+          "docs": "Returns leverage token leaderboard on base."
+        },
+        {
+          "info": {
+            "name": "GET /v3/base/lt-trades",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/v3/base/lt-trades"
+          },
+          "docs": "Returns leverage token trades on base."
+        },
+        {
+          "info": {
+            "name": "Fetch sum of usd value of claimed rewards for a given account ID for each collateral.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/v3/base/rewards-claimed",
+            "params": [
+              {
+                "name": "accountId",
+                "value": "",
+                "type": "query",
+                "description": "The account ID to fetch total usd value of claimed rewards for. Must be a positive integer."
+              }
+            ]
+          },
+          "docs": "Checks the cache first, and if not found, fetches claimed rewards data from Postgres for the given account ID."
+        },
+        {
+          "info": {
+            "name": "GET /v3/base/sc-pool-apy-all",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/v3/base/sc-pool-apy-all"
+          },
+          "docs": "Returns current APY for Spartan Council Pool on Arbitrum."
+        },
+        {
+          "info": {
+            "name": "GET /v3/base/sc-pool-apy-history",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/v3/base/sc-pool-apy-history"
+          },
+          "docs": "Returns historical APY for Spartan Council Pool on Base."
+        },
+        {
+          "info": {
+            "name": "GET /v3/base/sc-pool-apy",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/v3/base/sc-pool-apy"
+          },
+          "docs": "Returns current APY for Spartan Council Pool on Base."
+        },
+        {
+          "info": {
+            "name": "GET /v3/base/snx-buyback",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/v3/base/snx-buyback"
+          },
+          "docs": "Returns SNX buyback details on Base."
+        },
+        {
+          "info": {
+            "name": "Fetch sum of usd value of issued debt each collateral.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/v3/mainnet/issued-debt",
+            "params": [
+              {
+                "name": "accountId",
+                "value": "",
+                "type": "query",
+                "description": "The account ID to fetch the issued debt for."
+              }
+            ]
+          },
+          "docs": "Checks the cache first, and if not found, fetches issued debt data from Postgres for the given account ID."
+        },
+        {
+          "info": {
+            "name": "Fetch sum of usd value of claimed rewards for a given account ID for each collateral.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/v3/mainnet/rewards-claimed",
+            "params": [
+              {
+                "name": "accountId",
+                "value": "",
+                "type": "query",
+                "description": "The account ID to fetch total usd value of claimed rewards for. Must be a positive integer."
+              }
+            ]
+          },
+          "docs": "Checks the cache first, and if not found, fetches claimed rewards data from Postgres for the given account ID."
+        },
+        {
+          "info": {
+            "name": "GET /v3/mainnet/sc-pool-apy-all",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/v3/mainnet/sc-pool-apy-all"
+          },
+          "docs": "Returns current APY for Spartan Council Pool on Mainnet."
+        },
+        {
+          "info": {
+            "name": "GET /v3/optimism/lt-leaderboard",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/v3/optimism/lt-leaderboard"
+          },
+          "docs": "Returns leverage token leaderboard on optimism."
+        },
+        {
+          "info": {
+            "name": "GET /v3/optimism/lt-trades",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/v3/optimism/lt-trades"
+          },
+          "docs": "Returns leverage token trades on optimism."
+        },
+        {
+          "info": {
+            "name": "GET /v3/top-asset",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/v3/top-asset"
+          },
+          "docs": "Returns the current top performing asset and it's APR and APY estimated from past 7 day performance."
+        },
+        {
+          "info": {
+            "name": "GET /v3/tvl",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/v3/tvl"
+          },
+          "docs": "Returns total value locked across all Synthetix V3 deployments."
+        },
+        {
+          "info": {
+            "name": "Retrieve TVL data for a specific network and time span.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/v3/tvl420",
+            "params": [
+              {
+                "name": "network",
+                "value": "",
+                "type": "query",
+                "description": "Name of the blockchain network (e.g., cross, ethereum, or optimism)."
+              },
+              {
+                "name": "span",
+                "value": "",
+                "type": "query",
+                "description": "Time span for aggregations"
+              }
+            ]
+          },
+          "docs": "Fetches Total Value Locked (TVL) data from the cache or PostgreSQL for the specified blockchain network and time span."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

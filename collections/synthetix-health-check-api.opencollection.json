@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Synthetix escrowed-balance health-check API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "health-check",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /health",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/health"
+          },
+          "docs": "Returns API health status. Protected with basic auth. Only for internal use."
+        },
+        {
+          "info": {
+            "name": "GET /status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.synthetix.io/status"
+          },
+          "docs": "Returns API status."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

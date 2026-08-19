@@ -1,0 +1,224 @@
+{
+  "item": [
+    {
+      "id": "958b1c1b-bc4f-4149-b145-d9ffc09d2764",
+      "name": "vested-balance",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4c5403e9-b5e9-4a5e-9892-1f7dd08f18a8",
+          "name": "Returns vested SNX balance from SynthetixEscrow contract.",
+          "request": {
+            "name": "Returns vested SNX balance from SynthetixEscrow contract.",
+            "description": {
+              "content": "Returns vested SNX balance from SynthetixEscrow contract.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "SynthetixEscrow",
+                "vested-balance"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1830f203-7c5b-4ce6-919b-cdea9b626a66",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "SynthetixEscrow",
+                    "vested-balance"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"synthetixEscrowVestedBalance\": \"723907.949250420000000002\",\n  \"OVMSynthetixEscrowVestedBalance\": \"0\",\n  \"contracts\": {\n    \"ethereum\": {\n      \"synthetixEscrowVestedBalance\": \"0x971e78e0C92392A4E39099835cF7E6aB535b2227\"\n    },\n    \"optimism\": {\n      \"OVMSynthetixEscrowVestedBalance\": \"0x06C6D063896ac733673c4474E44d9268f2402A55\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ebaee448-5ea2-4bdd-9981-5ea117ebef3e",
+              "name": "You have been banned by WAF.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "SynthetixEscrow",
+                    "vested-balance"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "dc6a20c5-6baa-4b46-9c37-7fb5e6c3d2aa",
+              "name": "Too many requests, you're being rate-limited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "SynthetixEscrow",
+                    "vested-balance"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b67b289a-201b-4f55-97ee-f8f7117a9f97",
+              "name": "Service unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "SynthetixEscrow",
+                    "vested-balance"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "1df3961a-175f-49d5-ba50-25df523b081b",
+              "name": "Unexpected error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "SynthetixEscrow",
+                    "vested-balance"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.synthetix.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "df6bc247-feea-4dd0-8513-3afd81464db6",
+    "name": "Synthetix escrowed-balance vested-balance API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Synthetix API documentation",
+      "type": "text/plain"
+    }
+  }
+}

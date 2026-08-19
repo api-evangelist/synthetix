@@ -1,0 +1,529 @@
+{
+  "item": [
+    {
+      "id": "2b674946-e8b2-42f2-82e6-54ab8b033af4",
+      "name": "staking",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "952b5d3b-5ffc-4d03-b207-cfad979de951",
+          "name": "Returns outstanding composition of Synthetix debt pool. If `key` query parameter is not provided it returns an array of objects (all assets). If `key` query parameter is provided it returns an object (with requested asset). If `net` query parameter is not provided it returns combined data for both networks. If `net` query parameter is provided it returns data for requested network.",
+          "request": {
+            "name": "Returns outstanding composition of Synthetix debt pool. If `key` query parameter is not provided it returns an array of objects (all assets). If `key` query parameter is provided it returns an object (with requested asset). If `net` query parameter is not provided it returns combined data for both networks. If `net` query parameter is provided it returns data for requested network.",
+            "description": {
+              "content": "Returns outstanding composition of Synthetix debt pool. If `key` query parameter is not provided it returns an array of objects (all assets). If `key` query parameter is provided it returns an object (with requested asset). If `net` query parameter is not provided it returns combined data for both networks. If `net` query parameter is provided it returns data for requested network.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "debt-pool-comp"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "key",
+                  "value": "<string>",
+                  "description": "(optional) The asset name for which return data for."
+                },
+                {
+                  "disabled": false,
+                  "key": "net",
+                  "value": "<string>",
+                  "description": "(optional) The asset name for which return data for."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3b60f917-ae10-4882-a7bb-be89db91ef79",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "debt-pool-comp"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "net",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"currencyKey\": \"sETH\",\n    \"supply\": 6866.706542354661,\n    \"cap\": 4101.2567000633635,\n    \"loans_ccy\": 7561.067502196861,\n    \"shorts_ccy\": 8179.315701148817,\n    \"wrappers_ccy\": 681.7924839970312,\n    \"futures_skew_ccy\": 604.3922998298378,\n    \"futures_debt_usd\": 8806.47790297913,\n    \"perps_skew_ccy\": 617.658427667086,\n    \"perps_debt_usd\": 8305.566118729601,\n    \"eth_wrapper_ccy_legacy\": 1307.0213837864496,\n    \"debt_in_usd\": 3688.9601844418817,\n    \"position_in_usd\": 5059.717814959778,\n    \"position_in_ccy\": 7126.698213763535,\n    \"price\": 5113.146083170651,\n    \"debt_in_percent\": 473.62286190561707,\n    \"user_debt_hedge_in_usd\": 4164.505535783825,\n    \"position_type\": \"long\",\n    \"user_debt_hedge_with_correlation_in_usd\": 2479.7127085918437,\n    \"timestamp\": 8295.288176961363\n  },\n  {\n    \"currencyKey\": \"sETH\",\n    \"supply\": 7085.3828289650655,\n    \"cap\": 7405.769315936289,\n    \"loans_ccy\": 7874.169639135026,\n    \"shorts_ccy\": 9241.547742382007,\n    \"wrappers_ccy\": 7876.477074933004,\n    \"futures_skew_ccy\": 9446.93980620205,\n    \"futures_debt_usd\": 7522.126236508842,\n    \"perps_skew_ccy\": 6255.86846560059,\n    \"perps_debt_usd\": 1647.7564653624866,\n    \"eth_wrapper_ccy_legacy\": 2976.738652063018,\n    \"debt_in_usd\": 3720.669995066098,\n    \"position_in_usd\": 2427.0353164240264,\n    \"position_in_ccy\": 5365.131608342083,\n    \"price\": 3941.047123745519,\n    \"debt_in_percent\": 507.7371961102883,\n    \"user_debt_hedge_in_usd\": 7371.079454479469,\n    \"position_type\": \"long\",\n    \"user_debt_hedge_with_correlation_in_usd\": 4654.820108197526,\n    \"timestamp\": 651.1440873512208\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9b3eb77c-cd42-4537-b038-d57c0e107384",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "debt-pool-comp"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "net",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "36f78f2d-d6bb-4b03-a05c-13153262eb03",
+              "name": "You have been banned by WAF.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "debt-pool-comp"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "net",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "bc22d757-e582-434a-aeb3-cfd0c4ce2c69",
+              "name": "Too many requests, you're being rate-limited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "debt-pool-comp"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "net",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "82e15079-ae99-4f14-8089-3dabf1f9d425",
+              "name": "Service unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "debt-pool-comp"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "net",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b5bb6c4c-3095-423c-94b6-ce96711fd22c",
+              "name": "Unexpected error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "debt-pool-comp"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "key",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "net",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "dda59c32-7c30-431c-bf18-fff88e6d7ccb",
+          "name": "Returns SNX staking ratio between L1 and L2.",
+          "request": {
+            "name": "Returns SNX staking ratio between L1 and L2.",
+            "description": {
+              "content": "Returns SNX staking ratio between L1 and L2.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "staking-ratio"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "faa6e5f9-c8af-4831-a04d-8b7993485506",
+              "name": "Successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "staking-ratio"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"systemStakingPercent\": 9929.580105761428,\n  \"timestamp\": 9255.735240343354,\n  \"stakedSnx\": {\n    \"ethereum\": 8492.633973937334,\n    \"optimism\": 1948.8368547206492\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1e0c78e4-4c39-4f0c-8a1b-984582d17e96",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "staking-ratio"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "516f225f-edd7-4da8-b78b-61cfe717baaf",
+              "name": "You have been banned by WAF.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "staking-ratio"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b6daf821-be07-4c15-947c-51a7f87dbf24",
+              "name": "Too many requests, you're being rate-limited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "staking-ratio"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "1e3de03e-aedf-4135-8a67-7cf2163d1df7",
+              "name": "Service unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "staking-ratio"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2a8f605c-14a9-4312-a946-8dc3a7a01859",
+              "name": "Unexpected error.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "staking-ratio"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.synthetix.io",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "93aee723-80d7-41c9-926e-fa89884d3664",
+    "name": "Synthetix escrowed-balance staking API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Synthetix API documentation",
+      "type": "text/plain"
+    }
+  }
+}
