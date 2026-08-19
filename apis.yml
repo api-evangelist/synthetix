@@ -38,7 +38,7 @@ contact:
 - FN: Synthetix Developer Support
   url: https://discord.gg/synthetix
   X-twitter: synthetix_io
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 modified: '2026-06-14'
 apis:
 - name: Synthetix Info API
