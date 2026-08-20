@@ -54,6 +54,13 @@ apis:
   - Prices
   - Funding Rates
   - Collateral
+  - Order Book
+  tags_raw:
+  - Market Data
+  - Public
+  - Prices
+  - Funding Rates
+  - Collateral
   - Orderbook
   properties:
   - type: X-openapi
@@ -131,6 +138,9 @@ apis:
     path: /v1/info
     action: getOrderbook
     tags:
+    - Order Book
+    - Depth
+    tags_raw:
     - Orderbook
     - Depth
   - label: Get Exchange Status
@@ -156,6 +166,13 @@ apis:
   tags:
   - Trading
   - Authenticated
+  - Order
+  - Positions
+  - Account
+  - Collateral
+  tags_raw:
+  - Trading
+  - Authenticated
   - Orders
   - Positions
   - Accounts
@@ -176,30 +193,40 @@ apis:
     path: /v1/trade
     action: placeOrders
     tags:
+    - Order
+    tags_raw:
     - Orders
   - label: Modify Order
     method: POST
     path: /v1/trade
     action: modifyOrder
     tags:
+    - Order
+    tags_raw:
     - Orders
   - label: Cancel Orders
     method: POST
     path: /v1/trade
     action: cancelOrders
     tags:
+    - Order
+    tags_raw:
     - Orders
   - label: Cancel All Orders
     method: POST
     path: /v1/trade
     action: cancelAllOrders
     tags:
+    - Order
+    tags_raw:
     - Orders
   - label: Schedule Cancel
     method: POST
     path: /v1/trade
     action: scheduleCancel
     tags:
+    - Order
+    tags_raw:
     - Orders
   - label: Get Positions
     method: POST
@@ -212,12 +239,17 @@ apis:
     path: /v1/trade
     action: getOpenOrders
     tags:
+    - Order
+    tags_raw:
     - Orders
   - label: Get Order History
     method: POST
     path: /v1/trade
     action: getOrderHistory
     tags:
+    - Order
+    - Historical
+    tags_raw:
     - Orders
     - Historical
   - label: Get Trades
@@ -258,6 +290,9 @@ apis:
     action: getBalanceUpdates
     tags:
     - Collateral
+    - Balances
+    tags_raw:
+    - Collateral
     - Balance
   - label: Get Transfers
     method: POST
@@ -276,24 +311,32 @@ apis:
     path: /v1/trade
     action: createSubaccount
     tags:
+    - Account
+    tags_raw:
     - Accounts
   - label: Get SubAccount
     method: POST
     path: /v1/trade
     action: getSubAccount
     tags:
+    - Account
+    tags_raw:
     - Accounts
   - label: Get SubAccounts
     method: POST
     path: /v1/trade
     action: getSubAccounts
     tags:
+    - Account
+    tags_raw:
     - Accounts
   - label: Get SubAccount IDs
     method: POST
     path: /v1/trade
     action: getSubAccountIds
     tags:
+    - Account
+    tags_raw:
     - Accounts
   - label: Get Delegated Signers
     method: POST
@@ -331,6 +374,9 @@ apis:
     action: getPerformanceHistory
     tags:
     - Analytics
+    - PNL
+    tags_raw:
+    - Analytics
     - PnL
   - label: Get Snaxpot Epoch Tickets
     method: POST
@@ -347,6 +393,12 @@ apis:
   humanURL: https://developers.synthetix.io/websocket-api/info
   baseURL: wss://papi.synthetix.io/v1/ws/info
   tags:
+  - WebSocket
+  - Real-Time
+  - Market Data
+  - Public
+  - Streaming
+  tags_raw:
   - WebSocket
   - Real-time
   - Market Data
@@ -366,6 +418,12 @@ apis:
   humanURL: https://developers.synthetix.io/websocket-api/trade
   baseURL: wss://papi.synthetix.io/v1/ws/trade
   tags:
+  - WebSocket
+  - Real-Time
+  - Trading
+  - Authenticated
+  - Streaming
+  tags_raw:
   - WebSocket
   - Real-time
   - Trading
@@ -395,6 +453,8 @@ apis:
   humanURL: https://developers.synthetix.io/rest-api/info/market-data
   baseURL: https://papi.synthetix.io/v1/info
   tags:
+  - Health Check
+  tags_raw:
   - health-check
   properties:
   - type: OpenAPI
@@ -405,6 +465,8 @@ apis:
   humanURL: https://developers.synthetix.io/rest-api/info/market-data
   baseURL: https://papi.synthetix.io/v1/info
   tags:
+  - Staking
+  tags_raw:
   - staking
   properties:
   - type: OpenAPI
@@ -415,6 +477,8 @@ apis:
   humanURL: https://developers.synthetix.io/rest-api/info/market-data
   baseURL: https://papi.synthetix.io/v1/info
   tags:
+  - Stats
+  tags_raw:
   - stats
   properties:
   - type: OpenAPI
@@ -425,6 +489,8 @@ apis:
   humanURL: https://developers.synthetix.io/rest-api/info/market-data
   baseURL: https://papi.synthetix.io/v1/info
   tags:
+  - Supply
+  tags_raw:
   - supply
   properties:
   - type: OpenAPI
@@ -435,6 +501,8 @@ apis:
   humanURL: https://developers.synthetix.io/rest-api/info/market-data
   baseURL: https://papi.synthetix.io/v1/info
   tags:
+  - V3
+  tags_raw:
   - v3
   properties:
   - type: OpenAPI
