@@ -66,7 +66,7 @@ apis:
   - Prices
   - Funding Rates
   - Collateral
-  - Orderbook
+  - Order Book
   tags_raw:
   - Market Data
   - Public
@@ -150,7 +150,7 @@ apis:
     path: /v1/info
     action: getOrderbook
     tags:
-    - Orderbook
+    - Order Book
     - Depth
     tags_raw:
     - Orderbook
@@ -386,7 +386,7 @@ apis:
     action: getPerformanceHistory
     tags:
     - Analytics
-    - PnL
+    - PNL
     tags_raw:
     - Analytics
     - PnL
@@ -477,7 +477,7 @@ apis:
   humanURL: https://developers.synthetix.io/rest-api/info/market-data
   baseURL: https://papi.synthetix.io/v1/info
   tags:
-  - staking
+  - Staking
   tags_raw:
   - staking
   properties:
@@ -501,7 +501,7 @@ apis:
   humanURL: https://developers.synthetix.io/rest-api/info/market-data
   baseURL: https://papi.synthetix.io/v1/info
   tags:
-  - supply
+  - Supply
   tags_raw:
   - supply
   properties:
@@ -513,7 +513,7 @@ apis:
   humanURL: https://developers.synthetix.io/rest-api/info/market-data
   baseURL: https://papi.synthetix.io/v1/info
   tags:
-  - V3
+  - v3
   tags_raw:
   - v3
   properties:
