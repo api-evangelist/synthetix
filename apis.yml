@@ -530,6 +530,8 @@ apis:
   - type: OpenAPI
     url: openapi/synthetix-vested-balance-api-openapi.yml
 common:
+- type: Website
+  url: https://www.synthetix.io/
 - type: AgenticAccess
   url: agentic-access/synthetix-agentic-access.yml
 - type: DomainSecurity
