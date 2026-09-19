@@ -269,6 +269,9 @@ apis:
     path: /v1/trade
     action: getTrades
     tags:
+    - Trade
+    - Historical
+    tags_raw:
     - Trades
     - Historical
   - label: Get Position History
