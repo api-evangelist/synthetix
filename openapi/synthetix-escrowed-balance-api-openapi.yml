@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Synthetix escrowed-balance API
+  title: Synthetix Escrowed Balance API
   description: Synthetix API documentation
   version: 1.0.0
 servers:
@@ -51,6 +51,10 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get liquidator rewards balance
+      x-summary-source: derived
+      operationId: getLiquidatorRewardsBalance
+      x-operation-id-source: derived
   /RewardEscrow/escrowed-balance:
     get:
       tags:
@@ -84,6 +88,10 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get reward escrow escrowed balance
+      x-summary-source: derived
+      operationId: getRewardEscrowEscrowedBalance
+      x-operation-id-source: derived
   /RewardEscrowV2/escrowed-balance:
     get:
       tags:
@@ -126,6 +134,10 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get reward escrow v2 escrowed balance
+      x-summary-source: derived
+      operationId: getRewardEscrowV2EscrowedBalance
+      x-operation-id-source: derived
   /SynthetixBridgeEscrow/balance:
     get:
       tags:
@@ -159,3 +171,7 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get synthetix bridge escrow balance
+      x-summary-source: derived
+      operationId: getSynthetixBridgeEscrowBalance
+      x-operation-id-source: derived

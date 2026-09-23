@@ -1,18 +1,18 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Synthetix escrowed-balance supply API
+  title: Synthetix Supply API
   description: Synthetix API documentation
   version: 1.0.0
 servers:
 - url: https://api.synthetix.io
   description: Production
 tags:
-- name: supply
+- name: Supply
 paths:
   /circulating-supply:
     get:
       tags:
-      - supply
+      - Supply
       description: Returns combined SNX circulating supply from L1 and L2.
       responses:
         '200':
@@ -102,10 +102,14 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get circulating supply
+      x-summary-source: derived
+      operationId: getCirculatingSupply
+      x-operation-id-source: derived
   /total-supply:
     get:
       tags:
-      - supply
+      - Supply
       description: Returns SNX total supply for L1 and L2.
       responses:
         '200':
@@ -144,3 +148,7 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get total supply
+      x-summary-source: derived
+      operationId: getTotalSupply
+      x-operation-id-source: derived

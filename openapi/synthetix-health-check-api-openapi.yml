@@ -1,18 +1,18 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Synthetix escrowed-balance health-check API
+  title: Synthetix Health Check API
   description: Synthetix API documentation
   version: 1.0.0
 servers:
 - url: https://api.synthetix.io
   description: Production
 tags:
-- name: health-check
+- name: Health Check
 paths:
   /health:
     get:
       tags:
-      - health-check
+      - Health Check
       description: Returns API health status. Protected with basic auth. Only for internal use.
       responses:
         '200':
@@ -35,10 +35,14 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get health
+      x-summary-source: derived
+      operationId: getHealth
+      x-operation-id-source: derived
   /status:
     get:
       tags:
-      - health-check
+      - Health Check
       description: Returns API status.
       responses:
         '200':
@@ -58,3 +62,7 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get status
+      x-summary-source: derived
+      operationId: getStatus
+      x-operation-id-source: derived

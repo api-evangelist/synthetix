@@ -1,13 +1,7 @@
 {
   "provider": "synthetix",
   "sources": [
-    "synthetix-escrowed-balance-api-openapi.yml",
-    "synthetix-health-check-api-openapi.yml",
-    "synthetix-staking-api-openapi.yml",
-    "synthetix-stats-api-openapi.yml",
-    "synthetix-supply-api-openapi.yml",
-    "synthetix-v3-api-openapi.yml",
-    "synthetix-vested-balance-api-openapi.yml"
+    "_original/openapi.json"
   ],
   "outputs": [
     "synthetix-escrowed-balance-api-openapi.yml",
@@ -21,6 +15,25 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "openapi.json: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "openapi.json: declared missing tag: escrowed-balance",
+    "openapi.json: declared missing tag: health-check",
+    "openapi.json: declared missing tag: staking",
+    "openapi.json: declared missing tag: stats",
+    "openapi.json: declared missing tag: supply",
+    "openapi.json: declared missing tag: v3",
+    "openapi.json: declared missing tag: vested-balance",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "synthetix-escrowed-balance-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "synthetix-health-check-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "synthetix-staking-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "synthetix-stats-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "synthetix-supply-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "synthetix-v3-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "synthetix-vested-balance-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

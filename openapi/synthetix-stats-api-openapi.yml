@@ -1,18 +1,18 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Synthetix escrowed-balance stats API
+  title: Synthetix Stats API
   description: Synthetix API documentation
   version: 1.0.0
 servers:
 - url: https://api.synthetix.io
   description: Production
 tags:
-- name: stats
+- name: Stats
 paths:
   /stats/perps-volume:
     get:
       tags:
-      - stats
+      - Stats
       description: Returns total volume figures across all perps deployments.
       responses:
         '200':
@@ -42,3 +42,7 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get stats perps volume
+      x-summary-source: derived
+      operationId: getStatsPerpsVolume
+      x-operation-id-source: derived

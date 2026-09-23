@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: Synthetix escrowed-balance v3 API
+  title: Synthetix V3 API
   description: Synthetix API documentation
   version: 1.0.0
 servers:
@@ -134,6 +134,10 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get arbitrum sc pool apy all
+      x-summary-source: derived
+      operationId: getV3ArbitrumScPoolApyAll
+      x-operation-id-source: derived
   /v3/arbitrum/sc-pool-apy-history:
     get:
       tags:
@@ -259,6 +263,10 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get arbitrum sc pool apy history
+      x-summary-source: derived
+      operationId: getV3ArbitrumScPoolApyHistory
+      x-operation-id-source: derived
   /v3/arbitrum/sc-pool-apy:
     get:
       tags:
@@ -384,11 +392,15 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get arbitrum sc pool apy
+      x-summary-source: derived
+      operationId: getV3ArbitrumScPoolApy
+      x-operation-id-source: derived
   /v3/base/issued-debt:
     get:
       tags:
       - v3
-      summary: Fetch sum of usd value of issued debt each collateral.
+      summary: Fetch sum of usd value of issued debt each collateral
       description: Checks the cache first, and if not found, fetches issued debt data from Postgres for the given account ID.
       parameters:
       - in: query
@@ -425,6 +437,8 @@ paths:
                     description: Error message.
         '500':
           description: An internal server error occurred.
+      operationId: getV3BaseIssuedDebt
+      x-operation-id-source: derived
   /v3/base/lt-leaderboard:
     get:
       tags:
@@ -475,6 +489,10 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get base lt leaderboard
+      x-summary-source: derived
+      operationId: getV3BaseLtLeaderboard
+      x-operation-id-source: derived
   /v3/base/lt-trades:
     get:
       tags:
@@ -555,11 +573,15 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get base lt trades
+      x-summary-source: derived
+      operationId: getV3BaseLtTrades
+      x-operation-id-source: derived
   /v3/base/rewards-claimed:
     get:
       tags:
       - v3
-      summary: Fetch sum of usd value of claimed rewards for a given account ID for each collateral.
+      summary: Fetch sum of usd value of claimed rewards for a given account ID for each…
       description: Checks the cache first, and if not found, fetches claimed rewards data from Postgres for the given account ID.
       parameters:
       - in: query
@@ -596,6 +618,8 @@ paths:
                     description: Error message.
         '500':
           description: An internal server error occurred.
+      operationId: getV3BaseRewardsClaimed
+      x-operation-id-source: derived
   /v3/base/sc-pool-apy-all:
     get:
       tags:
@@ -721,6 +745,10 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get base sc pool apy all
+      x-summary-source: derived
+      operationId: getV3BaseScPoolApyAll
+      x-operation-id-source: derived
   /v3/base/sc-pool-apy-history:
     get:
       tags:
@@ -846,6 +874,10 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get base sc pool apy history
+      x-summary-source: derived
+      operationId: getV3BaseScPoolApyHistory
+      x-operation-id-source: derived
   /v3/base/sc-pool-apy:
     get:
       tags:
@@ -969,6 +1001,10 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get base sc pool apy
+      x-summary-source: derived
+      operationId: getV3BaseScPoolApy
+      x-operation-id-source: derived
   /v3/base/snx-buyback:
     get:
       tags:
@@ -1009,11 +1045,15 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get base snx buyback
+      x-summary-source: derived
+      operationId: getV3BaseSnxBuyback
+      x-operation-id-source: derived
   /v3/mainnet/issued-debt:
     get:
       tags:
       - v3
-      summary: Fetch sum of usd value of issued debt each collateral.
+      summary: Fetch sum of usd value of issued debt each collateral
       description: Checks the cache first, and if not found, fetches issued debt data from Postgres for the given account ID.
       parameters:
       - in: query
@@ -1050,11 +1090,13 @@ paths:
                     description: Error message.
         '500':
           description: An internal server error occurred.
+      operationId: getV3MainnetIssuedDebt
+      x-operation-id-source: derived
   /v3/mainnet/rewards-claimed:
     get:
       tags:
       - v3
-      summary: Fetch sum of usd value of claimed rewards for a given account ID for each collateral.
+      summary: Fetch sum of usd value of claimed rewards for a given account ID for each…
       description: Checks the cache first, and if not found, fetches claimed rewards data from Postgres for the given account ID.
       parameters:
       - in: query
@@ -1091,6 +1133,8 @@ paths:
                     description: Error message.
         '500':
           description: An internal server error occurred.
+      operationId: getV3MainnetRewardsClaimed
+      x-operation-id-source: derived
   /v3/mainnet/sc-pool-apy-all:
     get:
       tags:
@@ -1216,6 +1260,10 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get mainnet sc pool apy all
+      x-summary-source: derived
+      operationId: getV3MainnetScPoolApyAll
+      x-operation-id-source: derived
   /v3/optimism/lt-leaderboard:
     get:
       tags:
@@ -1266,6 +1314,10 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get optimism lt leaderboard
+      x-summary-source: derived
+      operationId: getV3OptimismLtLeaderboard
+      x-operation-id-source: derived
   /v3/optimism/lt-trades:
     get:
       tags:
@@ -1346,6 +1398,10 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get optimism lt trades
+      x-summary-source: derived
+      operationId: getV3OptimismLtTrades
+      x-operation-id-source: derived
   /v3/top-asset:
     get:
       tags:
@@ -1385,6 +1441,10 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get top asset
+      x-summary-source: derived
+      operationId: getV3TopAsset
+      x-operation-id-source: derived
   /v3/tvl:
     get:
       tags:
@@ -1415,11 +1475,15 @@ paths:
           description: Service unavailable.
         default:
           description: Unexpected error.
+      summary: Get tvl
+      x-summary-source: derived
+      operationId: getV3Tvl
+      x-operation-id-source: derived
   /v3/tvl420:
     get:
       tags:
       - v3
-      summary: Retrieve TVL data for a specific network and time span.
+      summary: Retrieve TVL data for a specific network and time span
       description: Fetches Total Value Locked (TVL) data from the cache or PostgreSQL for the specified blockchain network and time span.
       parameters:
       - in: query
@@ -1481,3 +1545,5 @@ paths:
                   error:
                     type: string
                     example: Internal server error.
+      operationId: getV3Tvl420
+      x-operation-id-source: derived
