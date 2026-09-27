@@ -1,0 +1,54 @@
+openapi: 3.2.0
+info:
+  title: Synthetix Top Asset API
+  description: Synthetix API documentation
+  version: 1.0.0
+servers:
+- url: https://api.synthetix.io
+  description: Production
+tags:
+- name: Top Asset
+paths:
+  /v3/top-asset:
+    get:
+      tags:
+      - Top Asset
+      description: Returns the current top performing asset and it's APR and APY estimated from past 7 day performance.
+      responses:
+        '200':
+          description: Successful response.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  timestamp:
+                    type: string
+                    format: date-time
+                    example: '2024-05-23T14:00:00.000Z'
+                  chain:
+                    type: string
+                    example: base
+                  token_symbol:
+                    type: string
+                    example: USDC
+                  apr:
+                    type: number
+                    example: 0.123456789
+                  apy:
+                    type: number
+                    example: 0.123456789
+        '401':
+          description: Unauthorized.
+        '403':
+          description: You have been banned by WAF.
+        '429':
+          description: Too many requests, you're being rate-limited.
+        5XX:
+          description: Service unavailable.
+        default:
+          description: Unexpected error.
+      summary: Get top asset
+      x-summary-source: derived
+      operationId: getV3TopAsset
+      x-operation-id-source: derived

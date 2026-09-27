@@ -453,7 +453,7 @@ apis:
   - FN: Synthetix Developer Docs
     url: https://developers.synthetix.io/
 - aid: synthetix:synthetix-escrowed-balance-api
-  name: Synthetix escrowed-balance API
+  name: Synthetix Escrowed Balance API
   description: The escrowed-balance API from Synthetix — 4 operation(s) for escrowed-balance.
   humanURL: https://developers.synthetix.io/rest-api/info/market-data
   baseURL: https://papi.synthetix.io/v1/info
@@ -463,7 +463,7 @@ apis:
   - type: OpenAPI
     url: openapi/synthetix-escrowed-balance-api-openapi.yml
 - aid: synthetix:synthetix-health-check-api
-  name: Synthetix health-check API
+  name: Synthetix Health Check API
   description: The health-check API from Synthetix — 2 operation(s) for health-check.
   humanURL: https://developers.synthetix.io/rest-api/info/market-data
   baseURL: https://papi.synthetix.io/v1/info
@@ -475,7 +475,7 @@ apis:
   - type: OpenAPI
     url: openapi/synthetix-health-check-api-openapi.yml
 - aid: synthetix:synthetix-staking-api
-  name: Synthetix staking API
+  name: Synthetix Staking API
   description: The staking API from Synthetix — 2 operation(s) for staking.
   humanURL: https://developers.synthetix.io/rest-api/info/market-data
   baseURL: https://papi.synthetix.io/v1/info
@@ -487,7 +487,7 @@ apis:
   - type: OpenAPI
     url: openapi/synthetix-staking-api-openapi.yml
 - aid: synthetix:synthetix-stats-api
-  name: Synthetix stats API
+  name: Synthetix Stats API
   description: The stats API from Synthetix — 1 operation(s) for stats.
   humanURL: https://developers.synthetix.io/rest-api/info/market-data
   baseURL: https://papi.synthetix.io/v1/info
@@ -499,7 +499,7 @@ apis:
   - type: OpenAPI
     url: openapi/synthetix-stats-api-openapi.yml
 - aid: synthetix:synthetix-supply-api
-  name: Synthetix supply API
+  name: Synthetix Supply API
   description: The supply API from Synthetix — 2 operation(s) for supply.
   humanURL: https://developers.synthetix.io/rest-api/info/market-data
   baseURL: https://papi.synthetix.io/v1/info
@@ -510,20 +510,8 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/synthetix-supply-api-openapi.yml
-- aid: synthetix:synthetix-v3-api
-  name: Synthetix v3 API
-  description: The v3 API from Synthetix — 19 operation(s) for v3.
-  humanURL: https://developers.synthetix.io/rest-api/info/market-data
-  baseURL: https://papi.synthetix.io/v1/info
-  tags:
-  - v3
-  tags_raw:
-  - v3
-  properties:
-  - type: OpenAPI
-    url: openapi/synthetix-v3-api-openapi.yml
 - aid: synthetix:synthetix-vested-balance-api
-  name: Synthetix vested-balance API
+  name: Synthetix Vested Balance API
   description: The vested-balance API from Synthetix — 1 operation(s) for vested-balance.
   humanURL: https://developers.synthetix.io/rest-api/info/market-data
   baseURL: https://papi.synthetix.io/v1/info
@@ -532,6 +520,76 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/synthetix-vested-balance-api-openapi.yml
+- aid: synthetix:synthetix-arbitrum-api
+  name: Synthetix Arbitrum API
+  description: The Arbitrum API from Synthetix — 3 operation(s) for arbitrum.
+  humanURL: https://developers.synthetix.io/rest-api/info/market-data
+  baseURL: https://papi.synthetix.io/v1/info
+  tags:
+  - Arbitrum
+  properties:
+  - type: OpenAPI
+    url: openapi/synthetix-arbitrum-api-openapi.yml
+- aid: synthetix:synthetix-base-api
+  name: Synthetix Base API
+  description: The Base API from Synthetix — 8 operation(s) for base.
+  humanURL: https://developers.synthetix.io/rest-api/info/market-data
+  baseURL: https://papi.synthetix.io/v1/info
+  tags:
+  - Base
+  properties:
+  - type: OpenAPI
+    url: openapi/synthetix-base-api-openapi.yml
+- aid: synthetix:synthetix-mainnet-api
+  name: Synthetix Mainnet API
+  description: The Mainnet API from Synthetix — 3 operation(s) for mainnet.
+  humanURL: https://developers.synthetix.io/rest-api/info/market-data
+  baseURL: https://papi.synthetix.io/v1/info
+  tags:
+  - Mainnet
+  properties:
+  - type: OpenAPI
+    url: openapi/synthetix-mainnet-api-openapi.yml
+- aid: synthetix:synthetix-optimism-api
+  name: Synthetix Optimism API
+  description: The Optimism API from Synthetix — 2 operation(s) for optimism.
+  humanURL: https://developers.synthetix.io/rest-api/info/market-data
+  baseURL: https://papi.synthetix.io/v1/info
+  tags:
+  - Optimism
+  properties:
+  - type: OpenAPI
+    url: openapi/synthetix-optimism-api-openapi.yml
+- aid: synthetix:synthetix-top-asset-api
+  name: Synthetix Top Asset API
+  description: The Top Asset API from Synthetix — 1 operation(s) for top asset.
+  humanURL: https://developers.synthetix.io/rest-api/info/market-data
+  baseURL: https://papi.synthetix.io/v1/info
+  tags:
+  - Top Asset
+  properties:
+  - type: OpenAPI
+    url: openapi/synthetix-top-asset-api-openapi.yml
+- aid: synthetix:synthetix-tvl-api
+  name: Synthetix Tvl API
+  description: The Tvl API from Synthetix — 1 operation(s) for tvl.
+  humanURL: https://developers.synthetix.io/rest-api/info/market-data
+  baseURL: https://papi.synthetix.io/v1/info
+  tags:
+  - Tvl
+  properties:
+  - type: OpenAPI
+    url: openapi/synthetix-tvl-api-openapi.yml
+- aid: synthetix:synthetix-tvl420-api
+  name: Synthetix Tvl420 API
+  description: The Tvl420 API from Synthetix — 1 operation(s) for tvl420.
+  humanURL: https://developers.synthetix.io/rest-api/info/market-data
+  baseURL: https://papi.synthetix.io/v1/info
+  tags:
+  - Tvl420
+  properties:
+  - type: OpenAPI
+    url: openapi/synthetix-tvl420-api-openapi.yml
 common:
 - type: Website
   url: https://www.synthetix.io/

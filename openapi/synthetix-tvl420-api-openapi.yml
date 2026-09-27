@@ -1,0 +1,79 @@
+openapi: 3.2.0
+info:
+  title: Synthetix Tvl420 API
+  description: Synthetix API documentation
+  version: 1.0.0
+servers:
+- url: https://api.synthetix.io
+  description: Production
+tags:
+- name: Tvl420
+paths:
+  /v3/tvl420:
+    get:
+      tags:
+      - Tvl420
+      summary: Retrieve TVL data for a specific network and time span
+      description: Fetches Total Value Locked (TVL) data from the cache or PostgreSQL for the specified blockchain network and time span.
+      parameters:
+      - in: query
+        name: network
+        required: true
+        schema:
+          type: string
+          enum:
+          - cross
+          - ethereum
+          - optimism
+        description: Name of the blockchain network (e.g., cross, ethereum, or optimism).
+      - in: query
+        name: span
+        required: true
+        schema:
+          type: string
+          enum:
+          - hourly
+          - daily
+          - weekly
+          - monthly
+        description: Time span for aggregations
+      responses:
+        '200':
+          description: Successfully retrieved TVL data.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    ts:
+                      type: string
+                      format: date-time
+                      description: The timestamp of the TVL data.
+                    value:
+                      type: number
+                      format: float
+                      description: The TVL value.
+        '400':
+          description: Invalid network or span specified in query parameters.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid network or span.
+        '500':
+          description: An unexpected error occurred when fetching data.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Internal server error.
+      operationId: getV3Tvl420
+      x-operation-id-source: derived
