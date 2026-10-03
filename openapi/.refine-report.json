@@ -18,9 +18,7 @@
     "synthetix-supply-api-openapi.yml",
     "synthetix-vested-balance-api-openapi.yml"
   ],
-  "archived": [
-    "deleted 1 superseded output(s) from the previous generation"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
@@ -58,16 +56,21 @@
     "openapi.json: declared missing tag: stats",
     "openapi.json: declared missing tag: supply",
     "openapi.json: declared missing tag: vested-balance",
-    "superseded outputs removed: synthetix-v3-api-openapi.yml",
-    "apis.yml register: written (+7 apis, 17 total)"
+    "apis.yml register: already-registered"
   ],
   "skipped": [
+    "synthetix-arbitrum-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "synthetix-base-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "synthetix-escrowed-balance-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "synthetix-health-check-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "synthetix-mainnet-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "synthetix-optimism-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "synthetix-staking-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "synthetix-stats-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "synthetix-supply-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "synthetix-v3-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "synthetix-top-asset-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "synthetix-tvl-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "synthetix-tvl420-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "synthetix-vested-balance-api-openapi.yml: previously refined output, superseded by openapi/_original/"
   ]
 }
