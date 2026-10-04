@@ -576,6 +576,8 @@ apis:
   humanURL: https://developers.synthetix.io/rest-api/info/market-data
   baseURL: https://papi.synthetix.io/v1/info
   tags:
+  - TVL
+  tags_raw:
   - Tvl
   properties:
   - type: OpenAPI
