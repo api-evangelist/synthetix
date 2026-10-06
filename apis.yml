@@ -51,7 +51,7 @@ contact:
   url: https://discord.gg/synthetix
   X-twitter: synthetix_io
 specificationVersion: '0.23'
-modified: '2026-06-14'
+modified: '2026-10-06'
 apis:
 - name: Synthetix Info API
   description: >
@@ -593,6 +593,8 @@ apis:
   - type: OpenAPI
     url: openapi/synthetix-tvl420-api-openapi.yml
 common:
+- url: https://blog.synthetix.io/rss/
+  type: BlogRSS
 - type: Website
   url: https://www.synthetix.io/
 - type: AgenticAccess
