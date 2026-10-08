@@ -137,3 +137,63 @@ plans:
       - All Tier 7 features
       - Rate limit: 5,000 tokens per 10-second window
       - Preferential fee structure
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: Regular User
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Tier 1
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Tier 2
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Tier 3
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Tier 4
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Tier 5
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Tier 6
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Tier 7
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Market Maker
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
